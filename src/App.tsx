@@ -1,16 +1,16 @@
-import './style/App.css';
+import './res/style/App.css';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 } from "react-router-dom";
-import NavBar from "./navigation/NavBar";
+import NavBar from "./components/navigation/NavBar";
 import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
 import Cursor from "./components/Cursor";
-import MouseContextProvider from "./providers/MouseContext";
+import MouseContextProvider from "./context/MouseContext";
 import {useState} from "react";
 
 function App() {

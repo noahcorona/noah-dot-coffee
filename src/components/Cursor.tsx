@@ -1,8 +1,8 @@
 import React from "react";
 import { useContext } from "react";
-import useMousePosition from "../providers/UseMousePosition";
-import {MouseContext} from "../providers/MouseContext";
-import '../style/cursor.css';
+import useMousePosition from "../context/UseMousePosition";
+import {MouseContext} from "../context/MouseContext";
+import '../res/style/cursor.css';
 
 const Cursor = () => {
     const { cursorType } = useContext(MouseContext);
