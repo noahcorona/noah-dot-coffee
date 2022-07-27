@@ -31,7 +31,7 @@ const NavItem = (props: { item: any; }) => {
                         onMouseLeave={() => hideDropdown()}
                     >
                         {item.submenu.map((submenuItem: { destination: To; title: string; }) => (
-                            <li className="nav-submenu-item">
+                            <li key={submenuItem.title} className="nav-submenu-item">
                                 <HashLink className="nav-item-text"
                                       to={submenuItem.destination}>
                                     {submenuItem.title}

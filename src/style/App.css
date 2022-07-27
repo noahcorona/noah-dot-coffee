@@ -2,3 +2,11 @@
   margin: auto;
   width: 800px;
 }
+
+.Body {
+  color: #fff;
+}
+
+* {
+  cursor: none !important;
+}
