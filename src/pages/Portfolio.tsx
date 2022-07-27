@@ -7,6 +7,7 @@ import {
     projects_media
 } from "../constants/projects.js";
 import ProjectCard from "../components/ProjectCard";
+import WebProjectDisplay from "../components/WebProjectDisplay";
 
 const Portfolio = () => {
     return (
@@ -14,7 +15,14 @@ const Portfolio = () => {
             <h1>Portfolio</h1>
             <h2 id="web">Web</h2>
             {projects_web.map((project: any) =>
-                <ProjectCard key={project.title} project={project} />
+                <div className="project">
+                    <div className="project-left">
+                        <ProjectCard key={project.title} project={project} />
+                    </div>
+                    <div className="project-right">
+                        <WebProjectDisplay project={project} />
+                    </div>
+                </div>
             )}
             <h2 id="mobile">Mobile Apps</h2>
             {projects_mobile.map((project: any) =>

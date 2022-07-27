@@ -20,12 +20,10 @@ const navButtonStyle = {
 const NavItem = (props: { item: any; navHeight: number; }) => {
     const {item} = props;
     const { cursorChangeHandler } = useContext(MouseContext);
-
     const [dropdown, setDropdown] = useState(false);
 
     function scrollWithOffset(el: HTMLElement) {
         const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-        console.log(props.navHeight);
         window.scrollTo({ top: yCoordinate - props.navHeight, behavior: 'smooth' });
     }
 

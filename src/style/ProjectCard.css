@@ -10,3 +10,16 @@
 .card-container h1 h2 h3 {
     color: #fff;
 }
+
+.project {
+    display: flex;
+    justify-content: space-between;
+}
+
+.project-left {
+    flex: 0.4;
+}
+
+.project-right {
+    flex: 0.5;
+}
