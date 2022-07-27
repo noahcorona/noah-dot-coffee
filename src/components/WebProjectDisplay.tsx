@@ -1,6 +1,6 @@
 import '../style/ProjectCard.css'
 
-function WebProjectDisplay(props: { project: any; }) {
+const WebProjectDisplay = (props: { project: any; }) => {
     const {project} = props;
 
     return (

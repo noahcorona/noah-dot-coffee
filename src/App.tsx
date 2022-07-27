@@ -11,14 +11,17 @@ import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
 import Cursor from "./components/Cursor";
 import MouseContextProvider from "./providers/MouseContext";
+import {useState} from "react";
 
 function App() {
+  const [navHeight, setNavHeight] = useState(0);
+
   return (
       <div className="App">
         <MouseContextProvider>
           <Cursor />
           <Router>
-            <NavBar />
+            <NavBar height={navHeight} setHeight={setNavHeight} />
             <div className="container">
               <Routes>
                 <Route path="/" element={<About />} />

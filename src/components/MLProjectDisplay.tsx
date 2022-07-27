@@ -1,6 +1,6 @@
 import '../style/ProjectCard.css'
 
-function MLProjectDisplay(props: { project: any; }) {
+const MLProjectDisplay = (props: { project: any; }) => {
     const {project} = props;
 
     return (

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 
 const useMousePosition = () => {
     const [mousePosition, setMousePosition] = useState({ x: null, y: null });
+
     useEffect(() => {
         const mouseMoveHandler = (event: { clientX: any; clientY: any; }) => {
             const { clientX, clientY } = event;

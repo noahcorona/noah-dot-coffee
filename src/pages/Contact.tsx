@@ -1,6 +1,6 @@
 import '../style/App.css';
 
-function Contact() {
+const Contact = () => {
     return (
         <div className="Body">
             <h1>Contact</h1>

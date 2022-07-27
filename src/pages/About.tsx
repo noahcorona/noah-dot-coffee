@@ -1,6 +1,6 @@
 import '../style/App.css';
 
-function About() {
+const About = () => {
     return (
         <div className="Body">
             <h1>About</h1>

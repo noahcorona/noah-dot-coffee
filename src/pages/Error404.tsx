@@ -1,6 +1,6 @@
 import '../style/App.css';
 
-function Error404() {
+const Error404 = () => {
     return (
         <div className="Body">
             <h1>Sorry :(</h1>

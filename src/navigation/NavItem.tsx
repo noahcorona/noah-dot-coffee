@@ -1,11 +1,33 @@
 import {Link, To} from "react-router-dom";
 import {HashLink} from "react-router-hash-link";
-import {useState} from "react";
+import {useContext, useState} from "react";
+import {MouseContext} from "../providers/MouseContext";
+import Button from "@mui/material/Button";
 
-const NavItem = (props: { item: any; }) => {
+const navButtonStyle = {
+    color: 'white',
+    backgroundColor: 'rgba(45,45,45,0.8)',
+    border: "1px rgba(255,255,255,0.7) solid",
+    "a": {textDecoration: 'none'},
+    "a:visited": {
+        color: 'white'
+    },
+    ":hover": {
+        border: "1px #aaa solid",
+    },
+}
+
+const NavItem = (props: { item: any; navHeight: number; }) => {
     const {item} = props;
+    const { cursorChangeHandler } = useContext(MouseContext);
 
     const [dropdown, setDropdown] = useState(false);
+
+    function scrollWithOffset(el: HTMLElement) {
+        const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
+        console.log(props.navHeight);
+        window.scrollTo({ top: yCoordinate - props.navHeight, behavior: 'smooth' });
+    }
 
     function showDropdown() {
         if (item.submenu) setDropdown(true)
@@ -17,13 +39,20 @@ const NavItem = (props: { item: any; }) => {
 
     return (
         <li className="nav-menu-item">
-            <Link className="nav-item-text"
-                  to={item.destination}
-                  onMouseEnter={() => showDropdown()}
-                  onMouseLeave={() => hideDropdown()}
-            >
-                {item.title}
-            </Link>
+            <Button variant="outlined"
+                    sx={navButtonStyle}
+                    onMouseEnter={() => {
+                        showDropdown();
+                        cursorChangeHandler("hovered");
+                    }}
+                    onMouseLeave={() => {
+                        hideDropdown();
+                        cursorChangeHandler("");
+                    }}>
+                <Link to={item.destination}>
+                    {item.title}
+                </Link>
+            </Button>
             {dropdown ?
                 (
                     <ul className="nav-submenu"
@@ -32,10 +61,17 @@ const NavItem = (props: { item: any; }) => {
                     >
                         {item.submenu.map((submenuItem: { destination: To; title: string; }) => (
                             <li key={submenuItem.title} className="nav-submenu-item">
-                                <HashLink className="nav-item-text"
-                                      to={submenuItem.destination}>
-                                    {submenuItem.title}
-                                </HashLink>
+                                <Button variant="outlined"
+                                        sx={navButtonStyle}
+                                        onMouseEnter={() => cursorChangeHandler("hovered")}
+                                        onMouseLeave={() => cursorChangeHandler("")}>
+                                    <HashLink smooth
+                                              to={submenuItem.destination}
+                                              scroll={el => scrollWithOffset(el)}
+                                    >
+                                        {submenuItem.title}
+                                    </HashLink>
+                                </Button>
                             </li>
                         ))}
                     </ul>

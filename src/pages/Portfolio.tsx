@@ -8,27 +8,27 @@ import {
 } from "../constants/projects.js";
 import ProjectCard from "../components/ProjectCard";
 
-function Portfolio() {
+const Portfolio = () => {
     return (
         <div className="Body">
             <h1>Portfolio</h1>
-            <h2>Web</h2>
+            <h2 id="web">Web</h2>
             {projects_web.map((project: any) =>
                 <ProjectCard key={project.title} project={project} />
             )}
-            <h2>Mobile Apps</h2>
+            <h2 id="mobile">Mobile Apps</h2>
             {projects_mobile.map((project: any) =>
                 <ProjectCard key={project.title} project={project} />
             )}
-            <h2>Embedded Systems</h2>
+            <h2 id="embedded">Embedded Systems</h2>
             {projects_embedded.map((project: any) =>
                 <ProjectCard key={project.title} project={project} />
             )}
-            <h2>Machine Learning</h2>
+            <h2 id="ml">Machine Learning</h2>
             {projects_ml.map((project: any) =>
                 <ProjectCard key={project.title} project={project} />
             )}
-            <h2>Multimedia Processing</h2>
+            <h2 id="media">Multimedia Processing</h2>
             {projects_media.map((project: any) =>
                 <ProjectCard key={project.title} project={project} />
             )}

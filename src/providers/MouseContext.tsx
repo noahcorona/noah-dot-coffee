@@ -1,4 +1,5 @@
 import React, { createContext, useState } from "react";
+
 export const MouseContext = createContext({
     cursorType: "",
     cursorChangeHandler: (_cursorType: any) => {},
@@ -9,6 +10,7 @@ const MouseContextProvider = (props: { children: string | number | boolean | Rea
     const cursorChangeHandler = (cursorType: React.SetStateAction<string>) => {
         setCursorType(cursorType);
     };
+
     return (
         <MouseContext.Provider
             value={{

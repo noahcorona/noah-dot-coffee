@@ -3,14 +3,37 @@ import navigation from "../constants/navigation";
 import NavItem from "./NavItem";
 import SocialBar from "./SocialBar";
 import logo from "../res/coffee.png";
+import {MouseContext} from "../providers/MouseContext";
+import {useContext, useLayoutEffect, useRef} from "react";
 
-function NavBar() {
+interface IProps {
+    height: number,
+    setHeight: (arg0: number) => void,
+}
+
+const NavBar = (props: IProps) => {
+    const { cursorChangeHandler } = useContext(MouseContext);
+    const ref = useRef<HTMLDivElement>(null);
+
+    useLayoutEffect(() => {
+        if (!ref.current || !ref.current.clientHeight) {
+            return;
+        }
+        // @ts-ignore
+        props.setHeight(ref.current.clientHeight);
+        // @ts-ignore
+        console.log(ref.current.clientHeight);
+    }, []);
+
     return (
-        <div className="nav-bar">
+        <div ref={ref} className="nav-bar">
             <div className="nav-content">
                 <div className="nav-left">
                     <p className="nav-logo-text">Noah Corona</p>
-                    <a href="https://www.buymeacoffee.com/4IeSH91kr">
+                    <a href="https://www.buymeacoffee.com/4IeSH91kr"
+                       onMouseEnter={() => cursorChangeHandler("hovered")}
+                       onMouseLeave={() => cursorChangeHandler("")}
+                    >
                         <div className="nav-logo-container">
                             <img alt="Buy me a coffee" src={logo} className="nav-logo" />
                         </div>
@@ -21,7 +44,7 @@ function NavBar() {
                     <nav className="nav-container">
                         <ul className="nav-menu">
                             {navigation.map((item) =>
-                                <NavItem key={item.title} item={item} />
+                                <NavItem key={item.title} item={item} navHeight={props.height} />
                             )}
                         </ul>
                     </nav>

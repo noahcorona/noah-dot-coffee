@@ -1,6 +1,6 @@
 import '../style/ProjectCard.css'
 
-function EmbeddedProjectDisplay(props: { project: any; }) {
+const EmbeddedProjectDisplay = (props: { project: any; }) => {
     const {project} = props;
 
     return (
