@@ -7,13 +7,17 @@ import Button from "@mui/material/Button";
 const navButtonStyle = {
     color: 'white',
     backgroundColor: 'rgba(45,45,45,0.8)',
-    border: "1px rgba(255,255,255,0.7) solid",
-    "a": {textDecoration: 'none'},
-    "a:visited": {
-        color: 'white'
+    border: '1px rgba(255,255,255,0.7) solid',
+    'a': {
+        color: '#fff',
+        textDecoration: 'none',
     },
-    ":hover": {
-        border: "1px #aaa solid",
+    'a:visited': {
+        color: '#fff',
+        textDecoration: 'none',
+    },
+    ':hover': {
+        border: '1px #fff solid',
     },
 }
 

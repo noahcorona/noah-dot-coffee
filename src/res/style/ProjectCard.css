@@ -1,15 +1,4 @@
-.card-container {
-    color: #fff;
-    background-color: #222;
-    border-radius: 0.5em;
-    padding: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
-}
-
-.card-container h1 h2 h3 {
-    color: #fff;
-}
+/* Project component layout */
 
 .project {
     display: flex;
@@ -22,4 +11,24 @@
 
 .project-right {
     flex: 0.5;
+}
+
+/* Left area of project component */
+
+.summary-container {
+    background-color: #222;
+    border-radius: 0.5em;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Right area of project component */
+
+.card-container {
+    background-color: #222;
+    border-radius: 0.5em;
+    padding: 2em;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }

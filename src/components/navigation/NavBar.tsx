@@ -8,7 +8,7 @@ import {useContext, useLayoutEffect, useRef} from "react";
 
 interface IProps {
     height: number,
-    setHeight: (arg0: number) => void,
+    setHeight: (height: number) => void,
 }
 
 const NavBar = (props: IProps) => {
@@ -19,17 +19,21 @@ const NavBar = (props: IProps) => {
         if (!ref.current || !ref.current.clientHeight) {
             return;
         }
-        // @ts-ignore
+
         props.setHeight(ref.current.clientHeight);
-        // @ts-ignore
-        console.log(ref.current.clientHeight);
     }, []);
 
     return (
         <div ref={ref} className="nav-bar">
             <div className="nav-content">
                 <div className="nav-left">
-                    <p className="nav-logo-text">Noah Corona</p>
+                    <a href="/"
+                       className="nav-logo-text"
+                       onMouseEnter={() => cursorChangeHandler("hovered")}
+                       onMouseLeave={() => cursorChangeHandler("")}
+                    >
+                        Noah Corona
+                    </a>
                     <a href="https://www.buymeacoffee.com/4IeSH91kr"
                        onMouseEnter={() => cursorChangeHandler("hovered")}
                        onMouseLeave={() => cursorChangeHandler("")}
@@ -44,7 +48,9 @@ const NavBar = (props: IProps) => {
                     <nav className="nav-container">
                         <ul className="nav-menu">
                             {navigation.map((item) =>
-                                <NavItem key={item.title} item={item} navHeight={props.height} />
+                                <NavItem key={item.title}
+                                         item={item}
+                                         navHeight={props.height} />
                             )}
                         </ul>
                     </nav>

@@ -1,14 +1,15 @@
-.ring {
+.cursor {
     position: fixed;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 100%;
+    border: 1px rgba(255, 255, 255, 0.8) solid;
     transform: translate(-50%, -50%);
-    -webkit-transition-duration: 100ms;
-    transition-duration: 100ms;
+    -webkit-transition-duration: 50ms;
+    transition-duration: 50ms;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
     will-change: width, height, transform, border;
@@ -16,26 +17,8 @@
     pointer-events: none;
 }
 
-.dot {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 8px;
-    height: 8px;
-    background-color: #ffffff;
-    border-radius: 100%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    pointer-events: none;
-}
-
-.ring.hovered {
-    width: 50px;
-    height: 50px;
-    border-width: 3px;
+.cursor.hovered {
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0.4);
-}
-
-.dot.hovered {
-    display: none;
 }

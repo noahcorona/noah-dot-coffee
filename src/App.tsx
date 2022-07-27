@@ -12,6 +12,7 @@ import Error404 from "./pages/Error404";
 import Cursor from "./components/Cursor";
 import MouseContextProvider from "./context/MouseContext";
 import {useState} from "react";
+import Resume from "./pages/Resume";
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
@@ -26,6 +27,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<About />} />
                 <Route path="/portfolio" element={<Portfolio />} />
+                <Route path="/resume" element={<Resume />} />
                 <Route path="/contact" element={<Contact />} />
                 <Route path="*" element={<Error404 />} />
               </Routes>

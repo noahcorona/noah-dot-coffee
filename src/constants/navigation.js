@@ -12,7 +12,7 @@ const navigation = [
                 destination: "/portfolio#web",
             },
             {
-                title: "Mobile",
+                title: "Mobile Apps",
                 destination: "/portfolio#mobile",
             },
             {
@@ -22,8 +22,16 @@ const navigation = [
             {
                 title: "Machine Learning",
                 destination: "/portfolio#ml",
+            },
+            {
+                title: "Multimedia Processing",
+                destination: "/portfolio#media",
             }
         ]
+    },
+    {
+        title: "Resume",
+        destination: "/resume"
     },
     {
         title: "Contact",

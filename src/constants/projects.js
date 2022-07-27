@@ -12,7 +12,7 @@ export const projects = {
                 "Node.js"
             ],
             demo_link: "https://noah.coffee/",
-            github_link: "http://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -32,8 +32,8 @@ export const projects = {
                 "Aerospace",
                 "Commercial manufacturing"
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
     ],
@@ -63,7 +63,7 @@ export const projects = {
                 "Bluetooth Low Energy",
                 "Cross-platform",
             ],
-            github_link: "http://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -79,7 +79,7 @@ export const projects = {
                 "Google Maps API",
                 "Geolocation",
             ],
-            github_link: "http://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -95,7 +95,7 @@ export const projects = {
                 "Thermocouple",
                 "Bluetooth Low Energy",
                 "esp32"],
-            github_link: "http://example.com",
+            github_link: "https://example.com",
             images: [],
         },
     ],
@@ -127,8 +127,8 @@ export const projects = {
                 "Electrochemical measurement",
                 "Bluetooth Low Energy"
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             microcontrollers: [
                 "esp32",
             ],
@@ -150,8 +150,8 @@ export const projects = {
             microcontrollers: [
                 "esp32",
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -170,8 +170,8 @@ export const projects = {
             microcontrollers: [
                 "esp32",
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -189,8 +189,8 @@ export const projects = {
             microcontrollers: [
                 "STM32",
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
     ],
@@ -205,8 +205,8 @@ export const projects = {
                 "Game",
                 "Rational Agents",
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -221,8 +221,8 @@ export const projects = {
                 "Classification",
                 "Fashion",
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -237,8 +237,8 @@ export const projects = {
                 "Classification",
                 "Fashion"
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
         {
@@ -253,8 +253,8 @@ export const projects = {
                 "Classification",
                 "Fashion",
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
     ],
@@ -270,8 +270,8 @@ export const projects = {
                 "Audio",
                 "Feature analysis",
             ],
-            demo_link: "http://example.com",
-            github_link: "http://example.com",
+            demo_link: "https://example.com",
+            github_link: "https://example.com",
             images: [],
         },
     ],

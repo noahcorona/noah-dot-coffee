@@ -18,6 +18,15 @@
     font-size: 1.3rem;
     font-weight: bold;
     color: #eee;
+    text-decoration: none;
+}
+
+.nav-logo-text:hover {
+    color: #eee;
+}
+
+.nav-logo-text:visited {
+    color: #eee;
 }
 
 .nav-menu {
@@ -38,7 +47,6 @@
     list-style: none;
     display: inline-block;
     margin: 0em 0.4em 0.8em 0.4em;
-
 }
 
 .nav-submenu {
@@ -46,10 +54,10 @@
     list-style: none;
     padding: 0.25em 0 0 0;
     box-sizing: border-box;
-    color: #224193;
     font-size: 1.3rem;
     font-weight: 500;
     margin: 0;
+    background-color: #2d2d2d;
 }
 
 .nav-submenu-item {
