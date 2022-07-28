@@ -9,7 +9,9 @@ const Portfolio = () => {
         <div className="Body">
             <h1 id="web">Web</h1>
             {web.map((project: any) =>
-                <Project key={project.title} project={project} projectType={"web"} />
+                <Project key={project.title}
+                         project={project}
+                         projectType={"web"} />
             )}
             <h1 id="mobile">Mobile Apps</h1>
             {mobile.map((project: any) =>

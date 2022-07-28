@@ -3,14 +3,16 @@
 .project {
     display: flex;
     justify-content: space-between;
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
 
 .project-left {
-    flex: 0.4;
+    width: 40%;
 }
 
 .project-right {
-    flex: 0.5;
+    width: 50%;
 }
 
 /* Left area of project component */
@@ -19,8 +21,6 @@
     background-color: #222;
     border-radius: 0.5em;
     padding: 2em;
-    margin-top: 2em;
-    margin-bottom: 2em;
 }
 
 /* Right area of project component */
