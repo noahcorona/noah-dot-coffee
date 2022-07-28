@@ -1,7 +1,7 @@
 // cursor
 import {useEffect, useState} from "react";
 import classNames from "classnames";
-import '../res/style/Cursor.css';
+import '../style/Cursor.css';
 
 export const Cursor = () => {
     const [position, setPosition] = useState({ x: 0, y: 0 });

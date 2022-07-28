@@ -2,7 +2,7 @@ export const projects = {
     web: [
         {
             title: "noah.coffee",
-            description: "Personal portfolio website with contact info",
+            description: "Personal Portfolio website with Contact info",
             stack: [
                 "Javascript",
                 "CSS"
@@ -17,7 +17,7 @@ export const projects = {
         },
         {
             title: "anoroc.com",
-            description: "One of my first ever portfolio, and a favor" +
+            description: "One of my first ever Portfolio, and a favor" +
                 " for my grandpa - the owner of ANOROC, Inc. I built this" +
                 " website when I was 10 years old, in 2011. While the" +
                 " site is no longer in service, you can still explore the" +
@@ -136,7 +136,7 @@ export const projects = {
         },
         {
             title: "Solar Battery Charger with Active Tracking",
-            description: "Personal portfolio and contact website",
+            description: "Personal Portfolio and Contact website",
             stack: [
                 "Javascript"
             ],

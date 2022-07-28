@@ -5,7 +5,7 @@ const navigation = [
     },
     {
         title: "Portfolio",
-        destination: "/portfolio",
+        destination: "/Portfolio",
     },
     {
         title: "Resume",
@@ -13,7 +13,7 @@ const navigation = [
     },
     {
         title: "Contact",
-        destination: "/contact"
+        destination: "/Contact"
     },
 ];
 

@@ -1,5 +1,5 @@
-import '../res/style/App.css';
-import ResumeForm from "../components/contact/ResumeForm";
+import '../style/App.css';
+import ResumeForm from "../components/ResumeForm";
 
 const Resume = () => {
     return (
