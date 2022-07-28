@@ -1,16 +1,72 @@
-import React, {useContext} from "react";
-import useMousePosition from "../context/UseMousePosition";
-import {MouseContext} from "../context/MouseContext";
-import '../res/style/cursor.css';
+// cursor
+import {useEffect, useState} from "react";
+import classNames from "classnames";
+import '../res/style/Cursor.css';
 
-const Cursor = () => {
-    const { cursorType } = useContext(MouseContext);
-    const { x, y } = useMousePosition();
-    return (
+export const Cursor = () => {
+    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [clicked, setClicked] = useState(false);
+    const [linkHovered, setLinkHovered] = useState(false);
+    const [hidden, setHidden] = useState(false);
+
+    useEffect(() => {
+        addEventListeners();
+        handleLinkHoverEvents();
+        return () => removeEventListeners();
+    }, []);
+
+    const cursorClasses = classNames("cursor", {
+        "cursor--clicked": clicked,
+        "cursor--hidden": hidden,
+        "cursor--link-hovered": linkHovered
+    });
+
+    const addEventListeners = () => {
+        document.addEventListener("mousemove", onMouseMove);
+        document.addEventListener("mouseenter", onMouseEnter);
+        document.addEventListener("mouseleave", onMouseLeave);
+        document.addEventListener("mousedown", onMouseDown);
+        document.addEventListener("mouseup", onMouseUp);
+    };
+
+    const removeEventListeners = () => {
+        document.removeEventListener("mousemove", onMouseMove);
+        document.removeEventListener("mouseenter", onMouseEnter);
+        document.removeEventListener("mouseleave", onMouseLeave);
+        document.removeEventListener("mousedown", onMouseDown);
+        document.removeEventListener("mouseup", onMouseUp);
+    };
+
+    const onMouseMove = (e: any) => {
+        setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    const onMouseDown = () => {
+        setClicked(true);
+    };
+
+    const onMouseUp = () => {
+        setClicked(false);
+    };
+
+    const onMouseLeave = () => {
+        setHidden(true);
+    };
+
+    const onMouseEnter = () => {
+        setHidden(false);
+    };
+
+    const handleLinkHoverEvents = () => {
+        document.querySelectorAll("a").forEach((el) => {
+            el.addEventListener("mouseover", () => setLinkHovered(true));
+            el.addEventListener("mouseout", () => setLinkHovered(false));
+        });
+    };
+
+    return(
         <div
-            className={`cursor ${cursorType}`}
-            style={{ left: `${x}px`, top: `${y}px` }}
-        />
-    );
-};
-export default Cursor;
+            className={ cursorClasses }
+            style={ { left: `${ position.x }px`, top: `${ position.y }px` } }
+        />);
+}

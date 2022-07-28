@@ -9,10 +9,10 @@ import Portfolio from "./pages/Portfolio";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Error404 from "./pages/Error404";
-import Cursor from "./components/Cursor";
 import MouseContextProvider from "./context/MouseContext";
 import {useState} from "react";
 import Resume from "./pages/Resume";
+import {Cursor} from "./components/Cursor";
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
