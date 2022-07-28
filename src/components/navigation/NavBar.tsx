@@ -2,7 +2,6 @@ import '../../res/style/Navigation.css';
 import navigation from "../../constants/navigation";
 import NavItem from "./NavItem";
 import SocialBar from "./SocialBar";
-import logo from "../../res/coffee.png";
 import {MouseContext} from "../../context/MouseContext";
 import {useContext, useLayoutEffect, useRef} from "react";
 
@@ -26,24 +25,13 @@ const NavBar = (props: IProps) => {
     return (
         <div ref={ref} className="nav-bar">
             <div className="nav-content">
-                <div className="nav-left">
                     <a href="/"
                        className="nav-logo-text"
                        onMouseEnter={() => cursorChangeHandler("hovered")}
                        onMouseLeave={() => cursorChangeHandler("")}
                     >
-                        Noah Corona
+                        noah.coffee
                     </a>
-                    <a href="https://www.buymeacoffee.com/4IeSH91kr"
-                       onMouseEnter={() => cursorChangeHandler("hovered")}
-                       onMouseLeave={() => cursorChangeHandler("")}
-                    >
-                        <div className="nav-logo-container">
-                            <img alt="Buy me a coffee" src={logo} className="nav-logo" />
-                        </div>
-                    </a>
-                </div>
-                <div className="nav-right">
                     <SocialBar />
                     <nav className="nav-container">
                         <ul className="nav-menu">
@@ -54,7 +42,6 @@ const NavBar = (props: IProps) => {
                             )}
                         </ul>
                     </nav>
-                </div>
             </div>
         </div>
     )

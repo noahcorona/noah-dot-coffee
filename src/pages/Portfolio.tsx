@@ -7,24 +7,23 @@ const Portfolio = () => {
 
     return (
         <div className="Body">
-            <h1>Portfolio</h1>
-            <h2 id="web">Web</h2>
+            <h1 id="web">Web</h1>
             {web.map((project: any) =>
                 <Project key={project.title} project={project} projectType={"web"} />
             )}
-            <h2 id="mobile">Mobile Apps</h2>
+            <h1 id="mobile">Mobile Apps</h1>
             {mobile.map((project: any) =>
                 <Project key={project.title} project={project} projectType={"mobile"} />
             )}
-            <h2 id="embedded">Embedded Systems</h2>
+            <h1 id="embedded">Embedded Systems</h1>
             {embedded.map((project: any) =>
                 <Project key={project.title} project={project} projectType={"embedded"} />
             )}
-            <h2 id="ml">Machine Learning</h2>
+            <h1 id="ml">Machine Learning</h1>
             {ml.map((project: any) =>
                 <Project key={project.title} project={project} projectType={"ml"} />
             )}
-            <h2 id="media">Multimedia Processing</h2>
+            <h1 id="media">Multimedia Processing</h1>
             {media.map((project: any) =>
                 <Project key={project.title} project={project} projectType={"media"} />
             )}

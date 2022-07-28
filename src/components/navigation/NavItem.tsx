@@ -3,23 +3,7 @@ import {HashLink} from "react-router-hash-link";
 import {useContext, useState} from "react";
 import {MouseContext} from "../../context/MouseContext";
 import Button from "@mui/material/Button";
-
-const navButtonStyle = {
-    color: 'white',
-    backgroundColor: 'rgba(45,45,45,0.8)',
-    border: '1px rgba(255,255,255,0.7) solid',
-    'a': {
-        color: '#fff',
-        textDecoration: 'none',
-    },
-    'a:visited': {
-        color: '#fff',
-        textDecoration: 'none',
-    },
-    ':hover': {
-        border: '1px #fff solid',
-    },
-}
+import {navButtonStyle} from "../../res/style/inputStyles";
 
 const NavItem = (props: { item: any; navHeight: number; }) => {
     const {item} = props;
