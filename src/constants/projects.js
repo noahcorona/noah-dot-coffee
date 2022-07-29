@@ -2,9 +2,10 @@ export const projects = {
     web: [
         {
             title: "noah.coffee",
-            description: "Personal Portfolio website with Contact info",
+            description: "Personal portfolio website with contact info",
             stack: [
                 "Javascript",
+                "HTML",
                 "CSS"
             ],
             keywords: [
@@ -13,11 +14,22 @@ export const projects = {
             ],
             demo_link: "https://noah.coffee/",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: '/projects/noah-dot-coffee/1.png',
+                    description: "Landing page",
+                },
+                {
+                    type: "photo",
+                    source: '/projects/noah-dot-coffee/2.png',
+                    description: "Contact page",
+                }
+            ],
         },
         {
             title: "anoroc.com",
-            description: "One of my first ever Portfolio, and a favor" +
+            description: "One of my first ever websites, and a favor" +
                 " for my grandpa - the owner of ANOROC, Inc. I built this" +
                 " website when I was 10 years old, in 2011. While the" +
                 " site is no longer in service, you can still explore the" +
@@ -34,12 +46,18 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
     ],
     mobile: [
         {
-            title: "CUDA (Mobile App)",
+            title: "CUDA",
             description: "CUDA was the 3rd place winner of the " +
                 "2021-2022 UCSB E.C.E. Capstone " +
                 "program. The project goal was to " +
@@ -56,15 +74,23 @@ export const projects = {
             stack: [
                 "Javascript",
                 "React Native",
-                "Firebase Realtime Database"
+                "Firebase Realtime Database",
+                "Bluetooth Low Energy",
+                "Serial Protocols"
             ],
             keywords: [
                 "Medical",
-                "Bluetooth Low Energy",
+                "Electrochemical sensing",
                 "Cross-platform",
             ],
-            github_link: "https://example.com",
-            images: [],
+            github_link: "https://github.com/AptitudeCapstone/CUDA",
+            media: [
+                {
+                    type: "video",
+                    source: "https://user-images.githubusercontent.com/25698069/180273048-2b10df13-f372-4fe7-acd8-6ecb7d3206be.mp4",
+                    description: "Demo video",
+                },
+            ],
         },
         {
             title: "Geo-tagged Social Media",
@@ -80,7 +106,13 @@ export const projects = {
                 "Geolocation",
             ],
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
         {
             title: "Thermocouple Monitor",
@@ -96,7 +128,65 @@ export const projects = {
                 "Bluetooth Low Energy",
                 "esp32"],
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: '/projects/reflow-oven/mobile_app_running.jpg',
+                    description: "Mobile app screenshot, taken when the app is actively monitoring a nearby thermocouple via an esp32",
+                },
+                {
+                    type: "photo",
+                    source: '/projects/reflow-oven/thermocouple_demo.jpg',
+                    description: "Mobile app screenshot, taken when the app is actively monitoring a nearby thermocouple via an esp32",
+                },
+                {
+                    type: "video",
+                    source: '/projects/reflow-oven/thermocouple_demo_video.m4v',
+                    description: "An example setup for the thermocouple: a " +
+                        "toaster oven lined with heat-reflective tape",
+                },
+            ],
+        },
+        {
+            title: "Receipt Scanner",
+            description: "Scans receipts, performing OCR to aid in the process of " +
+                "organizing business expenses. Allows the user to easily export a " +
+                "PDF of collections of their receipts with customizable information.",
+            stack: [
+                "Swift"
+            ],
+            keywords: [
+                "iOS",
+                "Computer vision",
+                "Optical character recognition"],
+            github_link: "https://example.com",
+            media: [
+                {
+                    type: "video",
+                    source: '/projects/receipt-scanner/receipt_scanner_demo_video.m4v',
+                    description: "Demo video 1",
+                },
+                {
+                    type: "video",
+                    source: '/projects/receipt-scanner/receipt_scanner_demo_video_2.m4v',
+                    description: "Demo video 2",
+                },
+                {
+                    type: "video",
+                    source: '/projects/receipt-scanner/receipt_scanner_demo_video_3.m4v',
+                    description: "Demo video 3",
+                },
+                {
+                    type: "video",
+                    source: '/projects/receipt-scanner/receipt_scanner_demo_video_4.m4v',
+                    description: "Demo video 4",
+                },
+                {
+                    type: "photo",
+                    source: '/projects/receipt-scanner/receipt_scanner_dev_screenshot.jpg',
+                    description: "Mobile app screenshot, taken when the app is actively monitoring a nearby thermocouple via an esp32",
+                },
+            ],
         },
     ],
     embedded: [
@@ -132,11 +222,17 @@ export const projects = {
             microcontrollers: [
                 "esp32",
             ],
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "/projects/CUDA/reader.jpeg",
+                    description: "CUDA Reader and collector",
+                },
+            ],
         },
         {
             title: "Solar Battery Charger with Active Tracking",
-            description: "Personal Portfolio and Contact website",
+            description: "Personal portfolio and contact website",
             stack: [
                 "Javascript"
             ],
@@ -152,7 +248,33 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: '/projects/solar-tracking-charger/solar_tracker_printed.jpg',
+                    description: "Custom housing CAD model (assembled)",
+                },
+                {
+                    type: "photo",
+                    source: '/projects/solar-tracking-charger/solar_tracker_model_exploded.jpg',
+                    description: "Custom housing CAD model (exploded)",
+                },
+                {
+                    type: "photo",
+                    source: '/projects/solar-tracking-charger/solar_tracker_model_assembled.jpg',
+                    description: "3D printed housing",
+                },
+                {
+                    type: "video",
+                    source: '/projects/solar-tracking-charger/solar_tracker.m4v',
+                    description: "3D printed housing",
+                },
+                {
+                    type: "video",
+                    source: '/projects/solar-tracking-charger/solar_tracker_2.m4v',
+                    description: "3D printed housing",
+                },
+            ],
         },
         {
             title: "Thermocouple BLE Transceiver",
@@ -172,7 +294,13 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
         {
             title: "Guitar Tuner",
@@ -191,7 +319,13 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
     ],
     ml: [
@@ -207,7 +341,13 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
         {
             title: "Fashion Classifier",
@@ -223,7 +363,13 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
         {
             title: "Linear Classifier",
@@ -239,7 +385,13 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
         {
             title: "Naive Bayes Classifier",
@@ -255,7 +407,13 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
     ],
     media: [
@@ -272,7 +430,13 @@ export const projects = {
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
-            images: [],
+            media: [
+                {
+                    type: "photo",
+                    source: "https://picsum.photos/200/300",
+                    description: "Random image",
+                },
+            ],
         },
     ],
 }

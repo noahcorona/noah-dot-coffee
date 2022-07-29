@@ -11,7 +11,7 @@
     pointer-events: none;
     transition: all 400ms ease;
     transition-property: background-color, opacity, transform, mix-blend-mode;
-    z-index: 9999;
+    z-index: 99999;
     mix-blend-mode: difference;
     background-color: #fff;
 }

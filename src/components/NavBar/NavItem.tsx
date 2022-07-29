@@ -1,9 +1,7 @@
-import {Link, To} from "react-router-dom";
-import {HashLink} from "react-router-hash-link";
-import {useContext, useState} from "react";
+import {Link} from "react-router-dom";
+import {useContext} from "react";
 import {MouseContext} from "../../context/MouseContext";
 import Button from "@mui/material/Button";
-import {navButtonStyle} from "../../style/inputStyles";
 
 const NavItem = (props: { item: any; navHeight: number; }) => {
     const {item} = props;
@@ -11,14 +9,14 @@ const NavItem = (props: { item: any; navHeight: number; }) => {
 
     return (
         <li className="nav-menu-item">
-            <Button variant="outlined"
-                    sx={navButtonStyle}
-                    onMouseEnter={() => cursorChangeHandler("hovered")}
-                    onMouseLeave={() => cursorChangeHandler("")}>
-                <Link to={item.destination}>
-                    {item.title}
-                </Link>
-            </Button>
+            <Link className="nav-button" to={item.destination}>
+                <Button variant="outlined"
+                        color="inherit"
+                        onMouseEnter={() => cursorChangeHandler("hovered")}
+                        onMouseLeave={() => cursorChangeHandler("")}>
+                        {item.title}
+                </Button>
+            </Link>
         </li>
     );
 }

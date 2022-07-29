@@ -1,5 +1,4 @@
 import '../style/App.css';
-import '../style/Portfolio.css';
 import Project from "../components/Portfolio/Project";
 import {projects} from "../constants/projects.js";
 import {Tab, Tabs} from "@mui/material";
@@ -16,18 +15,21 @@ const Portfolio = () => {
 
     return (
         <div className="Body">
-            <Tabs value={value}
-                  textColor={'inherit'}
-                  TabScrollButtonProps={{style: {color: '#fff'}}}
-                  TabIndicatorProps={{style: {backgroundColor: '#fff'}}}
-                  centered
-                  onChange={handleTabChange}>
-                <Tab classes="tab" label="Web" />
-                <Tab classes="tab" label="Mobile Apps" />
-                <Tab classes="tab" label="Embedded Systems" />
-                <Tab classes="tab" label="Machine Learning" />
-                <Tab classes="tab" label="Media Processing" />
-            </Tabs>
+            <div className="tab-bar">
+                <Tabs centered
+                      value={value}
+                      textColor={'inherit'}
+                      TabScrollButtonProps={{style: {color: '#fff'}}}
+                      TabIndicatorProps={{style: {backgroundColor: '#fff'}}}
+                      onChange={handleTabChange}>
+                    <Tab className="tab" label="Web" />
+                    <Tab className="tab" label="Mobile Apps" />
+                    <Tab className="tab" label="Embedded Systems" />
+                    <Tab className="tab" label="Machine Learning" />
+                    <Tab className="tab" label="Media Processing" />
+                </Tabs>
+            </div>
+            <div>
             {value === 0 &&
                 <TabContainer>
                     {web.map((project: any) =>
@@ -65,6 +67,7 @@ const Portfolio = () => {
                     )}
                 </TabContainer>
             }
+            </div>
         </div>
     );
 }

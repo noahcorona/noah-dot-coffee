@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {TextField} from "@mui/material";
 import Button from "@mui/material/Button";
-import {submitButtonStyle, submittedButtonStyle, textFieldStyle} from "../style/inputStyles";
+import {submitButtonStyle, submittedButtonStyle, textFieldProps, textFieldStyle} from "../style/inputStyles";
 
 const ResumeForm = () => {
     const [status, setStatus] = useState("Send");
@@ -21,18 +21,21 @@ const ResumeForm = () => {
                            id="name"
                            placeholder="Name *"
                            variant="outlined"
+                           inputProps={textFieldProps}
                            sx={textFieldStyle}
                            required />
                 <TextField type="email"
                            id="email"
                            placeholder="Email address *"
                            variant="outlined"
+                           inputProps={textFieldProps}
                            sx={textFieldStyle}
                            required />
                 <TextField type="text"
                            id="company"
                            placeholder="Company"
                            variant="outlined"
+                           inputProps={textFieldProps}
                            sx={textFieldStyle} />
             </div>
             <Button type="submit"

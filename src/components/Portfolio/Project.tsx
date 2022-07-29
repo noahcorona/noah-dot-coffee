@@ -1,5 +1,6 @@
 import '../../style/ProjectCard.css'
-import ProjectCard from "./Cards/ProjectCard";
+import {Chip} from "@mui/material";
+import Carousel from "./Carousel";
 
 const Project = (props: { project: any; projectType: any; }) => {
     return (
@@ -8,27 +9,40 @@ const Project = (props: { project: any; projectType: any; }) => {
                 <div className="summary-container">
                     <h3>{props.project.title}</h3>
                     <h4>{props.project.description}</h4>
-                    <div>
-                        {props.project.demo_link && <h4>{props.project.demo_link}</h4>}
-                    </div>
-                    <div>
-                        {props.project.github_link && <h4>{props.project.github_link}</h4>}
-                    </div>
-                    <div>
+                    <div className="chip-container">
+                        <h4>Stack</h4>
                         {Array.from(props.project.stack).map((item: any) => (
-                            <span key={item}>{item}</span>
+                            <Chip key={item}
+                                  label={item}
+                                  size="small"
+                                  sx={{color: '#fff'}}
+                                  variant="outlined" />
                         ))}
                     </div>
                     <div>
+                        <h4>Keywords</h4>
                         {Array.from(props.project.keywords).map((keyword: any) => (
-                            <span key={keyword}>{keyword}</span>
+                            <Chip key={keyword}
+                                  label={keyword}
+                                  size="small"
+                                  sx={{color: '#fff'}}
+                                  variant="outlined" />
                         ))}
                     </div>
                 </div>
             </div>
             <div className="project-right">
-                <ProjectCard project={props.project}
-                             projectType={props.projectType} />
+                    {props.project.demo_link &&
+                        <a className="web-link" href={props.project.demo_link}>
+                            View the live demo
+                        </a>
+                    }
+                    {props.project.github_link &&
+                        <a className="web-link" href={props.project.github_link}>
+                            View on Github
+                        </a>
+                    }
+                <Carousel media={props.project.media} />
             </div>
         </div>
     )
