@@ -13,7 +13,7 @@ export const projects = {
                 "Node.js"
             ],
             demo_link: "https://noah.coffee/",
-            github_link: "https://example.com",
+            github_link: "https://github.com/noahcorona/noah-dot-coffee",
             media: [
                 {
                     type: "photo",
@@ -30,7 +30,7 @@ export const projects = {
         {
             title: "anoroc.com",
             description: "One of my first ever websites, and a favor" +
-                " for my grandpa - the owner of ANOROC, Inc. I built this" +
+                " for my grandparents - the owners of ANOROC, Inc. I built this" +
                 " website when I was 10 years old, in 2011. While the" +
                 " site is no longer in service, you can still explore the" +
                 " site using the Wayback Machine!",
@@ -44,13 +44,22 @@ export const projects = {
                 "Aerospace",
                 "Commercial manufacturing"
             ],
-            demo_link: "https://example.com",
-            github_link: "https://example.com",
+            demo_link: "https://web.archive.org/web/20130817061837/http://anoroc.com/index.html",
             media: [
                 {
                     type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
+                    source: "/projects/anoroc-dot-com/anoroc_homepage.png",
+                    description: "Anoroc homepage (2011)",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/anoroc-dot-com/anoroc_about.png",
+                    description: "Anoroc 'About us' page (2011)",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/anoroc-dot-com/anoroc_contact.png",
+                    description: "Anoroc contact page (2011)",
                 },
             ],
         },
@@ -105,12 +114,32 @@ export const projects = {
                 "Google Maps API",
                 "Geolocation",
             ],
-            github_link: "https://example.com",
+            github_link: "https://github.com/noahcorona/ucsb-cs184-final-project-app",
             media: [
                 {
                     type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
+                    source: "/projects/geotag-social/geotag_social_authentication.png",
+                    description: "Authentication screen",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/geotag-social/geotag_social_map.png",
+                    description: "Map view and post previews screen",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/geotag-social/geotag_social_capture_photo.png",
+                    description: "Map view and post previews screen",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/geotag-social/geotag_social_post_photo.png",
+                    description: "Map view and post previews screen",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/geotag-social/geotag_social_edit_account.png",
+                    description: "Account settings screen",
                 },
             ],
         },
@@ -191,7 +220,7 @@ export const projects = {
     ],
     embedded: [
         {
-            title: "CUDA (Embedded App)",
+            title: "CUDA",
             description: "CUDA was the 3rd place winner of the " +
                 "2021-2022 UCSB E.C.E. Capstone " +
                 "program. The project goal was to " +
@@ -292,13 +321,22 @@ export const projects = {
             microcontrollers: [
                 "esp32",
             ],
-            demo_link: "https://example.com",
-            github_link: "https://example.com",
             media: [
                 {
                     type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
+                    source: '/projects/reflow-oven/mobile_app_running.jpg',
+                    description: "Mobile app screenshot, taken when the app is actively monitoring a nearby thermocouple via an esp32",
+                },
+                {
+                    type: "photo",
+                    source: '/projects/reflow-oven/thermocouple_demo.jpg',
+                    description: "Mobile app screenshot, taken when the app is actively monitoring a nearby thermocouple via an esp32",
+                },
+                {
+                    type: "video",
+                    source: '/projects/reflow-oven/thermocouple_demo_video.m4v',
+                    description: "An example setup for the thermocouple: a " +
+                        "toaster oven lined with heat-reflective tape",
                 },
             ],
         },
@@ -339,14 +377,9 @@ export const projects = {
                 "Game",
                 "Rational Agents",
             ],
-            demo_link: "https://example.com",
             github_link: "https://example.com",
             media: [
-                {
-                    type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
-                },
+
             ],
         },
         {
@@ -361,14 +394,9 @@ export const projects = {
                 "Classification",
                 "Fashion",
             ],
-            demo_link: "https://example.com",
-            github_link: "https://example.com",
+            demo_link: "https://colab.research.google.com/github/noahcorona/ucsb-165b-fashion-classifier/blob/main/hw4.ipynb",
+            github_link: "https://github.com/noahcorona/ucsb-165b-fashion-classifier",
             media: [
-                {
-                    type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
-                },
             ],
         },
         {
@@ -376,21 +404,15 @@ export const projects = {
             description: "",
             stack: [
                 "Python",
-                "SciKit-learn"
             ],
             keywords: [
-                "MNIST",
                 "Classification",
-                "Fashion"
+                "MatPlotLib",
+                "ML Algorithms"
             ],
-            demo_link: "https://example.com",
-            github_link: "https://example.com",
+            demo_link: "https://colab.research.google.com/github/noahcorona/ucsb-cs165b-linear-classifier/blob/main/hw2.ipynb",
+            github_link: "https://github.com/noahcorona/ucsb-cs165b-linear-classifier",
             media: [
-                {
-                    type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
-                },
             ],
         },
         {
@@ -401,18 +423,10 @@ export const projects = {
                 "SciKit-learn",
             ],
             keywords: [
-                "MNIST",
                 "Classification",
-                "Fashion",
             ],
-            demo_link: "https://example.com",
-            github_link: "https://example.com",
+            github_link: "https://github.com/noahcorona/ucsb-cs165b-naive-bayes-classifier",
             media: [
-                {
-                    type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
-                },
             ],
         },
     ],
@@ -424,19 +438,86 @@ export const projects = {
                 "Python",
             ],
             keywords: [
-                "Signal processing",
-                "Audio",
+                "Audio processing",
                 "Feature analysis",
+                "Short-time Fourier Transform",
+                "Novelty function",
+                "Tempo estimation",
             ],
-            demo_link: "https://example.com",
-            github_link: "https://example.com",
+            demo_link: "https://colab.research.google.com/github/noahcorona/ucsb-ece160-tempo-estimation/blob/main/Mini_Project_2.ipynb",
+            github_link: "https://github.com/noahcorona/ucsb-ece160-tempo-estimation",
             media: [
                 {
                     type: "photo",
-                    source: "https://picsum.photos/200/300",
-                    description: "Random image",
+                    source: "/projects/tempo-estimation/tempo_estimation_tempogram.png",
+                    description: "Tempogram for two 20-second audio " +
+                        "clips, in units of beats per minute vs. seconds",
                 },
             ],
         },
     ],
+    hmi_plc: [
+        {
+            title: "Main-Tie-Main Power Transfer Controller",
+            description: "",
+            stack: [
+                "Ladder Logic",
+                "C#"
+            ],
+            keywords: [
+                "Programmable logic controller",
+                "Human-machine interface",
+                "Power controls",
+            ],
+            media: [
+                {
+                    type: "photo",
+                    source: "/projects/main-tie-main/main_tie_main_enclosure_face.jpg",
+                    description: "The face of the unit's enclosure: the control panel",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/main-tie-main/main_tie_main_enclosure_open.jpg",
+                    description: "The enclosure with the internal wiring visible",
+                },
+            ],
+        },
+        {
+            title: "Pump Monitor and Control System",
+            description: "",
+            stack: [
+                "Ladder Logic",
+                "C#"
+            ],
+            keywords: [
+                "Programmable logic controller",
+                "Human-machine interface",
+                "Data collection",
+                "Histogram",
+                "Alarms"
+            ],
+            media: [
+                {
+                    type: "photo",
+                    source: "/projects/fluid-tech/fluid_tech_authorization.png",
+                    description: "The authorization page of the control panel user interface",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/fluid-tech/fluid_tech_alarms.png",
+                    description: "The alarms page of the control panel user interface (1 of 2)",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/fluid-tech/fluid_tech_alarms_2.png",
+                    description: "The alarms page of the control panel user interface (2 of 2)",
+                },
+                {
+                    type: "photo",
+                    source: "/projects/fluid-tech/fluid_tech_options.png",
+                    description: "The options page of the control panel user interface",
+                },
+            ],
+        },
+    ]
 }

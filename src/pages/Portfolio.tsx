@@ -6,7 +6,7 @@ import {useState} from "react";
 import TabContainer from "../components/Portfolio/TabContainer";
 
 const Portfolio = () => {
-    const {web, mobile, embedded, ml, media} = projects;
+    const {web, mobile, embedded, ml, media, hmi_plc} = projects;
     const [value, setValue] = useState(0);
 
     function handleTabChange(event: any, value: number) {
@@ -23,10 +23,11 @@ const Portfolio = () => {
                       TabIndicatorProps={{style: {backgroundColor: '#fff'}}}
                       onChange={handleTabChange}>
                     <Tab className="tab" label="Web" />
-                    <Tab className="tab" label="Mobile Apps" />
-                    <Tab className="tab" label="Embedded Systems" />
+                    <Tab className="tab" label="Mobile" />
+                    <Tab className="tab" label="Embedded" />
                     <Tab className="tab" label="Machine Learning" />
-                    <Tab className="tab" label="Media Processing" />
+                    <Tab className="tab" label="Multimedia" />
+                    <Tab className="tab" label="HMI & PLC" />
                 </Tabs>
             </div>
             <div>
@@ -63,6 +64,13 @@ const Portfolio = () => {
             {value === 4 &&
                 <TabContainer>
                     {media.map((project: any) =>
+                        <Project key={project.title} project={project} projectType={"media"} />
+                    )}
+                </TabContainer>
+            }
+            {value === 5 &&
+                <TabContainer>
+                    {hmi_plc.map((project: any) =>
                         <Project key={project.title} project={project} projectType={"media"} />
                     )}
                 </TabContainer>
