@@ -2,8 +2,8 @@ export const projects = [
     {
         year: 2022,
         title: "smlr.org",
-        description: "A full-stack MERN app that shortens URLs. " +
-            "Has a documented, public API. ",
+        description: "A full-stack app that shortens URLs and " +
+            "generates QR codes. Also provides a free, documented API. ",
         stack: [
             "MongoDB",
             "Express",
@@ -58,20 +58,10 @@ export const projects = [
         {
             year: 2010,
             title: "anoroc.com",
-            description: "One of my first ever websites, and a favor" +
-                " for my grandparents - the owners of ANOROC, Inc. I built this" +
-                " website when I was 10 years old, in 2011. While the" +
-                " site is no longer in service, you can still explore the" +
-                " site using the Wayback Machine!",
+            description: "One of my first ever projects - a website for a sheet metal manufacturing company named Anoroc, and owned by my grandparents. The website remained in service for years and is visible on the WayBack Machine.",
             stack: [
                 "HTML",
                 "CSS"
-            ],
-            keywords: [
-                "Web design",
-                "Sheet metal",
-                "Aerospace",
-                "Commercial manufacturing"
             ],
             demo_link: "https://web.archive.org/web/20130817061837/http://anoroc.com/index.html",
             media: [
@@ -93,6 +83,7 @@ export const projects = [
             ],
         },
         {
+            year: 2022,
             title: "CUDA",
             description: "CUDA was the 3rd place winner of the " +
                 "2021-2022 UCSB E.C.E. Capstone " +
@@ -108,16 +99,13 @@ export const projects = [
                 "monitor nearby devices and store " +
                 "results in the cloud.",
             stack: [
-                "Javascript",
+                "Python",
+                "JavaScript",
                 "React Native",
-                "Firebase Realtime Database",
+                "Firebase",
                 "Bluetooth Low Energy",
-                "Serial Protocols"
-            ],
-            keywords: [
-                "Medical",
-                "Electrochemical sensing",
-                "Cross-platform",
+                "I2C",
+                "SPI"
             ],
             github_link: "https://github.com/AptitudeCapstone/CUDA",
             media: [
@@ -129,17 +117,14 @@ export const projects = [
             ],
         },
         {
+            year: 2021,
             title: "Geo-tagged Social Media",
             description: "Socialize by uploading, commenting, and " +
                 "rating geo-tagged photo posts",
             stack: [
-                "Javascript"
-            ],
-            keywords: [
+                "Javascript",
                 "React Native",
-                "Cross-platform",
-                "Google Maps API",
-                "Geolocation",
+                "Google Maps API"
             ],
             github_link: "https://github.com/noahcorona/ucsb-cs184-final-project-app",
             media: [
@@ -171,6 +156,7 @@ export const projects = [
             ],
         },
         {
+            year: 2020,
             title: "Thermocouple Monitor",
             description: "Receives Bluetooth Low Energy updates from an " +
                 "esp32 microcontroller and displays the current temperature " +
@@ -204,6 +190,7 @@ export const projects = [
             ],
         },
         {
+            year: 2018,
             title: "Receipt Scanner",
             description: "Scans receipts, performing OCR to aid in the process of " +
                 "organizing business expenses. Allows the user to easily export a " +
@@ -245,57 +232,13 @@ export const projects = [
             ],
         },
         {
-            title: "CUDA",
-            description: "CUDA was the 3rd place winner of the " +
-                "2021-2022 UCSB E.C.E. Capstone " +
-                "program. The project goal was to " +
-                "produce fast and inexpensive " +
-                "medical tests that users can trust. " +
-                "The CUDA Reader is a portable device " +
-                "capable of detecting COVID-19 as " +
-                "well as aiding in the detection of " +
-                "trauma-induced coagulopathy. The " +
-                "device uses a Raspberry Pi to " +
-                "interface with a variety of components, " +
-                "such as a microcontroller and real-time clock. " +
-                "Bluetooth Low Energy is used to communicate " +
-                "the necessary data to nearby devices running the " +
-                "companion CUDA mobile app. This code is private, as it " +
-                "contains proprietary information belonging to " +
-                "Aptitude Medical Systems, Inc.",
-            stack: [
-                "Python"
-            ],
-            keywords: [
-                "Raspberry Pi",
-                "Electrochemical measurement",
-                "Bluetooth Low Energy"
-            ],
-            demo_link: "https://example.com",
-            github_link: "https://example.com",
-            microcontrollers: [
-                "esp32",
-            ],
-            media: [
-                {
-                    type: "photo",
-                    source: "/projects/CUDA/reader.jpeg",
-                    description: "CUDA Reader and collector",
-                },
-            ],
-        },
-        {
+            year: 2020,
             title: "Solar Battery Charger with Active Tracking",
             description: "Personal portfolio and contact website",
             stack: [
-                "Javascript"
-            ],
-            keywords: [
-                "React.js",
-                "Node.js",
-                "servo",
-                "3D printing",
-                "18650",
+                "Javascript",
+                "React JS",
+                "STM32"
             ],
             microcontrollers: [
                 "esp32",
@@ -331,20 +274,15 @@ export const projects = [
             ],
         },
         {
+            year: 2020,
             title: "Thermocouple BLE Transceiver",
             description: "Thermocouple sensor application that also acts as a " +
                 "GATT server, advertising temperature data over Bluetooth " +
                 "Low Energy",
             stack: [
-                "C++"
-            ],
-            keywords: [
+                "C++",
                 "esp32",
-                "Thermocouple",
-                "Bluetooth Low Energy",
-            ],
-            microcontrollers: [
-                "esp32",
+                "Bluetooth Low Energy"
             ],
             media: [
                 {
@@ -366,19 +304,13 @@ export const projects = [
             ],
         },
         {
+            year: 2020,
             title: "Guitar Tuner",
             description: "",
             stack: [
-                "C++"
-            ],
-            keywords: [
-                "Audio processing",
-                "Fast Fourier transforms",
-                "LCD programming",
-                "Embedded UI design"
-            ],
-            microcontrollers: [
+                "C++",
                 "STM32",
+                "LCD via SPI",
             ],
             demo_link: "https://example.com",
             github_link: "https://example.com",
@@ -391,14 +323,13 @@ export const projects = [
             ],
         },
         {
+            year: 2021,
             title: "Pacman Agent",
-            description: "",
+            description: "A rational agent for the common game PacMan. " +
+                "Based on a homework assignment. ",
             stack: [
-                "Python", "scikit-learn"
-            ],
-            keywords: [
-                "Game",
-                "Rational Agents",
+                "Python",
+                "scikit-learn"
             ],
             github_link: "https://example.com",
             media: [
@@ -406,6 +337,7 @@ export const projects = [
             ],
         },
         {
+            year: 2021,
             title: "Fashion Classifier",
             description: "",
             stack: [
@@ -423,6 +355,7 @@ export const projects = [
             ],
         },
         {
+            year: 2021,
             title: "Linear Classifier",
             description: "",
             stack: [
@@ -439,6 +372,7 @@ export const projects = [
             ],
         },
         {
+            year: 2021,
             title: "Naive Bayes Classifier",
             description: "",
             stack: [
@@ -453,6 +387,7 @@ export const projects = [
             ],
         },
         {
+            year: 2022,
             title: "Tempo Estimator",
             description: "",
             stack: [
@@ -477,16 +412,12 @@ export const projects = [
             ],
         },
         {
+            year: 2019,
             title: "Main-Tie-Main Power Transfer Controller",
             description: "",
             stack: [
                 "Ladder Logic",
-                "C#"
-            ],
-            keywords: [
-                "Programmable logic controller",
-                "Human-machine interface",
-                "Power controls",
+                "Schneider combined PLC/HMI"
             ],
             media: [
                 {
@@ -502,18 +433,14 @@ export const projects = [
             ],
         },
         {
+            year: 2017,
             title: "Pump Monitor and Control System",
-            description: "",
+            description: "Data collection Histogram Alarms",
             stack: [
                 "Ladder Logic",
-                "C#"
-            ],
-            keywords: [
-                "Programmable logic controller",
-                "Human-machine interface",
-                "Data collection",
-                "Histogram",
-                "Alarms"
+                "C#",
+                "PLC & HMI",
+                "Modbus"
             ],
             media: [
                 {

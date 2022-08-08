@@ -11,13 +11,18 @@
     margin-top: 1.5em;
     overflow-x: scroll;
     overflow-y: hidden;
-    white-space:nowrap;
+    white-space: nowrap;
 }
 
 .info-badge {
     font-family: 'Courier New', monospace;
     margin-right: 0.5em;
     font-size: 1em;
+    color: #222;
+}
+
+.info-badge:not(:first-child):before {
+    content:  " \B7  ";
 }
 
 /* Project component layout */

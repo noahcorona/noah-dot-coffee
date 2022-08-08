@@ -74,10 +74,9 @@ fieldset {
 }
 
 .Section {
-  padding: 0 5em 5em 5em;
-  margin: auto;
+  margin: auto auto 7em;
   width: 75vw;
-  max-width: 1200px;
+  max-width: 1000px;
   min-width: 292px;
   display: block;
   flex-direction: column;
