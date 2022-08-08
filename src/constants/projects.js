@@ -1,6 +1,34 @@
-export const projects = {
-    web: [
+export const projects = [
+    {
+        year: 2022,
+        title: "smlr.org",
+        description: "A full-stack MERN app that shortens URLs. " +
+            "Has a documented, public API. ",
+        stack: [
+            "MongoDB",
+            "Express",
+            "React.JS",
+            "Node.JS",
+            "HTML",
+            "CSS"
+        ],
+        keywords: [
+            "URL Shortener",
+            "QR Generation",
+            "Public API"
+        ],
+        demo_link: "https://smlr.org/",
+        github_link: "https://github.com/noahcorona/url-shortener",
+        media: [
+            {
+                type: "photo",
+                source: '/projects/smlr-dot-org/smlr_dot_org_homepage.png',
+                description: "URL Shortening service's landing page. ",
+            },
+        ],
+    },
         {
+            year: 2022,
             title: "noah.coffee",
             description: "Personal portfolio website with contact info",
             stack: [
@@ -28,6 +56,7 @@ export const projects = {
             ],
         },
         {
+            year: 2010,
             title: "anoroc.com",
             description: "One of my first ever websites, and a favor" +
                 " for my grandparents - the owners of ANOROC, Inc. I built this" +
@@ -63,8 +92,6 @@ export const projects = {
                 },
             ],
         },
-    ],
-    mobile: [
         {
             title: "CUDA",
             description: "CUDA was the 3rd place winner of the " +
@@ -217,8 +244,6 @@ export const projects = {
                 },
             ],
         },
-    ],
-    embedded: [
         {
             title: "CUDA",
             description: "CUDA was the 3rd place winner of the " +
@@ -365,8 +390,6 @@ export const projects = {
                 },
             ],
         },
-    ],
-    ml: [
         {
             title: "Pacman Agent",
             description: "",
@@ -429,8 +452,6 @@ export const projects = {
             media: [
             ],
         },
-    ],
-    media: [
         {
             title: "Tempo Estimator",
             description: "",
@@ -455,8 +476,6 @@ export const projects = {
                 },
             ],
         },
-    ],
-    hmi_plc: [
         {
             title: "Main-Tie-Main Power Transfer Controller",
             description: "",
@@ -520,4 +539,3 @@ export const projects = {
             ],
         },
     ]
-}

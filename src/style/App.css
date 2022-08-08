@@ -1,5 +1,99 @@
-.Body {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/*
+    Reusable styles, element styles
+ */
+
+
+.decorated {
+  overflow: hidden;
+  text-align: left;
+}
+
+.decorated > span {
+  position: relative;
+  display: inline-block;
+}
+
+.decorated > span:before, .decorated > span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  border-bottom: 2px solid #555;
+  width: 100vw;
+  margin: 0 20px;
+}
+
+.decorated > span:before {
+  right: 100%;
+}
+
+.decorated > span:after {
+  left: 100%;
+}
+
+.bottom-spaced {
+  margin-bottom: 1em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+}
+
+h1 {
+  color: #555;
+}
+
+h2, h3 {
+  color: #555;
+}
+
+a {
+  color: #a50;
+}
+
+a:visited {
+  color: #a50;
+}
+
+fieldset {
+  border: none !important;
+  outline: none !important;
+}
+
+.Section {
+  padding: 0 5em 5em 5em;
   margin: auto;
-  width: 800px;
-  color: #fff;
+  width: 60vw;
+  max-width: 1200px;
+  min-width: 292px;
+  display: block;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Portfolio {
+  color: #555;
+}
+
+.Contact {
+  color: #555;
+}
+
+.Portrait {
+  width: 20vw;
+  height: 20vw;
+  max-width: 250px;
+  max-height: 250px;
+  border-radius: 999em;
+  aspect-ratio: 1;
 }
