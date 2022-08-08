@@ -1,0 +1,40 @@
+h5 {
+    font-size: 1em;
+}
+
+h3 {
+    margin-top: 1em;
+}
+
+.Portrait {
+    width: 20vw;
+    height: 20vw;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 999em;
+    aspect-ratio: 1;
+}
+
+.technology-link-wrapper {
+    font-family: 'Courier New', monospace;
+    font-size: 0.8em;
+}
+
+.technology-link-wrapper > a {
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.technology-link-wrapper > a:hover {
+    text-decoration: underline;
+}
+
+.technology-link {
+    display: block;
+    position: relative;
+    border-radius: 10em;
+    margin-bottom: 10px;
+    padding: 5px 5px 5px 15px;
+}

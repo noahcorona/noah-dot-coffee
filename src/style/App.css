@@ -1,7 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: 'Roboto',
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -65,6 +64,10 @@ a:visited {
   color: #a50;
 }
 
+p {
+  line-height: 1.8em;
+}
+
 fieldset {
   border: none !important;
   outline: none !important;
@@ -73,27 +76,10 @@ fieldset {
 .Section {
   padding: 0 5em 5em 5em;
   margin: auto;
-  width: 60vw;
+  width: 75vw;
   max-width: 1200px;
   min-width: 292px;
   display: block;
   flex-direction: column;
   align-items: center;
-}
-
-.Portfolio {
-  color: #555;
-}
-
-.Contact {
-  color: #555;
-}
-
-.Portrait {
-  width: 20vw;
-  height: 20vw;
-  max-width: 250px;
-  max-height: 250px;
-  border-radius: 999em;
-  aspect-ratio: 1;
 }

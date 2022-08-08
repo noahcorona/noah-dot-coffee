@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Navigation } from "swiper";
-import '../style/Project.css'
+import '../style/Portfolio.css'
 import '../style/Carousel.css'
 import "swiper/css";
 import "swiper/css/pagination";

@@ -1,5 +1,6 @@
 import '../style/NavBar.css';
 import {useLayoutEffect, useRef} from "react";
+import Container from 'react-bootstrap/Container';
 import {AiFillGithub} from "@react-icons/all-files/ai/AiFillGithub";
 import {AiFillLinkedin} from "@react-icons/all-files/ai/AiFillLinkedin";
 import {SiBuymeacoffee} from "@react-icons/all-files/si/SiBuymeacoffee";
@@ -22,7 +23,7 @@ const NavBar = (props: IProps) => {
     }, []);
 
     return (
-        <div ref={ref} className="nav-bar">
+        <Container fluid ref={ref} className="nav-bar">
             <div className="nav-content">
                 <div className="social-bar">
                     <a href="/src/components/pages">
@@ -77,7 +78,7 @@ const NavBar = (props: IProps) => {
                     </ul>
                 </nav>
             </div>
-        </div>
+        </Container>
     )
 }
 

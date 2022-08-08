@@ -1,0 +1,52 @@
+.Portfolio {
+    color: #555;
+}
+
+.project h3 {
+    font-size: 1.5em;
+}
+
+.project-tags {
+    margin-left: 2em;
+    margin-top: 1.5em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space:nowrap;
+}
+
+.info-badge {
+    font-family: 'Courier New', monospace;
+    margin-right: 0.5em;
+    font-size: 1em;
+}
+
+/* Project component layout */
+
+.project {
+    border-radius: 0.5em;
+    padding: 0 1em;
+    color: #555;
+    background-color: #fcfcfc;
+}
+
+/* Right area of project component */
+
+.web-link {
+    display: block;
+    font-family: 'Courier New', monospace;
+    font-size: 1.5em;
+    text-decoration: none;
+    color: #555;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 0.5em;
+    outline: none;
+}
+
+.web-link:visited {
+    color: #555;
+}
+
+.web-link:hover {
+    color: #888;
+}

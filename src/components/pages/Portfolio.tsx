@@ -1,6 +1,7 @@
-import '../../style/App.css';
 import Project from "../Project";
 import {projects} from "../../constants/projects.js";
+import '../../style/App.css';
+import '../../style/Portfolio.css';
 
 const Portfolio = () => {
     return (

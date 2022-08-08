@@ -1,6 +1,7 @@
-import '../../style/App.css';
 import React, {useState} from "react";
 import {Button, Form} from "react-bootstrap";
+import '../../style/App.css';
+import '../../style/Contact.css';
 
 const Contact = () => {
     const [status, setStatus] = useState("Send");
