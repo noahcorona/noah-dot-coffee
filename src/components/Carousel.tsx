@@ -19,18 +19,19 @@ const Carousel = (props: any) => {
         loop={true}
       >
         {props.media.map((item: any) => (
-          <SwiperSlide id={item.source + '_slide'}>
-            {item.type === 'photo' ?
-                            <img src={item.source} alt="img"/> :
-                            <div />}
-            {item.type === 'video' ?
-                            <div className='player-wrapper'>
-                              <ReactPlayer url={item.source}
-                                width='100%'
-                                height='100%'
-                                controls={true} />
-                            </div>:
-                            <div />}
+          <SwiperSlide
+            id={item.source + '_slide'}
+            key={item.source}
+          >
+            {
+              item.type === 'photo' ?
+                <img src={item.source} alt="img"/> :
+                  <ReactPlayer
+                    url={item.source} width='100%'
+                    height='100%'
+                    controls={true}
+                  />
+            }
           </SwiperSlide>
         ))}
       </Swiper>

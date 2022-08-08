@@ -8,6 +8,9 @@ const Portfolio = () => {
    * helper function to sort projects by year
    * @param {object} a - project A
    * @param {object} b - project B
+   * @return {number} pos if a's year earlier than b,
+   *                  0 if equal years,
+   *                  neg if b's year earlier than a
    */
   function order(a: any, b: any) {
     return b.year - a.year;

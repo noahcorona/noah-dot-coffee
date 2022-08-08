@@ -57,22 +57,22 @@ const NavBar = (props: IProps) => {
           <ul className="nav-menu">
             <li className="nav-menu-item">
               <Link className="nav-button" to="/">
-                                About
+                About
               </Link>
             </li>
             <li className="nav-menu-item">
               <Link className="nav-button" to="#portfolio">
-                                Portfolio
+                Portfolio
               </Link>
             </li>
             <li className="nav-menu-item">
               <Link className="nav-button" to="#contact">
-                                Contact
+                Contact
               </Link>
             </li>
             <li className="nav-menu-item">
               <Link className="nav-button" to="/resume/Resume.pdf">
-                                Resume
+                Resume
               </Link>
             </li>
           </ul>

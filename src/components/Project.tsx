@@ -31,14 +31,20 @@ const Project = (props: any) => {
         <Col>
           <div>
             {props.project.demo_link &&
-                            <a className="web-link" href={props.project.demo_link}>
-                              <BsFillArrowUpRightSquareFill />
-                            </a>
+                <a
+                  className="web-link"
+                  href={props.project.demo_link}
+                >
+                  <BsFillArrowUpRightSquareFill />
+                </a>
             }
             {props.project.github_link &&
-                            <a className="web-link" href={props.project.github_link}>
-                              <BsGithub />
-                            </a>
+                <a
+                  className="web-link"
+                  href={props.project.github_link}
+                >
+                  <BsGithub />
+                </a>
             }
           </div>
         </Col>

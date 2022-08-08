@@ -3,13 +3,19 @@ import {Button, Form} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/Contact.css';
 
+const CONTACT_EMAIL = 'noahcorona@gmail.com';
+
 const Contact = () => {
   const [status, setStatus] = useState('Send');
 
+  /**
+   * to-do: function that sends contain info to the requested email
+   * @param {event} e
+   */
   async function handleSubmit(e: any) {
     e.preventDefault();
     setStatus('Sent');
-    console.log(status);
+    console.log(status), CONTACT_EMAIL;
   }
 
   return (
