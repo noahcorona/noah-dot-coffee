@@ -16,12 +16,13 @@ const About = () => {
           <div>
             <h2>Software Engineer</h2>
             <p>
-                I take pride in the software I build. Between
-                professional, academic, and personal projects,
-              {' I\'ve'} been writing software for over a decade.
-              {' I\'m'} specializing in web and mobile development,
-                but enjoy working on embedded and machine learning
-                projects.
+              {'I take pride in the software I build. Between ' +
+                'professional, academic, and personal projects, ' +
+                'I\'ve been writing software for over a decade. ' +
+                'I\'m specializing in web and mobile development, ' +
+                'but enjoy working on embedded and machine learning ' +
+                'projects.'
+              }
             </p>
           </div>
           <img src="/me.jpeg" alt="me" className="Portrait" />
@@ -29,7 +30,7 @@ const About = () => {
       </div>
       <div className="About-Text">
         <p>
-          If {'you\'re'} hiring, please consider {' '}
+          {'If you\'re hiring, please consider'}
           <a href="#contact">
             <u>reaching out</u>{'  '}<AiOutlineArrowRight />
           </a>
@@ -44,19 +45,19 @@ const About = () => {
                 href="#"
                 className="technology-link"
               >
-                {'>'} JavaScript (es6+)
+                {'> JavaScript (es6+)'}
               </a>
               <a
                 href="#"
                 className="technology-link"
               >
-                {'>'} TypeScript
+                {'> TypeScript'}
               </a>
               <a
                 href="#"
                 className="technology-link"
               >
-                {'>'} Swift
+                {'> Swift'}
               </a>
             </div>
           </Col>
@@ -66,19 +67,19 @@ const About = () => {
                 href="#"
                 className="technology-link"
               >
-                {'>'} Python
+                {'> Python'}
               </a>
               <a
                 href="#"
                 className="technology-link"
               >
-                {'>'} Node
+                {'> Node'}
               </a>
               <a
                 href="#"
                 className="technology-link"
               >
-                {'>'} C++
+                {'> C++'}
               </a>
             </div>
           </Col>
@@ -87,26 +88,29 @@ const About = () => {
               <a
                 href="#"
                 className="technology-link"
-              >{'>'} C#
+              >{'> C#'}
               </a>
               <a
                 href="#"
                 className="technology-link"
               >
-                {'>'} SQL
+                {'> SQL'}
               </a>
-              <a href="#" className="technology-link">{'>'} MongoDB</a>
+              <a href="#" className="technology-link">{'> MongoDB'}</a>
             </div>
           </Col>
         </Row>
       </Container>
       <h3>About Me</h3>
-      <p>My interest in software development started in 2010,
-        when I started exploring source code of video game
-        modifications for {'Microsoft\'s'} Xbox platform. In 2022,
-        I graduated from UC, Santa Barbara with a B.S. in
-        Computer Engineering. In the years between, {'I\'ve'}
-        written software professionally, academically, and for fun.</p>
+      <p>
+        {'My interest in software development started in 2010, ' +
+        'when I started exploring source code of video game ' +
+        'modifications for Microsoft\'s Xbox platform. In 2022, ' +
+        'I graduated from UC, Santa Barbara with a B.S. in ' +
+        'Computer Engineering. In the years between, I\'ve ' +
+        'written software professionally, academically, and for fun.'
+        }
+      </p>
       <p>I have been fortunate to work with some great folks,
         like a research team at Aptitude Medical Systems.</p>
     </div>
