@@ -40,20 +40,27 @@ const GalleryModal = (props: {
               loop={true}
             >
               {props.project.media.map((item: any) => (
-                <SwiperSlide
-                  id={item.source + '_slide'}
-                  key={item.source}
-                >
-                  {
-                    item.type === 'photo' ?
-                      <img src={item.source} alt="img"/> :
-                        <ReactPlayer
-                          url={item.source} width='100%'
-                          height='100%'
-                          controls={true}
-                        />
-                  }
-                </SwiperSlide>
+                <>
+                  <SwiperSlide
+                    id={item.source + '_slide'}
+                    key={item.source}
+                  >
+                    <div>
+                      {
+                                  item.type === 'photo' ?
+                                      <img src={item.source} alt="img"/> :
+                                      <ReactPlayer
+                                        url={item.source} width='100%'
+                                        height='100%'
+                                        controls={true}
+                                      />
+                      }
+                    </div>
+                    <div className="gallery-description">
+                      <p>{item.description}</p>
+                    </div>
+                  </SwiperSlide>
+                </>
               ))}
             </Swiper>
           </div>
