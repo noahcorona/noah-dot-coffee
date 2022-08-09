@@ -1,2 +1,2 @@
 # noah.coffee
-An interactive portfolio that showcases my work over the years
+An interactive portfolio built with React.js and Bootstrap. 
