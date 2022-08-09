@@ -4,7 +4,7 @@ import Container from 'react-bootstrap/Container';
 import {AiFillGithub} from '@react-icons/all-files/ai/AiFillGithub';
 import {AiFillLinkedin} from '@react-icons/all-files/ai/AiFillLinkedin';
 import {SiBuymeacoffee} from '@react-icons/all-files/si/SiBuymeacoffee';
-import {Link} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
 
 interface IProps {
     height: number,
@@ -26,7 +26,7 @@ const NavBar = (props: IProps) => {
     <Container fluid ref={ref} className="nav-bar">
       <div className="nav-content">
         <div className="social-bar">
-          <a href="/src/components/pages">
+          <a href="#">
             <img
               src="/android-chrome-192x192.png"
               alt="logo"
@@ -56,24 +56,24 @@ const NavBar = (props: IProps) => {
         <nav className="nav-container">
           <ul className="nav-menu">
             <li className="nav-menu-item">
-              <Link className="nav-button" to="/">
+              <HashLink className="nav-button" to="#about">
                 About
-              </Link>
+              </HashLink>
             </li>
             <li className="nav-menu-item">
-              <Link className="nav-button" to="#portfolio">
+              <HashLink className="nav-button" to="#portfolio">
                 Portfolio
-              </Link>
+              </HashLink>
             </li>
             <li className="nav-menu-item">
-              <Link className="nav-button" to="#contact">
+              <HashLink className="nav-button" to="#contact">
                 Contact
-              </Link>
+              </HashLink>
             </li>
             <li className="nav-menu-item">
-              <Link className="nav-button" to="/resume/Resume.pdf">
+              <a className="nav-button" href="/resume/Resume.pdf">
                 Resume
-              </Link>
+              </a>
             </li>
           </ul>
         </nav>

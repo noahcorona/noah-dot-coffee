@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <Router>
         <NavBar height={navHeight} setHeight={setNavHeight} />
-        <div className="container">
+        <div className="container" id="about">
           <Routes>
             <Route path="/" element={
               <>

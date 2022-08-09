@@ -6,6 +6,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.App {
+  margin-bottom: 8em;
+}
+
 
 /*
     Reusable styles, element styles
@@ -74,7 +78,9 @@ fieldset {
 }
 
 .Section {
-  margin: auto auto 7em;
+  margin: auto;
+  padding-top: 7em;
+  padding-bottom: 5em;
   width: 75vw;
   max-width: 1000px;
   min-width: 292px;

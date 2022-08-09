@@ -15,7 +15,7 @@ const Contact = () => {
   async function handleSubmit(e: any) {
     e.preventDefault();
     setStatus('Sent');
-    console.log(status), CONTACT_EMAIL;
+    console.log(status, CONTACT_EMAIL);
   }
 
   return (

@@ -5,10 +5,7 @@ import '../../style/About.css';
 
 const About = () => {
   return (
-    <div
-      id="about"
-      className="Section"
-    >
+    <div className="Section small-top-pad">
       <div className="decorated bottom-spaced">
         <span><h1>Noah Corona</h1></span>
       </div>
@@ -20,15 +17,15 @@ const About = () => {
               <p>
                 I take pride in the software I build. Between
                 professional, academic, and personal projects,
-                {'I\'ve'} been writing software for over a decade.
-                {'I\'m'} specializing in web and mobile development,
+                {' I\'ve'} been writing software for over a decade.
+                {' I\'m'} specializing in web and mobile development,
                 but enjoy working on embedded and machine learning
                 projects.
               </p>
               <p>
                 If {'you\'re'} hiring, please consider taking a
                 look at <a href="#portfolio">my resume</a> and
-                <a href="#content">feel free to reach out</a>.
+                {' '}<a href="#content">feel free to reach out</a>.
               </p>
             </div>
           </div>
