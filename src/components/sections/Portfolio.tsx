@@ -4,7 +4,7 @@ import {Col, Container, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/Portfolio.css';
 
-const Portfolio = () => {
+const Portfolio = (props: { setGalleryActiveProject: any; }) => {
   /**
    * helper function to sort projects by year
    * @param {object} a - project A
@@ -50,11 +50,15 @@ const Portfolio = () => {
             </Col>
           </Row>
         </Container>
-        {projects.sort(order).map((project: any) =>
-          <Project key={project.title}
-            project={project}
-            projectType={'web'} />,
-        )}
+        {
+          projects.sort(order).map((project: any) =>
+            <Project key={project.title}
+              project={project}
+              projectType={'web'}
+              setGalleryActiveProject={props.setGalleryActiveProject}
+            />,
+          )
+        }
       </div>
     </div>
   );

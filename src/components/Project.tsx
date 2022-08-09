@@ -31,6 +31,10 @@ const Project = (props: any) => {
             <a
               className="web-link"
               href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                props.setGalleryActiveProject(props.project);
+              }}
             >
               <IoIosImages />
             </a>
