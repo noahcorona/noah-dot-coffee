@@ -31,7 +31,8 @@ export const projects = [
     description: 'Personal website with portfolio and contact info',
     stack: [
       'Javascript',
-      'React.js'
+      'TypeScript',
+      'React.js',
     ],
     demo_link: 'https://noah.coffee/',
     github_link: 'https://github.com/noahcorona/noah-dot-coffee',

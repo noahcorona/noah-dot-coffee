@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import {Col, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/About.css';
+// eslint-disable-next-line max-len
 import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
 
 const About = () => {

@@ -44,8 +44,8 @@ const Project = (props: any) => {
             }
             {props.project.demo_link &&
                 <a
-                    className="web-link"
-                    href={props.project.demo_link}
+                  className="web-link"
+                  href={props.project.demo_link}
                 >
                   <BsBoxArrowUpRight />
                 </a>

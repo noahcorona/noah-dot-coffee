@@ -1,11 +1,8 @@
 import Project from '../Project';
 import {projects} from '../../constants/projects.js';
+import {Col, Container, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/Portfolio.css';
-import {Col, Container, Row} from 'react-bootstrap';
-import {IoIosImages} from '@react-icons/all-files/io/IoIosImages';
-import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
-import {BsGithub} from 'react-icons/bs';
 
 const Portfolio = () => {
   /**
