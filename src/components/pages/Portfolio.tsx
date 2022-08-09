@@ -2,6 +2,10 @@ import Project from '../Project';
 import {projects} from '../../constants/projects.js';
 import '../../style/App.css';
 import '../../style/Portfolio.css';
+import {Col, Container, Row} from 'react-bootstrap';
+import {IoIosImages} from '@react-icons/all-files/io/IoIosImages';
+import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
+import {BsGithub} from 'react-icons/bs';
 
 const Portfolio = () => {
   /**
@@ -30,6 +34,25 @@ const Portfolio = () => {
         <h3>Favorites</h3>
         <h3>By Area</h3>
         <h3 className="bottom-spaced">Project Archive</h3>
+        <Container className="top-spaced bottom-spaced">
+          <Row className="gap-2">
+            <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
+              <h5>Year</h5>
+            </Col>
+            <Col xs={2} sm={2} md={2} lg={2} xl={2} className="text-center">
+              <h5>Title</h5>
+            </Col>
+            <Col xs={4} sm={4} md={4} lg={4} xl={4} className="text-center">
+              <h5>Description</h5>
+            </Col>
+            <Col xs={3} sm={3} md={3} lg={3} xl={3} className="text-center">
+              <h5>Tech Stack</h5>
+            </Col>
+            <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
+              <h5>Links</h5>
+            </Col>
+          </Row>
+        </Container>
         {projects.sort(order).map((project: any) =>
           <Project key={project.title}
             project={project}

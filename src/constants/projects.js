@@ -2,15 +2,13 @@ export const projects = [
   {
     year: 2022,
     title: 'smlr.org',
-    description: 'A full-stack app that shortens URLs and ' +
-            'generates QR codes. Also provides a free, documented API. ',
+    description: 'A full-stack URL shortening app. Also ' +
+        'generates QR codes and provides a free, documented API. ',
     stack: [
       'MongoDB',
-      'Express',
-      'React.JS',
-      'Node.JS',
-      'HTML',
-      'CSS',
+      'Express.js',
+      'React.js',
+      'Node.js',
     ],
     keywords: [
       'URL Shortener',
@@ -30,15 +28,10 @@ export const projects = [
   {
     year: 2022,
     title: 'noah.coffee',
-    description: 'Personal portfolio website with contact info',
+    description: 'Personal website with portfolio and contact info',
     stack: [
       'Javascript',
-      'HTML',
-      'CSS',
-    ],
-    keywords: [
-      'React.js',
-      'Node.js',
+      'React.js'
     ],
     demo_link: 'https://noah.coffee/',
     github_link: 'https://github.com/noahcorona/noah-dot-coffee',
@@ -89,19 +82,10 @@ export const projects = [
   {
     year: 2022,
     title: 'CUDA',
-    description: 'CUDA was the 3rd place winner of the ' +
-                '2021-2022 UCSB E.C.E. Capstone ' +
-                'program. The project goal was to ' +
-                'produce fast and inexpensive ' +
-                'medical tests that users can trust. ' +
-                'The CUDA Reader is a portable device ' +
+    description: 'The CUDA Reader is a portable device ' +
                 'capable of detecting COVID-19 as ' +
                 'well as aiding in the detection of ' +
-                'trauma-induced coagulopathy. The ' +
-                'CUDA Reader’s companion, a cross-platform ' +
-                'mobile app, allows users to ' +
-                'monitor nearby devices and store ' +
-                'results in the cloud.',
+                'trauma-induced coagulopathy.',
     stack: [
       'Python',
       'JavaScript',

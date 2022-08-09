@@ -2,6 +2,7 @@ import Container from 'react-bootstrap/Container';
 import {Col, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/About.css';
+import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
 
 const About = () => {
   return (
@@ -13,24 +14,25 @@ const About = () => {
         <div className="d-flex gap-4">
           <div>
             <h2>Software Engineer</h2>
-            <div>
-              <p>
+            <p>
                 I take pride in the software I build. Between
                 professional, academic, and personal projects,
-                {' I\'ve'} been writing software for over a decade.
-                {' I\'m'} specializing in web and mobile development,
+              {' I\'ve'} been writing software for over a decade.
+              {' I\'m'} specializing in web and mobile development,
                 but enjoy working on embedded and machine learning
                 projects.
-              </p>
-              <p>
-                If {'you\'re'} hiring, please consider taking a
-                look at <a href="#portfolio">my resume</a> and
-                {' '}<a href="#content">feel free to reach out</a>.
-              </p>
-            </div>
+            </p>
           </div>
           <img src="/me.jpeg" alt="me" className="Portrait" />
         </div>
+      </div>
+      <div className="About-Text">
+        <p>
+          If {'you\'re'} hiring, please consider {' '}
+          <a href="#contact">
+            <u>reaching out</u>{'  '}<AiOutlineArrowRight />
+          </a>
+        </p>
       </div>
       <h3>Technologies I work with</h3>
       <Container fluid>

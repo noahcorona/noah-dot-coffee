@@ -1,49 +1,53 @@
 import '../style/Portfolio.css';
-import {BsFillArrowUpRightSquareFill, BsGithub} from 'react-icons/bs';
+import {BsGithub} from 'react-icons/bs';
 import {Col, Container, Row} from 'react-bootstrap';
+import {IoIosImages} from '@react-icons/all-files/io/IoIosImages';
+import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 
 const Project = (props: any) => {
   return (
-    <Container className="bottom-spaced">
+    <Container className="top-spaced bottom-spaced">
       <Row className="gap-2">
-        <Col className="align-self-center">
+        <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
           <h6>{props.project.year}</h6>
         </Col>
-        <Col xs={8} md={9} lg={9} xl={10}>
-          <div className="project">
-            <div className="d-flex justify-content-between">
-              <h3>{props.project.title + '  '}</h3>
-              <div className="project-tags">
-                {
-                  Array.from(props.project.stack).map((item: any) => (
-                    <span className="info-badge" key={item}>
-                      {item}
-                    </span>
-                  ))
-                }
-              </div>
-            </div>
-            <div className="d-flex justify-content-between gap-4">
-              <p>{props.project.description}</p>
-            </div>
-          </div>
+        <Col xs={2} sm={2} md={2} lg={2} xl={2} className="text-center">
+          <h5>{props.project.title}</h5>
         </Col>
-        <Col>
+        <Col xs={4} sm={4} md={4} lg={4} xl={4} className="text-center">
+          <p>{props.project.description}</p>
+        </Col>
+        <Col xs={3} sm={3} md={3} lg={3} xl={3} className="text-center">
+          {
+            Array.from(props.project.stack).map((item: any) => (
+              <span className="info-badge" key={item}>
+                {item}
+              </span>
+            ))
+          }
+        </Col>
+        <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
           <div>
-            {props.project.demo_link &&
-                <a
-                  className="web-link"
-                  href={props.project.demo_link}
-                >
-                  <BsFillArrowUpRightSquareFill />
-                </a>
-            }
+            <a
+              className="web-link"
+              href="#"
+            >
+              <IoIosImages />
+            </a>
             {props.project.github_link &&
                 <a
                   className="web-link"
                   href={props.project.github_link}
                 >
                   <BsGithub />
+                </a>
+            }
+            {props.project.demo_link &&
+                <a
+                    className="web-link"
+                    href={props.project.demo_link}
+                >
+                  <BsBoxArrowUpRight />
                 </a>
             }
           </div>
