@@ -52,10 +52,9 @@ export const projects = [
   {
     year: 2010,
     title: 'anoroc.com',
-    description: 'One of my first ever projects - a website for ' +
-        'a sheet metal manufacturing company named Anoroc, and ' +
-        'owned by my grandparents. The website remained in ' +
-        'service for years and is visible on the WayBack Machine.',
+    description: 'A static website for a sheet metal manufacturing ' +
+        'company. The website remained in service for years and ' +
+        'is archived on the WayBack Machine.',
     stack: [
       'HTML',
       'CSS',
@@ -92,7 +91,7 @@ export const projects = [
       'JavaScript',
       'React Native',
       'Firebase',
-      'Bluetooth Low Energy',
+      'Bluetooth',
       'I2C',
       'SPI',
     ],
@@ -146,43 +145,6 @@ export const projects = [
     ],
   },
   {
-    year: 2020,
-    title: 'Thermocouple Monitor',
-    description: 'Receives Bluetooth Low Energy updates from an ' +
-                'esp32 microcontroller and displays the current' +
-        ' temperature ' +
-                'for the user.',
-    stack: [
-      'Swift',
-    ],
-    keywords: [
-      'iOS',
-      'Thermocouple',
-      'Bluetooth Low Energy',
-      'esp32'],
-    github_link: 'https://example.com',
-    media: [
-      {
-        type: 'photo',
-        source: '/projects/reflow-oven/mobile_app_running.jpg',
-        description: 'Mobile app screenshot, taken when the app ' +
-            'is actively monitoring a nearby thermocouple via an esp32',
-      },
-      {
-        type: 'photo',
-        source: '/projects/reflow-oven/thermocouple_demo.jpg',
-        description: 'Mobile app screenshot, taken when the app ' +
-            'is actively monitoring a nearby thermocouple via an esp32',
-      },
-      {
-        type: 'video',
-        source: '/projects/reflow-oven/thermocouple_demo_video.m4v',
-        description: 'An example setup for the thermocouple: a ' +
-                        'toaster oven lined with heat-reflective tape',
-      },
-    ],
-  },
-  {
     year: 2018,
     title: 'Receipt Scanner',
     description: 'Scans receipts, performing OCR to aid in the process of ' +
@@ -192,10 +154,6 @@ export const projects = [
     stack: [
       'Swift',
     ],
-    keywords: [
-      'iOS',
-      'Computer vision',
-      'Optical character recognition'],
     github_link: 'https://example.com',
     media: [
       {
@@ -275,13 +233,15 @@ export const projects = [
   {
     year: 2020,
     title: 'Thermocouple BLE Transceiver',
-    description: 'Thermocouple sensor application that also acts as a ' +
-                'GATT server, advertising temperature data over Bluetooth ' +
-                'Low Energy',
+    description: 'An esp32 application acts as a GATT server, ' +
+                'advertising temperature data over Bluetooth ' +
+                'Low Energy. An iOS application receives updates' +
+                ' and displays the temperature to the user. ',
     stack: [
       'C++',
+      'Swift',
       'esp32',
-      'Bluetooth Low Energy',
+      'Bluetooth',
     ],
     media: [
       {
@@ -306,8 +266,10 @@ export const projects = [
   },
   {
     year: 2020,
-    title: 'Guitar Tuner',
-    description: '',
+    title: 'Chromatic Tuner',
+    description: 'A chromatic tuner built using Fourier transforms ' +
+        'running on an STM32. Outputs nearest note on LCD using ' +
+        'the SPI serial protocol. ',
     stack: [
       'C++',
       'STM32',
@@ -330,7 +292,7 @@ export const projects = [
                 'Based on a homework assignment. ',
     stack: [
       'Python',
-      'scikit-learn',
+      'SciKit Learn',
     ],
     github_link: 'https://example.com',
     media: [
@@ -340,15 +302,12 @@ export const projects = [
   {
     year: 2021,
     title: 'Fashion Classifier',
-    description: '',
+    description: 'A classifier that predicts clothing article type. ' +
+        'The model is built using SciKit Learn and trained using ' +
+        'the MNIST Fashion dataset. MNIST fashion items. ',
     stack: [
       'Python',
-      'scikit-learn',
-    ],
-    keywords: [
-      'MNIST',
-      'Classification',
-      'Fashion',
+      'SciKit Learn',
     ],
     demo_link: 'https://colab.research.google.com/github/noahcorona/ucsb-165b-fashion-classifier/blob/main/hw4.ipynb',
     github_link: 'https://github.com/noahcorona/ucsb-165b-fashion-classifier',
@@ -358,14 +317,10 @@ export const projects = [
   {
     year: 2021,
     title: 'Linear Classifier',
-    description: '',
+    description: 'A basic linear classifier implementation in Python ' +
+        'using no external libraries.',
     stack: [
       'Python',
-    ],
-    keywords: [
-      'Classification',
-      'MatPlotLib',
-      'ML Algorithms',
     ],
     demo_link: 'https://colab.research.google.com/github/noahcorona/ucsb-cs165b-linear-classifier/blob/main/hw2.ipynb',
     github_link: 'https://github.com/noahcorona/ucsb-cs165b-linear-classifier',
@@ -375,7 +330,8 @@ export const projects = [
   {
     year: 2021,
     title: 'Naive Bayes Classifier',
-    description: '',
+    description: 'An implementation of a Naive Bayes Classifier using the ' +
+        'SciKit Learn library.',
     stack: [
       'Python',
       'SciKit-learn',
@@ -390,9 +346,12 @@ export const projects = [
   {
     year: 2022,
     title: 'Tempo Estimator',
-    description: '',
+    description: 'A tempo estimator implemented in Python, using' +
+        'a novelty function and the short-time Fourier transform. ' +
+        'Predicts the beats per minute (BPM) of audio samples. ',
     stack: [
       'Python',
+      'Essentia',
     ],
     keywords: [
       'Audio processing',
@@ -415,10 +374,13 @@ export const projects = [
   {
     year: 2019,
     title: 'Main-Tie-Main Power Transfer Controller',
-    description: '',
+    description: 'A main-tie-main scheme for power transfer. ' +
+        'This project uses Schneider technology to implement ' +
+        'a power transfer controller with a user-friendly touch' +
+        ' screen interface.',
     stack: [
       'Ladder Logic',
-      'Schneider combined PLC/HMI',
+      'Schneider Magelis PLC/HMI',
     ],
     media: [
       {

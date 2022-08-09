@@ -20,8 +20,8 @@ const About = () => {
                 'professional, academic, and personal projects, ' +
                 'I\'ve been writing software for over a decade. ' +
                 'I\'m specializing in web and mobile development, ' +
-                'and enjoy working on embedded and machine learning ' +
-                'projects.'
+                'and also enjoy working on embedded and machine ' +
+                'learning projects.'
               }
             </p>
           </div>

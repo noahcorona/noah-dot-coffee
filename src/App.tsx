@@ -4,10 +4,10 @@ import {
   Route,
 } from 'react-router-dom';
 import NavBar from './components/NavBar';
-import Portfolio from './components/pages/Portfolio';
-import About from './components/pages/About';
-import Contact from './components/pages/Contact';
-import Error404 from './components/pages/Error404';
+import Portfolio from './components/sections/Portfolio';
+import About from './components/sections/About';
+import Contact from './components/sections/Contact';
+import Error404 from './components/sections/Error404';
 import {useState} from 'react';
 import './style/App.css';
 

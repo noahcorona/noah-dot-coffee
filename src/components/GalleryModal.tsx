@@ -1,9 +1,16 @@
 import {DetailedHTMLProps, HTMLAttributes, RefObject, ReactNode} from 'react';
 import {Badge, Button, Modal, ModalProps} from 'react-bootstrap';
 import {Omit, BsPrefixProps} from 'react-bootstrap/esm/helpers';
-import Carousel from './Carousel';
+import {Swiper, SwiperSlide} from 'swiper/react/swiper-react';
+import {Navigation, Pagination} from 'swiper';
+import ReactPlayer from 'react-player';
+import '../style/Portfolio.css';
+import '../style/GalleryModal.css';
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
-const ProjectModal = (props: JSX.IntrinsicAttributes &
+const GalleryModal = (props: JSX.IntrinsicAttributes &
     Omit<Pick<DetailedHTMLProps<HTMLAttributes<HTMLDivElement>,
     HTMLDivElement>, 'key' | keyof HTMLAttributes<HTMLDivElement>> &
     {
@@ -30,7 +37,32 @@ const ProjectModal = (props: JSX.IntrinsicAttributes &
             <div>
               <h3>{props.project.title}</h3>
               <p>{props.project.description}</p>
-              <Carousel media={props.project.media}/>
+              <div className="swiperArea">
+                <Swiper
+                  pagination={{type: 'fraction'}}
+                  navigation={true}
+                  modules={[Pagination, Navigation]}
+                  className="mySwiper"
+                  loop={true}
+                >
+                  {props.project.media.map((item: any) => (
+                    <SwiperSlide
+                      id={item.source + '_slide'}
+                      key={item.source}
+                    >
+                      {
+                          item.type === 'photo' ?
+                              <img src={item.source} alt="img"/> :
+                              <ReactPlayer
+                                url={item.source} width='100%'
+                                height='100%'
+                                controls={true}
+                              />
+                      }
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
             </div>
             <div>
               <h3>Stack</h3>
@@ -72,4 +104,4 @@ const ProjectModal = (props: JSX.IntrinsicAttributes &
   );
 };
 
-export default ProjectModal;
+export default GalleryModal;
