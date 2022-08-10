@@ -32,7 +32,9 @@ const About = () => {
         <p>
           {'If you\'re hiring, please consider'}
           <a href="#contact">
-            <u>reaching out</u>{'  '}<AiOutlineArrowRight />
+            <u>reaching out</u>
+            {'  '}
+            <AiOutlineArrowRight />
           </a>
         </p>
       </div>
@@ -152,9 +154,9 @@ const About = () => {
             'on an '
           }
           <a href="#">independent project</a>
-          {
-            ' and contribute to some of Powercon\'s commercials projects.  '
-          }
+          and contribute to some of
+          <a href="#">{'Powercon\'s commercials projects'}</a>
+          .
         </p>
       </div>
     </div>

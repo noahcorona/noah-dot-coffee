@@ -19,7 +19,7 @@ export const projects = [
       {
         type: 'photo',
         source: '/projects/smlr-dot-org/smlr_dot_org_homepage.png',
-        description: 'URL Shortening service\'s landing page. ',
+        description: 'URL Shortening service\'s landing page.',
       },
     ],
   },
@@ -29,7 +29,8 @@ export const projects = [
       'web',
     ],
     title: 'noah.coffee',
-    description: 'Personal website with portfolio and contact info',
+    description: 'A responsive personal website with a portfolio, ' +
+        'contact form, and resume link.',
     stack: [
       'Javascript',
       'TypeScript',

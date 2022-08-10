@@ -28,20 +28,44 @@
 
 /* Project component layout */
 
-.project-card {
-    width: calc(50% - 1em);
-    padding: 1.25em;
-    margin-bottom: 5%;
-    background-color: rgba(0, 0, 0, 0.05);
+.project-medium {
+    margin-bottom: 1em;
+    margin-top: 1em;
     border-radius: 0.5em;
+    position:relative;
 }
 
-.project {
-    border-radius: 0.5em;
-    padding: 0 1em;
-    color: #555;
-    background-color: #fcfcfc;
+.project-medium-card-wrapper {
+    width: 50%;
+    padding: 1em;
+    vertical-align: top;
+    display: inline-flex;
 }
+
+@media screen and (max-width: 800px) {
+    .project-medium-card-wrapper {
+        width: 100%;
+    }
+}
+
+.project-medium-card {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.55);
+    transition-duration: 150ms;
+}
+
+.project-medium-card:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.project-medium-card p {
+    margin: 0;
+}
+
+.card-links {
+    padding-left: 1em;
+}
+
 
 .filter-links a {
     padding-left: 1em;
@@ -78,9 +102,7 @@
     font-size: 1.5em;
     text-decoration: none;
     color: #555;
-    padding-top: 0.25em;
-    padding-bottom: 0.25em;
-    padding-left: 0.5em;
+    padding: 0.25em 0.5em;
     outline: none;
 }
 
