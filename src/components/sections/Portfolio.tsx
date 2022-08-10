@@ -109,31 +109,13 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
           </a>
           <a
             href="#"
-            onClick={(e) => handleFilterClick(e, 'web')}
+            onClick={(e) => handleFilterClick(e, null)}
           >
             View All
           </a>
         </h5>
         {
-          !condensedView ? <>
-            {
-              currentProjects && currentProjects
-                  .map((project: any) => {
-                    return (
-                      <ProjectMedium
-                        key={project.title}
-                        project={project}
-                        projectType={'web'}
-                        setGalleryActiveProject={
-                          props.setGalleryActiveProject
-                        }
-                      />
-                    );
-                  },
-                  )
-            }
-          </> :
-          <>
+          condensedView &&
             <Container className="top-spaced bottom-spaced">
               <Row className="gap-2">
                 <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
@@ -153,19 +135,27 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
                 </Col>
               </Row>
             </Container>
-            {
-              projects
-                  .sort(order)
-                  .map((project: any) =>
-                    <ProjectSmall key={project.title}
-                      project={project}
-                      projectType={'web'}
-                      setGalleryActiveProject={props.setGalleryActiveProject}
-                    />,
-                  )
-            }
-          </>
         }
+        {
+          currentProjects && currentProjects
+              .map((project: any) => (condensedView ?
+                          <ProjectSmall
+                            key={project.title}
+                            project={project}
+                            projectType={'web'}
+                            setGalleryActiveProject={
+                              props.setGalleryActiveProject
+                            }
+                          /> :
+                          <ProjectMedium
+                            key={project.title}
+                            project={project}
+                            projectType={'web'}
+                            setGalleryActiveProject={
+                              props.setGalleryActiveProject
+                            }
+                          />
+              ))}
       </div>
     </div>
   );
