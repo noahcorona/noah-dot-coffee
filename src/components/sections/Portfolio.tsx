@@ -92,7 +92,7 @@ const Portfolio = (props: {
             )
           }
         </div>
-        <h5 className="filter-links d-flex justify-content-between">
+        <h5 className="filter-links">
           <span>{'Filter: '}</span>
           <a
             href="#"
