@@ -1,5 +1,5 @@
 .nav-bar {
-    padding: 20px 0;
+    padding: 1.25em;
     position: fixed;
     top: 0;
     z-index: 100;
@@ -72,28 +72,6 @@
 .nav-button:hover {
     color: rgba(170, 85, 0, 0.62);
     border-radius: 0.25em;
-}
-
-.nav-logo {
-    height: 1.75em;
-    width: 1.75em;
-}
-
-.nav-logo-container {
-    background-color: #666;
-    border-radius: 2em;
-    padding: 0.3em 0.25em 0.2em 0.25em;
-    margin-left: 1em;
-    display: inline-block;
-}
-
-.nav-right {
-    display: flex;
-}
-
-.nav-left {
-    display: flex;
-    align-items: center;
 }
 
 .social-bar {

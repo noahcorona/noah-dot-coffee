@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: 'Roboto',
+  font-family: 'Exo',
   sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,8 +14,12 @@ body {
     Reusable styles, element styles
  */
 
+.text-right {
+  text-align: right;
+}
+
 .courier {
-  font-face: 'Courier New', monospace;
+  font-family: 'Courier New', monospace;
 }
 
 .decorated {
