@@ -1,4 +1,4 @@
-import {useEffect, useLayoutEffect, useRef, useState} from 'react';
+import {useLayoutEffect, useRef} from 'react';
 import {AiFillGithub} from '@react-icons/all-files/ai/AiFillGithub';
 import {AiFillLinkedin} from '@react-icons/all-files/ai/AiFillLinkedin';
 import {SiBuymeacoffee} from '@react-icons/all-files/si/SiBuymeacoffee';
@@ -8,28 +8,8 @@ import {Nav, Navbar} from 'react-bootstrap';
 import '../style/Navigation.css';
 
 const Navigation = (props: any) => {
-  // bookkeeping for window size to toggle hamburger nav
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
-
   // bookkeeping for navbar height to for proper scroll behavior
   const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    /**
-    * Resize update handler to track window width
-    * Used to modify the navigation bar for mobile
-    * devices and narrow windows
-    */
-    function handleWindowResize() {
-      setWindowSize(window.innerWidth);
-    }
-
-    window.addEventListener('resize', handleWindowResize);
-
-    return () => {
-      window.removeEventListener('resize', handleWindowResize);
-    };
-  }, []);
 
   useLayoutEffect(() => {
     if (!ref.current || !ref.current.clientHeight) {
@@ -39,7 +19,7 @@ const Navigation = (props: any) => {
     props.setHeight(ref.current.clientHeight);
   }, []);
 
-  if (windowSize > 800) {
+  if (props.windowSize > 800) {
     return (
       <Container fluid ref={ref} className="nav-bar">
         <div className="nav-content">

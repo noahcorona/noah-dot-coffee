@@ -36,10 +36,15 @@
 }
 
 .project-medium-card-wrapper {
-    width: 50%;
-    padding: 1em;
+    width: calc(50% - 2em);
+    margin: 1em;
     vertical-align: top;
     display: inline-flex;
+}
+
+.project-medium-card-wrapper:hover {
+    margin: 1.25em 0.5em 0.75em 1.5em;
+    transition-duration: 150ms;
 }
 
 @media screen and (max-width: 800px) {
@@ -59,13 +64,24 @@
 }
 
 .project-medium-card p {
-    margin: 0;
+    margin-top: 1em;
 }
 
 .card-links {
     padding-left: 1em;
 }
 
+.stack-area {
+    margin-top: 1em;
+    border-top: 1px solid #ccc;
+    padding: 1em;
+    font-family: 'New Courier', monospace;
+    text-align: center;
+}
+
+.stack-area span {
+    padding: 0.25em;
+}
 
 .filter-links a {
     padding-left: 1em;

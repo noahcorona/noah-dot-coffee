@@ -16,13 +16,15 @@ const ProjectMedium = (props: any) => {
           </h4>
         </div>
         <p>{props.project.description}</p>
-        {
-          Array.from(props.project.stack).map((item: any) => (
-            <span key={item}>
-              {item + ' '}
-            </span>
-          ))
-        }
+        <div className="stack-area">
+          {
+            Array.from(props.project.stack).map((item: any) => (
+              <span key={item}>
+                {item + ' '}
+              </span>
+            ))
+          }
+        </div>
       </div>
       <div className="card-links">
         <a

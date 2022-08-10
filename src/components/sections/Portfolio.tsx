@@ -8,7 +8,10 @@ import {BiBookContent} from '@react-icons/all-files/bi/BiBookContent';
 import {BiListUl} from '@react-icons/all-files/bi/BiListUl';
 import {useEffect, useState} from 'react';
 
-const Portfolio = (props: { setGalleryActiveProject: any; }) => {
+const Portfolio = (props: {
+  windowSize: any,
+  setGalleryActiveProject: any;
+}) => {
   const [projectFilter, setProjectFilter] = useState<any>(null);
   const [currentProjects, setCurrentProjects] = useState<any>(null);
   const [condensedView, setCondensedView] = useState<any>(false);
@@ -60,30 +63,34 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
         <h3>Favorites</h3>
         <div className="d-flex justify-content-between">
           <h3 className="bottom-spaced">Project Archives</h3>
-          <h3 className="filter-icons bottom-spaced">
-            <a
-              href="#"
-              onClick={(e) => handleViewTypeClick(e, true)}
-            >
-              <BiListUl
-                className={
-                  condensedView ?
-                      'filter-icon-selected filter-icon' :
-                      'filter-icon'}
-              />
-            </a>
-            <a
-              href="#"
-              onClick={(e) => handleViewTypeClick(e, false)}
-            >
-              <BiBookContent
-                className={
-                    condensedView ?
-                        'filter-icon' :
-                        'filter-icon-selected filter-icon'}
-              />
-            </a>
-          </h3>
+          {
+            props.windowSize > 800 && (
+              <h3 className="filter-icons bottom-spaced">
+                <a
+                  href="#"
+                  onClick={(e) => handleViewTypeClick(e, true)}
+                >
+                  <BiListUl
+                    className={
+                            condensedView ?
+                                'filter-icon-selected filter-icon' :
+                                'filter-icon'}
+                  />
+                </a>
+                <a
+                  href="#"
+                  onClick={(e) => handleViewTypeClick(e, false)}
+                >
+                  <BiBookContent
+                    className={
+                            condensedView ?
+                                'filter-icon' :
+                                'filter-icon-selected filter-icon'}
+                  />
+                </a>
+              </h3>
+            )
+          }
         </div>
         <h5 className="filter-links d-flex justify-content-between">
           <span>{'Filter: '}</span>
@@ -125,7 +132,7 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
           </a>
         </h5>
         {
-          condensedView &&
+          (condensedView && props.windowSize > 800) &&
             <Container className="top-spaced bottom-spaced">
               <Row className="gap-2">
                 <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
@@ -148,8 +155,10 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
         }
         {
           currentProjects && currentProjects
-              .map((project: any) => (condensedView ?
-                          <ProjectSmall
+              .map((project: any) => (
+                  ((condensedView && props.windowSize < 800) ||
+                      !condensedView) ?
+                          <ProjectMedium
                             key={project.title}
                             project={project}
                             projectType={'web'}
@@ -157,7 +166,7 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
                               props.setGalleryActiveProject
                             }
                           /> :
-                          <ProjectMedium
+                          <ProjectSmall
                             key={project.title}
                             project={project}
                             projectType={'web'}
