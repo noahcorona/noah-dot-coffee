@@ -11,6 +11,7 @@ import {useEffect, useState} from 'react';
 const Portfolio = (props: { setGalleryActiveProject: any; }) => {
   const [projectFilter, setProjectFilter] = useState<any>(null);
   const [currentProjects, setCurrentProjects] = useState<any>(null);
+  const [condensedView, setCondensedView] = useState<any>(false);
 
   /**
    * helper function to sort projects by year
@@ -27,6 +28,11 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
   const handleFilterClick = (e: any, filterText: any) => {
     e.preventDefault();
     setProjectFilter(filterText);
+  };
+
+  const handleViewTypeClick = (e: any, condensed: any) => {
+    e.preventDefault();
+    setCondensedView(condensed);
   };
 
   useEffect(() => {
@@ -55,8 +61,18 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
         <div className="d-flex justify-content-between">
           <h3 className="bottom-spaced">Project Archives</h3>
           <h3 className="filter-icons bottom-spaced">
-            <BiListUl className="filter-icon" />
-            <BiBookContent className="filter-icon" />
+            <a
+              href="#"
+              onClick={(e) => handleViewTypeClick(e, true)}
+            >
+              <BiListUl className="filter-icon" />
+            </a>
+            <a
+              href="#"
+              onClick={(e) => handleViewTypeClick(e, false)}
+            >
+              <BiBookContent className="filter-icon" />
+            </a>
           </h3>
         </div>
         <h5 className="filter-links d-flex justify-content-between">
@@ -99,50 +115,56 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
           </a>
         </h5>
         {
-          currentProjects && currentProjects
-              .map((project: any) => {
-                return (
-                  <ProjectMedium
-                    key={project.title}
-                    project={project}
-                    projectType={'web'}
-                    setGalleryActiveProject={
-                      props.setGalleryActiveProject
-                    }
-                  />
-                );
-              },
-              )
-        }
-        <Container className="top-spaced bottom-spaced">
-          <Row className="gap-2">
-            <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
-              <h5>Year</h5>
-            </Col>
-            <Col xs={2} sm={2} md={2} lg={2} xl={2} className="text-center">
-              <h5>Title</h5>
-            </Col>
-            <Col xs={4} sm={4} md={4} lg={4} xl={4} className="text-center">
-              <h5>Description</h5>
-            </Col>
-            <Col xs={3} sm={3} md={3} lg={3} xl={3} className="text-center">
-              <h5>Tech Stack</h5>
-            </Col>
-            <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
-              <h5>Links</h5>
-            </Col>
-          </Row>
-        </Container>
-        {
-          projects
-              .sort(order)
-              .map((project: any) =>
-                <ProjectSmall key={project.title}
-                  project={project}
-                  projectType={'web'}
-                  setGalleryActiveProject={props.setGalleryActiveProject}
-                />,
-              )
+          !condensedView ? <>
+            {
+              currentProjects && currentProjects
+                  .map((project: any) => {
+                    return (
+                      <ProjectMedium
+                        key={project.title}
+                        project={project}
+                        projectType={'web'}
+                        setGalleryActiveProject={
+                          props.setGalleryActiveProject
+                        }
+                      />
+                    );
+                  },
+                  )
+            }
+          </> :
+          <>
+            <Container className="top-spaced bottom-spaced">
+              <Row className="gap-2">
+                <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
+                  <h5>Year</h5>
+                </Col>
+                <Col xs={2} sm={2} md={2} lg={2} xl={2} className="text-center">
+                  <h5>Title</h5>
+                </Col>
+                <Col xs={4} sm={4} md={4} lg={4} xl={4} className="text-center">
+                  <h5>Description</h5>
+                </Col>
+                <Col xs={3} sm={3} md={3} lg={3} xl={3} className="text-center">
+                  <h5>Tech Stack</h5>
+                </Col>
+                <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
+                  <h5>Links</h5>
+                </Col>
+              </Row>
+            </Container>
+            {
+              projects
+                  .sort(order)
+                  .map((project: any) =>
+                    <ProjectSmall key={project.title}
+                      project={project}
+                      projectType={'web'}
+                      setGalleryActiveProject={props.setGalleryActiveProject}
+                    />,
+                  )
+            }
+          </>
         }
       </div>
     </div>
