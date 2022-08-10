@@ -53,7 +53,21 @@
 }
 
 .filter-icon {
-    margin-right: 1em;
+    margin-left: 0.5em;
+    color: #555;
+    font-size: 1.5em;
+    margin-top: -0.25em;
+    padding: 4px;
+    overflow: visible;
+    border-radius: 0.25em;
+}
+
+.filter-icon-selected {
+    background-color: rgba(85, 85, 85, 0.15);
+}
+
+.filter-icon:hover {
+    background-color: rgba(85, 85, 85, 0.25);
 }
 
 /* Right area of project component */

@@ -65,13 +65,23 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
               href="#"
               onClick={(e) => handleViewTypeClick(e, true)}
             >
-              <BiListUl className="filter-icon" />
+              <BiListUl
+                className={
+                  condensedView ?
+                      'filter-icon-selected filter-icon' :
+                      'filter-icon'}
+              />
             </a>
             <a
               href="#"
               onClick={(e) => handleViewTypeClick(e, false)}
             >
-              <BiBookContent className="filter-icon" />
+              <BiBookContent
+                className={
+                    condensedView ?
+                        'filter-icon' :
+                        'filter-icon-selected filter-icon'}
+              />
             </a>
           </h3>
         </div>
