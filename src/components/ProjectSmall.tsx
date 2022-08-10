@@ -4,7 +4,7 @@ import {Col, Container, Row} from 'react-bootstrap';
 import {IoIosImages} from '@react-icons/all-files/io/IoIosImages';
 import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 
-const Project = (props: any) => {
+const ProjectSmall = (props: any) => {
   return (
     <Container className="top-spaced bottom-spaced">
       <Row className="gap-2">
@@ -61,4 +61,4 @@ const Project = (props: any) => {
   );
 };
 
-export default Project;
+export default ProjectSmall;

@@ -1,10 +1,17 @@
-import Project from '../Project';
+import ProjectSmall from '../ProjectSmall';
 import {projects} from '../../constants/projects.js';
 import {Col, Container, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/Portfolio.css';
+import ProjectMedium from '../ProjectMedium';
+import {BiBookContent} from '@react-icons/all-files/bi/BiBookContent';
+import {BiListUl} from '@react-icons/all-files/bi/BiListUl';
+import {useEffect, useState} from 'react';
 
 const Portfolio = (props: { setGalleryActiveProject: any; }) => {
+  const [projectFilter, setProjectFilter] = useState<any>(null);
+  const [currentProjects, setCurrentProjects] = useState<any>(null);
+
   /**
    * helper function to sort projects by year
    * @param {object} a - project A
@@ -17,6 +24,22 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
     return b.year - a.year;
   }
 
+  const handleFilterClick = (e: any, filterText: any) => {
+    e.preventDefault();
+    setProjectFilter(filterText);
+  };
+
+  useEffect(() => {
+    if (projectFilter) {
+      const filteredProjects = projects
+          .filter((el) => el.types.includes(projectFilter))
+          .sort(order);
+      setCurrentProjects(filteredProjects);
+    } else {
+      setCurrentProjects(projects.sort(order));
+    }
+  }, [projectFilter]);
+
   return (
     <div
       id="portfolio"
@@ -25,12 +48,72 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
       <div className="Portfolio">
         <div className="decorated bottom-spaced">
           <span>
-            <h1>Things {'I\'ve'} worked on</h1>
+            <h1>{'Things I\'ve worked on'}</h1>
           </span>
         </div>
         <h3>Favorites</h3>
-        <h3>By Area</h3>
-        <h3 className="bottom-spaced">Project Archive</h3>
+        <div className="d-flex justify-content-between">
+          <h3 className="bottom-spaced">Project Archives</h3>
+          <h3 className="filter-icons bottom-spaced">
+            <BiListUl className="filter-icon" />
+            <BiBookContent className="filter-icon" />
+          </h3>
+        </div>
+        <h5 className="filter-links d-flex justify-content-between">
+          <span>{'Filter: '}</span>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'web')}
+          >
+            Web
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'mobile')}
+          >
+            Mobile
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'embedded')}
+          >
+            Embedded
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'ml')}
+          >
+            Machine Learning
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'plc-hmi')}
+          >
+            PLC & HMI
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'web')}
+          >
+            View All
+          </a>
+        </h5>
+        {
+          currentProjects && currentProjects
+              .map((project: any) => {
+                return (
+                  <ProjectMedium
+                    key={project.title}
+                    project={project}
+                    projectType={'web'}
+                    setGalleryActiveProject={
+                      props.setGalleryActiveProject
+                    }
+                  />
+                );
+              },
+              )
+        }
         <Container className="top-spaced bottom-spaced">
           <Row className="gap-2">
             <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
@@ -51,13 +134,15 @@ const Portfolio = (props: { setGalleryActiveProject: any; }) => {
           </Row>
         </Container>
         {
-          projects.sort(order).map((project: any) =>
-            <Project key={project.title}
-              project={project}
-              projectType={'web'}
-              setGalleryActiveProject={props.setGalleryActiveProject}
-            />,
-          )
+          projects
+              .sort(order)
+              .map((project: any) =>
+                <ProjectSmall key={project.title}
+                  project={project}
+                  projectType={'web'}
+                  setGalleryActiveProject={props.setGalleryActiveProject}
+                />,
+              )
         }
       </div>
     </div>

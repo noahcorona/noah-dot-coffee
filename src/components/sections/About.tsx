@@ -114,9 +114,13 @@ const About = () => {
       </p>
       <h3>{'People I\'ve Worked With'}</h3>
       <div className="associate-card">
-        <a href="https://aptitudemedical.com/">
-          <h5>{'> Aptitude Medical Systems'}</h5>
-        </a>
+        <div className="d-inline-flex gap-4 bottom-spaced top-spaced">
+          <a href="https://aptitudemedical.com/">
+            <h5>{'> Aptitude Medical Systems'}</h5>
+          </a>
+          <div>Santa Barbara, CA</div>
+          <div>(2021, 2022)</div>
+        </div>
         <p>
           {
             'During the 2021-2022 UCSB ECE Capstone course, I had the ' +
@@ -133,9 +137,13 @@ const About = () => {
         </p>
       </div>
       <div className="associate-card">
-        <a href="https://powerconengineering.com/">
-          <h5>{'> Powercon Engineering'}</h5>
-        </a>
+        <div className="d-inline-flex gap-4 bottom-spaced top-spaced">
+          <a href="https://powerconengineering.com/">
+            <h5>{'> Powercon Engineering'}</h5>
+          </a>
+          <div>Tustin, CA</div>
+          <div>(2017, 2018, 2019)</div>
+        </div>
         <p>
           {
             'As a project engineer intern at Powercon, I had the chance to ' +

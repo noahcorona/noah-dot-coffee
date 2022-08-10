@@ -1,6 +1,9 @@
 export const projects = [
   {
     year: 2022,
+    types: [
+      'web',
+    ],
     title: 'smlr.org',
     description: 'A full-stack URL shortening app. Also ' +
         'generates QR codes and provides a free, documented API. ',
@@ -9,11 +12,6 @@ export const projects = [
       'Express.js',
       'React.js',
       'Node.js',
-    ],
-    keywords: [
-      'URL Shortener',
-      'QR Generation',
-      'Public API',
     ],
     demo_link: 'https://smlr.org/',
     github_link: 'https://github.com/noahcorona/url-shortener',
@@ -27,6 +25,9 @@ export const projects = [
   },
   {
     year: 2022,
+    types: [
+      'web',
+    ],
     title: 'noah.coffee',
     description: 'Personal website with portfolio and contact info',
     stack: [
@@ -51,6 +52,9 @@ export const projects = [
   },
   {
     year: 2010,
+    types: [
+      'web',
+    ],
     title: 'anoroc.com',
     description: 'A static website for a sheet metal manufacturing ' +
         'company. The website remained in service for years and ' +
@@ -81,6 +85,10 @@ export const projects = [
   },
   {
     year: 2022,
+    types: [
+      'mobile',
+      'embedded',
+    ],
     title: 'CUDA',
     description: 'The CUDA Reader is a portable device ' +
                 'capable of detecting COVID-19 as ' +
@@ -107,6 +115,9 @@ export const projects = [
   },
   {
     year: 2021,
+    types: [
+      'mobile',
+    ],
     title: 'Geo-tagged Social Media',
     description: 'Socialize by uploading, commenting, and ' +
                 'rating geo-tagged photo posts',
@@ -146,6 +157,9 @@ export const projects = [
   },
   {
     year: 2018,
+    types: [
+      'mobile',
+    ],
     title: 'Receipt Scanner',
     description: 'Scans receipts, performing OCR to aid in the process of ' +
                 'organizing business expenses. Allows the user to ' +
@@ -186,15 +200,16 @@ export const projects = [
   },
   {
     year: 2020,
-    title: 'Solar Battery Charger with Active Tracking',
-    description: 'Personal portfolio and contact website',
-    stack: [
-      'Javascript',
-      'React JS',
-      'STM32',
+    types: [
+      'embedded',
+      'mobile',
     ],
-    microcontrollers: [
-      'esp32',
+    title: 'Solar Battery Charger with Active Tracking',
+    description: 'An 18650 solar battery charger with a 2.0A USB output. ' +
+        'Actively tracks the brightest light source in view and adjusts the ' +
+        'panels using two 180 degree servo motors.',
+    stack: [
+      'STM32',
     ],
     demo_link: 'https://example.com',
     github_link: 'https://example.com',
@@ -232,7 +247,11 @@ export const projects = [
   },
   {
     year: 2020,
-    title: 'Thermocouple BLE Transceiver',
+    types: [
+      'embedded',
+      'mobile',
+    ],
+    title: 'Thermocouple Transmitter with Mobile Receiver App',
     description: 'An esp32 application acts as a GATT server, ' +
                 'advertising temperature data over Bluetooth ' +
                 'Low Energy. An iOS application receives updates' +
@@ -266,10 +285,13 @@ export const projects = [
   },
   {
     year: 2020,
+    types: [
+      'embedded',
+    ],
     title: 'Chromatic Tuner',
     description: 'A chromatic tuner built using Fourier transforms ' +
         'running on an STM32. Outputs nearest note on LCD using ' +
-        'the SPI serial protocol. ',
+        'the SPI serial protocol.',
     stack: [
       'C++',
       'STM32',
@@ -287,6 +309,9 @@ export const projects = [
   },
   {
     year: 2021,
+    types: [
+      'ml',
+    ],
     title: 'Pacman Agent',
     description: 'A rational agent for the common game PacMan. ' +
                 'Based on a homework assignment. ',
@@ -301,6 +326,9 @@ export const projects = [
   },
   {
     year: 2021,
+    types: [
+      'ml',
+    ],
     title: 'Fashion Classifier',
     description: 'A classifier that predicts clothing article type. ' +
         'The model is built using SciKit Learn and trained using ' +
@@ -316,6 +344,9 @@ export const projects = [
   },
   {
     year: 2021,
+    types: [
+      'ml',
+    ],
     title: 'Linear Classifier',
     description: 'A basic linear classifier implementation in Python ' +
         'using no external libraries.',
@@ -329,6 +360,9 @@ export const projects = [
   },
   {
     year: 2021,
+    types: [
+      'ml',
+    ],
     title: 'Naive Bayes Classifier',
     description: 'An implementation of a Naive Bayes Classifier using the ' +
         'SciKit Learn library.',
@@ -345,6 +379,9 @@ export const projects = [
   },
   {
     year: 2022,
+    types: [
+      'ml',
+    ],
     title: 'Tempo Estimator',
     description: 'A tempo estimator implemented in Python, using' +
         'a novelty function and the short-time Fourier transform. ' +
@@ -352,13 +389,6 @@ export const projects = [
     stack: [
       'Python',
       'Essentia',
-    ],
-    keywords: [
-      'Audio processing',
-      'Feature analysis',
-      'Short-time Fourier Transform',
-      'Novelty function',
-      'Tempo estimation',
     ],
     demo_link: 'https://colab.research.google.com/github/noahcorona/ucsb-ece160-tempo-estimation/blob/main/Mini_Project_2.ipynb',
     github_link: 'https://github.com/noahcorona/ucsb-ece160-tempo-estimation',
@@ -373,6 +403,9 @@ export const projects = [
   },
   {
     year: 2019,
+    types: [
+      'plc-hmi',
+    ],
     title: 'Main-Tie-Main Power Transfer Controller',
     description: 'A main-tie-main scheme for power transfer. ' +
         'This project uses Schneider technology to implement ' +
@@ -397,7 +430,10 @@ export const projects = [
   },
   {
     year: 2017,
-    title: 'Pump Monitor and Control System',
+    types: [
+      'plc-hmi',
+    ],
+    title: 'Pump Monitor & Control System',
     description: 'Data collection Histogram Alarms',
     stack: [
       'Ladder Logic',

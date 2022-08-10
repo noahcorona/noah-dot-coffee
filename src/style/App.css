@@ -10,6 +10,28 @@ body {
   margin-bottom: 8em;
 }
 
+.navbar-light .nav-item.active .nav-link,
+.navbar-light .nav-item .nav-link:active,
+.navbar-light .nav-item .nav-link:focus,
+.navbar-light .nav-item:hover .nav-link {
+  background-color: transparent;
+}
+
+.nav-item a {
+  font-family: 'Courier New', monospace;
+  font-weight: bold;
+  color: #555;
+  float: left;
+}
+
+.nav-item a:visited {
+  color: #555;
+}
+
+.nav-item a:hover {
+  text-decoration: underline;
+}
+
 /*
     Reusable styles, element styles
  */
