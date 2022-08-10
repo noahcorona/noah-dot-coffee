@@ -103,16 +103,52 @@ const About = () => {
       </Container>
       <h3>About Me</h3>
       <p>
-        {'My interest in software development started in 2010, ' +
-        'when I started exploring source code of video game ' +
-        'modifications for Microsoft\'s Xbox platform. In 2022, ' +
-        'I graduated from UC, Santa Barbara with a B.S. in ' +
-        'Computer Engineering. In the years between, I\'ve ' +
-        'written software professionally, academically, and for fun.'
+        {
+          'My interest in software development started in 2010, ' +
+          'when I started exploring source code of video game ' +
+          'modifications for Microsoft\'s Xbox platform. Recently, ' +
+          'I graduated from UC, Santa Barbara with a B.S. in ' +
+          'Computer Engineering. In the years between, I\'ve ' +
+          'written software professionally, academically, and for fun.'
         }
       </p>
-      <p>I have been fortunate to work with some great folks,
-        like a research team at Aptitude Medical Systems.</p>
+      <h3>{'People I\'ve Worked With'}</h3>
+      <div className="associate-card">
+        <a href="https://aptitudemedical.com/">
+          <h5>{'> Aptitude Medical Systems'}</h5>
+        </a>
+        <p>
+          {
+            'During the 2021-2022 UCSB ECE Capstone course, I had the ' +
+            'pleasure of working with some of the research scientists at ' +
+            'Aptitude Medical Systems on the '
+          }
+          <a href="#">CUDA project</a>
+          {
+            '. I led a student project that aimed to produce portable, ' +
+            'trustworthy, and timely digital test results for COVID-19 ' +
+            'and coagulopathy using a unified device. Results are stored ' +
+            'and shared in the cloud via a React Native app.'
+          }
+        </p>
+      </div>
+      <div className="associate-card">
+        <a href="https://powerconengineering.com/">
+          <h5>{'> Powercon Engineering'}</h5>
+        </a>
+        <p>
+          {
+            'As a project engineer intern at Powercon, I had the chance to ' +
+            'work on projects that utilize programmable logic controllers ' +
+            'and human-machine interfaces. I was fortunate to both work ' +
+            'on an '
+          }
+          <a href="#">independent project</a>
+          {
+            ' and contribute to some of Powercon\'s commercials projects.  '
+          }
+        </p>
+      </div>
     </div>
   );
 };
