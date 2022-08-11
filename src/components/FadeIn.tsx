@@ -1,4 +1,5 @@
 import {useEffect, useRef, useState} from 'react';
+import '../style/FadeIn.css';
 
 const FadeIn = (props: any) => {
   const [isVisible, setVisible] = useState(true);

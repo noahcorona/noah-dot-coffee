@@ -64,6 +64,83 @@ const Portfolio = (props: {
     }
   }, [projectFilter]);
 
+  const CUDAAreaSmall = () => (
+    <div className="Favorites-Area-Smaller">
+      <div className="Favorites-CUDA-Image-Area">
+        <img
+          src="/projects/CUDA/CUDA_demo.gif"
+          alt="Device screen"
+        />
+      </div>
+    </div>
+  );
+
+  const CUDAAreaLarge = () => (
+    <div className="Favorites-Area-Larger Favorites-CUDA-Text-Area">
+      <div>
+        <div className="Favorites-Description-Heading-Area">
+          <h2>CUDA Medical Diagnostic Device</h2>
+        </div>
+        <p>
+          {'The CUDA group was awarded 3rd place amongst the ' +
+                'electrical and computer engineering capstone ' +
+                'teams at UCSB. Working as project lead and ' +
+                'developer with the researchers at Aptitude ' +
+                'Medical Systems, I helped build a medical ' +
+                'diagnostic device capable of detecting ' +
+                'a life threatening condition called coagulopathy ' +
+                'that occurs commonly in physical trauma ' +
+                'patients. On this team of five, my most significant ' +
+                'contributions were the creation of a ' +
+                'mobile app and additions to the embedded system\'s ' +
+                'Bluetooth routines.'
+          }
+        </p>
+      </div>
+      <div className="Favorites-Icon-Links">
+        <a
+          href="https://www.ece.ucsb.edu/spotlights/22-ee-ce-capstone-awards-replays"
+          className="Favorites-Icon-Link-Small"
+        >
+          <div className="Favorites-Icon Favorites-Award-Icon
+                                Favorites-Award-Icon"
+          >
+            <BiAward />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+        <a
+          href="https://github.com/AptitudeCapstone/CUDA"
+          className="Favorites-Icon-Link-Small"
+        >
+          <div className="Favorites-Icon">
+            <RiGithubLine />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+        <a
+          href="#"
+          className="Favorites-Icon-Link-Small"
+          onClick={(e: any) => openGalleryClickHandler(e, 'CUDA')}
+        >
+          <div className="Favorites-Icon">
+            <IoIosImages />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+        <a
+          href="https://aptitudemedical.com/"
+          className="Favorites-Icon-Link-Small"
+        >
+          <div className="Favorites-Icon">
+            <BsBoxArrowUpRight />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+      </div>
+    </div>
+  );
+
   return (
     <div
       id="portfolio"
@@ -76,47 +153,25 @@ const Portfolio = (props: {
           </span>
         </div>
         <FadeIn>
-          <div className="Favorites-CUDA d-inline-flex">
-            <div className="Favorites-CUDA-Image-Area">
-              <img
-                src="/projects/CUDA/CUDA_demo.gif"
-                alt="Device screen"
-              />
-            </div>
-            <div className="Favorites-CUDA-Text-Area">
-              <div className="Favorites-Description-Heading-Area">
-                <h2>CUDA Medical Diagnostic Device</h2>
-              </div>
-              <p>
-                {'The CUDA group was awarded 3rd place amongst the ' +
-                 'electrical and computer engineering capstone ' +
-                 'teams at UCSB. Working as project lead and ' +
-                 'developer with the researchers at Aptitude ' +
-                 'Medical Systems, I helped build a medical ' +
-                 'diagnostic device capable of detecting ' +
-                 'a life threatening condition called coagulopathy ' +
-                 'that occurs commonly in physical trauma ' +
-                 'patients. On this team of five, my most significant ' +
-                 'contributions were the creation of a ' +
-                 'mobile app and additions to the embedded system\'s ' +
-                 'Bluetooth routines.'
-                }
-              </p>
-            </div>
-            <div className="Favorites-Icon-Links">
+          <div className="Favorites-CUDA">
+            {
+              props.windowSize > 900 ?
+                  <>
+                    <CUDAAreaSmall />
+                    <CUDAAreaLarge />
+                  </> :
+                  <>
+                    <CUDAAreaLarge />
+                    <CUDAAreaSmall />
+                  </>
+            }
+          </div>
+        </FadeIn>
+        <FadeIn>
+          <div className="Favorites-SMLR">
+            <div className="Favorites-Icon-Links Favorites-Left-Area">
               <a
-                href="https://www.ece.ucsb.edu/spotlights/22-ee-ce-capstone-awards-replays"
-                className="Favorites-Icon-Link-Small"
-              >
-                <div className="Favorites-Icon Favorites-Award-Icon
-                                Favorites-Award-Icon"
-                >
-                  <BiAward />
-                </div>
-                <div className="Favorites-Icon-Link-Small-Background" />
-              </a>
-              <a
-                href="https://github.com/AptitudeCapstone/CUDA"
+                href="https://github.com/noahcorona/url-shortener/"
                 className="Favorites-Icon-Link-Small"
               >
                 <div className="Favorites-Icon">
@@ -127,7 +182,7 @@ const Portfolio = (props: {
               <a
                 href="#"
                 className="Favorites-Icon-Link-Small"
-                onClick={(e: any) => openGalleryClickHandler(e, 'CUDA')}
+                onClick={(e: any) => openGalleryClickHandler(e, 'smlr.org')}
               >
                 <div className="Favorites-Icon">
                   <IoIosImages />
@@ -135,7 +190,7 @@ const Portfolio = (props: {
                 <div className="Favorites-Icon-Link-Small-Background" />
               </a>
               <a
-                href="https://aptitudemedical.com/"
+                href="https://smlr.org/"
                 className="Favorites-Icon-Link-Small"
               >
                 <div className="Favorites-Icon">
@@ -144,46 +199,11 @@ const Portfolio = (props: {
                 <div className="Favorites-Icon-Link-Small-Background" />
               </a>
             </div>
-          </div>
-        </FadeIn>
-        <FadeIn>
-          <div className="Favorites-SMLR">
-            <div className="d-flex">
-              <div className="Favorites-Icon-Links">
-                <a
-                  href="https://github.com/noahcorona/url-shortener/"
-                  className="Favorites-Icon-Link-Small"
-                >
-                  <div className="Favorites-Icon">
-                    <RiGithubLine />
-                  </div>
-                  <div className="Favorites-Icon-Link-Small-Background" />
-                </a>
-                <a
-                  href="#"
-                  className="Favorites-Icon-Link-Small"
-                  onClick={(e: any) => openGalleryClickHandler(e, 'smlr.org')}
-                >
-                  <div className="Favorites-Icon">
-                    <IoIosImages />
-                  </div>
-                  <div className="Favorites-Icon-Link-Small-Background" />
-                </a>
-                <a
-                  href="https://smlr.org/"
-                  className="Favorites-Icon-Link-Small"
-                >
-                  <div className="Favorites-Icon">
-                    <BsBoxArrowUpRight />
-                  </div>
-                  <div className="Favorites-Icon-Link-Small-Background" />
-                </a>
+            <div className="Favorites-SMLR-Text-Area">
+              <div className="Favorites-Description-Heading-Area">
+                <h2>smlr.org: A free URL shortener</h2>
               </div>
-              <div className="Favorites-SMLR-Text-Area">
-                <div className="Favorites-Description-Heading-Area">
-                  <h2>smlr.org: A free URL shortener</h2>
-                </div>
-                <p>{'smlr.org (smaller) is a full-stack web app that ' +
+              <p>{'smlr.org (smaller) is a full-stack web app that ' +
                     'allows anyone to shorten a URL with ease. The app ' +
                     'includes custom URL strings, profanity checking, QR ' +
                     'code generation, and allows users to track the number ' +
@@ -191,32 +211,30 @@ const Portfolio = (props: {
                     'RESTful API with documentation, allowing developers ' +
                     'to easily implement free small URLs into their own ' +
                     'applications.'
-                }
-                </p>
-              </div>
-              <div className="Favorites-SMLR-Image-Area">
-                <img
-                  src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
-                  alt="Homepage of smlr.org"
-                />
-              </div>
+              }
+              </p>
+            </div>
+            <div className="Favorites-SMLR-Image-Area">
+              <img
+                src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
+                alt="Homepage of smlr.org"
+              />
             </div>
           </div>
         </FadeIn>
         <FadeIn>
-          <div className="Favorites-CHROM-TUNER">
-            <div className="d-flex">
-              <div className="Favorites-CHROM-TUNER-Image-Area">
-                <img
-                  src="/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif"
-                  alt="Device screen"
-                />
+          <div className="d-flex Favorites-CHROM-TUNER">
+            <div className="Favorites-CHROM-TUNER-Image-Area">
+              <img
+                src="/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif"
+                alt="Device screen"
+              />
+            </div>
+            <div className="Favorites-CHROM-TUNER-Text-Area">
+              <div className="Favorites-Description-Heading-Area">
+                <h2>Chromatic Tuner</h2>
               </div>
-              <div className="Favorites-CHROM-TUNER-Text-Area">
-                <div className="Favorites-Description-Heading-Area">
-                  <h2>Chromatic Tuner</h2>
-                </div>
-                <p>{'An Artix-7 FPGA development board purposed to ' +
+              <p>{'An Artix-7 FPGA development board purposed to ' +
                     'detect the nearest note being played via an on-board ' +
                     'microphone from the 3rd to the 9th octave. Under the ' +
                     'hood, utilizes the power of the fast Fourier transform ' +
@@ -225,41 +243,40 @@ const Portfolio = (props: {
                     'to any frequency between 420 and 460 Hz, with the ' +
                     'default being 440 Hz. Automatically ranges the note ' +
                     'being played. Accurate to +/- 10 cents.'
+              }
+              </p>
+            </div>
+            <div className="Favorites-Icon-Links ">
+              <a
+                href="https://github.com/noahcorona/FPGA-chromatic-tuner"
+                className="Favorites-Icon-Link-Small"
+              >
+                <div className="Favorites-Icon">
+                  <RiGithubLine />
+                </div>
+                <div className="Favorites-Icon-Link-Small-Background" />
+              </a>
+              <a
+                href="#"
+                className="Favorites-Icon-Link-Small"
+                onClick={(e: any) =>
+                  openGalleryClickHandler(e, 'Chromatic Tuner')
                 }
-                </p>
-              </div>
-              <div className="Favorites-Icon-Links ">
-                <a
-                  href="https://github.com/noahcorona/FPGA-chromatic-tuner"
-                  className="Favorites-Icon-Link-Small"
-                >
-                  <div className="Favorites-Icon">
-                    <RiGithubLine />
-                  </div>
-                  <div className="Favorites-Icon-Link-Small-Background" />
-                </a>
-                <a
-                  href="#"
-                  className="Favorites-Icon-Link-Small"
-                  onClick={(e: any) =>
-                    openGalleryClickHandler(e, 'Chromatic Tuner')
-                  }
-                >
-                  <div className="Favorites-Icon">
-                    <IoIosImages />
-                  </div>
-                  <div className="Favorites-Icon-Link-Small-Background" />
-                </a>
-                <a
-                  href="https://github.com/noahcorona/FPGA-chromatic-tuner/archive/refs/heads/main.zip"
-                  className="Favorites-Icon-Link-Small"
-                >
-                  <div className="Favorites-Icon">
-                    <BsDownload />
-                  </div>
-                  <div className="Favorites-Icon-Link-Small-Background" />
-                </a>
-              </div>
+              >
+                <div className="Favorites-Icon">
+                  <IoIosImages />
+                </div>
+                <div className="Favorites-Icon-Link-Small-Background" />
+              </a>
+              <a
+                href="https://github.com/noahcorona/FPGA-chromatic-tuner/archive/refs/heads/main.zip"
+                className="Favorites-Icon-Link-Small"
+              >
+                <div className="Favorites-Icon">
+                  <BsDownload />
+                </div>
+                <div className="Favorites-Icon-Link-Small-Background" />
+              </a>
             </div>
           </div>
         </FadeIn>

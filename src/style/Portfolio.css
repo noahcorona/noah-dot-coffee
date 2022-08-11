@@ -55,12 +55,6 @@
     transition-duration: 150ms;
 }
 
-@media screen and (max-width: 800px) {
-    .Project-Card-Container {
-        width: 100%;
-    }
-}
-
 .Project-Card-Content {
     padding: 1em;
     background-color: rgba(255, 255, 255, 0.55);
@@ -142,14 +136,8 @@
     padding-bottom: 0.25em;
 }
 
-.Favorites-Description-Heading-Area > h4 {
-    font-size: 1.2em;
-    margin-bottom: 1.25em;
-}
-
 .Favorites-Icon-Links {
-    margin: 2em;
-    z-index: 2;
+    display: inline-block;
     align-self: center;
 }
 
@@ -166,7 +154,6 @@
     padding: 0.15em 0.25em;
     font-size: 1.75em;
     border-radius: 50%;
-    align-self: center;
     text-align: center;
     position: relative;
 }
@@ -232,30 +219,38 @@
     color: #fff;
 }
 
+.Favorites-Area-Smaller {
+    flex: 0.5;
+    padding: 1em;
+    display: inline-flex;
+    justify-content: end;
+    align-content: center;
+    align-self: center;
+}
+
+.Favorites-Area-Larger {
+    flex: 1;
+    padding: 1em;
+    justify-content: end;
+    align-content: center;
+    align-self: center;
+}
 
 .Favorites-CUDA {
     margin-top: 6em;
     margin-bottom: 6em;
     width: 100%;
     justify-content: center;
-}
-
-.Favorites-CUDA-Image-Area {
-    margin: 2em;
+    display: flex;
 }
 
 .Favorites-CUDA-Image-Area img {
-    max-width: 350px;
-    max-height: 500px;
-    aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
 }
 
 .Favorites-CUDA-Text-Area {
-    max-width: 500px;
-    height: min-content;
-    align-self: center;
+    display: flex;
 }
 
 .Favorites-CUDA-Text-Area h3 {
@@ -269,11 +264,12 @@
     background-color: #fff;
     border-radius: 0.25em;
     margin-top: 2em;
+    margin-right: 1.5em;
 }
 
 .Favorites-SMLR {
-    margin-top: 6em;
-    margin-bottom: 6em;
+    margin-top: 12em;
+    margin-bottom: 12em;
 }
 
 .Favorites-SMLR-Image-Area {
@@ -308,8 +304,8 @@
 }
 
 .Favorites-CHROM-TUNER {
-    margin-top: 6em;
-    margin-bottom: 6em;
+    margin-top: 12em;
+    margin-bottom: 12em;
 }
 
 .Favorites-CHROM-TUNER-Image-Area {
@@ -318,7 +314,7 @@
 }
 
 .Favorites-CHROM-TUNER-Image-Area img {
-    max-width: 450px;
+    max-width: 400px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
@@ -341,4 +337,26 @@
     background-color: #fff;
     border-radius: 0.25em;
     margin-top: 2em;
+}
+
+/*
+    Styles for different screen sizes
+ */
+
+@media screen and (max-width: 900px) {
+    .Project-Card-Container {
+        width: 100%;
+    }
+
+    .Favorites-CUDA {
+        display: block;
+    }
+
+    .Favorites-CUDA > div {
+        justify-content: center;
+        align-content: center;
+        justify-self: center;
+        margin: auto;
+        width: 100%;
+    }
 }

@@ -119,17 +119,3 @@ fieldset {
   flex-direction: column;
   align-items: center;
 }
-
-.fade-in {
-  opacity: 0;
-  transform: translateY(15vh);
-  visibility: hidden;
-  transition: opacity 600ms ease-out, transform 600ms ease-out;
-  will-change: opacity, visibility;
-}
-
-.fade-in.is-visible {
-  opacity: 1;
-  transform: none;
-  visibility: visible;
-}
