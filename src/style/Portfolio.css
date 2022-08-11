@@ -157,54 +157,34 @@
  */
 
 .CUDA-area {
-    justify-content: center;
     margin-top: 6em;
     margin-bottom: 6em;
+    width: 100%;
+    justify-content: center;
 }
 
 .CUDA-screen-image-area {
-    margin-top: 2em;
-    place-self: center;
-    display: flex;
-    justify-content: center;
+    margin: 2em;
 }
 
 .CUDA-screen-image {
-    max-width: 250px;
-    max-height: 350px;
+    max-width: 350px;
+    max-height: 500px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
-    align-self: center;
 }
 
 .CUDA-description-area {
     padding: 1.5em;
-    margin: 1em;
-    max-width: 500px;
-    min-width: 250px;
     background-color: #fff;
+    max-width: 400px;
 }
 
 .CUDA-description-area h3 {
     line-height: 1em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
-}
-
-.CUDA-device-image-area {
-    margin: auto 0 auto 0;
-    justify-content: end;
-}
-
-.CUDA-device-image {
-    max-height: 225px;
-    max-width: 350px;
-    aspect-ratio: auto;
-    border: 4px solid rgba(255, 255, 255, 1);
-    border-radius: 0.25em;
-    margin: 1em auto auto;
-    display: block;
 }
 
 .SMLR-area {

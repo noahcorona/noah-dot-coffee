@@ -62,58 +62,45 @@ const Portfolio = (props: {
           </span>
         </div>
         <FadeIn>
-          <div className="CUDA-area">
-            <div className="d-flex justify-content-around">
-              <div>
-                <div className="CUDA-device-image-area">
-                  <img
-                    src="/projects/CUDA/reader.jpeg"
-                    alt="Device screen"
-                    className="CUDA-device-image"
-                  />
-                </div>
-                <div className="CUDA-screen-image-area">
-                  <img
-                    src="/projects/CUDA/CUDA_demo.gif"
-                    alt="Device screen"
-                    className="CUDA-screen-image"
-                  />
-                </div>
-              </div>
-              <div>
-                <div className="CUDA-description-area">
-                  <div className="description-heading">
-                    <h3>
+          <div className="CUDA-area d-inline-flex">
+            <div className="CUDA-screen-image-area">
+              <img
+                src="/projects/CUDA/CUDA_demo.gif"
+                alt="Device screen"
+                className="CUDA-screen-image"
+              />
+            </div>
+            <div className="CUDA-description-area">
+              <div className="description-heading">
+                <h3>
                       CUDA Medical Diagnostic Device
-                    </h3>
-                    <h3>
-                      <Badge bg="warning">Academic Award</Badge>
-                    </h3>
-                  </div>
-                  <p>
-                    {'The CUDA group was awarded 3rd place amongst ' +
-                        'the ' +
-                      'electrical and computer engineering capstone' +
-                        ' teams ' +
-                      'at UCSB. Working as project lead and developer' +
-                        ' with the ' +
-                      'researchers at Aptitude Medical Systems, I ' +
-                        'helped build ' +
-                      'a medical diagnostic device capable of detecting' +
-                        ' a life ' +
-                      'threatening condition called coagulopathy that' +
-                        ' occurs ' +
-                      'commonly in physical trauma patients. On this' +
-                        ' team of ' +
-                      'five, my most significant contributions were' +
-                        ' the ' +
-                      'creation of a mobile app and additions to the' +
-                        ' embedded ' +
-                      'system\'s Bluetooth routines.'
-                    }
-                  </p>
-                </div>
+                </h3>
+                <h3>
+                  <Badge bg="warning">Academic Award</Badge>
+                </h3>
               </div>
+              <p>
+                {'The CUDA group was awarded 3rd place amongst ' +
+                    'the ' +
+                    'electrical and computer engineering capstone' +
+                    ' teams ' +
+                    'at UCSB. Working as project lead and developer' +
+                    ' with the ' +
+                    'researchers at Aptitude Medical Systems, I ' +
+                    'helped build ' +
+                    'a medical diagnostic device capable of detecting' +
+                    ' a life ' +
+                    'threatening condition called coagulopathy that' +
+                    ' occurs ' +
+                    'commonly in physical trauma patients. On this' +
+                    ' team of ' +
+                    'five, my most significant contributions were' +
+                    ' the ' +
+                    'creation of a mobile app and additions to the' +
+                    ' embedded ' +
+                    'system\'s Bluetooth routines.'
+                }
+              </p>
             </div>
           </div>
         </FadeIn>

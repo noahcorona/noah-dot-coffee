@@ -122,7 +122,7 @@ fieldset {
 
 .fade-in {
   opacity: 0;
-  transform: translateY(10vh);
+  transform: translateY(15vh);
   visibility: hidden;
   transition: opacity 600ms ease-out, transform 600ms ease-out;
   will-change: opacity, visibility;
