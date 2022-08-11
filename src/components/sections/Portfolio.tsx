@@ -124,26 +124,29 @@ const Portfolio = (props: {
           <div className="d-flex">
             <div className="CHROM-TUNER-screen-image-area">
               <img
-                src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
+                src="/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif"
                 alt="Device screen"
                 className="CHROM-TUNER-screen-image"
               />
             </div>
             <div className="CHROM-TUNER-description-area">
-              <h3>smlr.org: A free URL service</h3>
-              <p>{'Hosted on smlr.org, smlr is a full-stack web app that ' +
-                  'allows anyone to shorten a URL with ease. The app ' +
-                  'includes a public RESTful API so developers can ' +
-                  'easily implement small URLs into their own applications. ' +
-                  'Includes custom URL strings, profanity checking, and ' +
-                  'QR code generation.'
+              <h3>Chromatic Tuner on an Artix-7 FPGA</h3>
+              <p>{'An Artix-7 FPGA development board by Xilinx purposed to ' +
+                  'detect the nearest note being played via an on-board ' +
+                  'microphone from the 3rd to the 9th octave. Under the ' +
+                  'hood, utilizes the power of the fast Fourier transform ' +
+                  'in an impressively fast grand loop. The tuner ' +
+                  'can be configured for the note A4 to be set ' +
+                  'to any frequency between 420 and 460 Hz, with the ' +
+                  'default being 440 Hz. Automatically ranges the note being ' +
+                  'played. Accurate to +/- 10 cents.'
               }
               </p>
             </div>
           </div>
         </div>
         <div className="d-flex justify-content-between">
-          <h3 className="bottom-spaced">Project Archives</h3>
+          <h3 className="bottom-spaced">Project Archive</h3>
           {
             props.windowSize > 800 && (
               <h3 className="filter-icons bottom-spaced">
@@ -214,7 +217,8 @@ const Portfolio = (props: {
         </h5>
         {
           (condensedView && props.windowSize > 800) &&
-            <Container className="top-spaced bottom-spaced">
+            <Container className="top-spaced bottom-spaced
+            Project-Row-Header">
               <Row className="gap-2">
                 <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
                   <h5>Year</h5>
@@ -226,7 +230,7 @@ const Portfolio = (props: {
                   <h5>Description</h5>
                 </Col>
                 <Col xs={3} sm={3} md={3} lg={3} xl={3} className="text-center">
-                  <h5>Tech Stack</h5>
+                  <h5>Tech</h5>
                 </Col>
                 <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
                   <h5>Links</h5>

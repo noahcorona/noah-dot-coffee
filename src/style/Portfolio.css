@@ -2,90 +2,12 @@
     color: #555;
 }
 
-.project h3 {
-    font-size: 1.5em;
-}
+/*
+    Project Archive header area styles
+*/
 
-.project-tags {
-    margin-left: 2em;
-    margin-top: 1.5em;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-
-.info-badge {
-    font-family: 'Courier New', monospace;
-    text-align: center;
-}
-
-/* Project component layout */
-
-.project-medium {
-    margin-bottom: 1em;
-    margin-top: 1em;
-    border-radius: 0.5em;
-    position:relative;
-}
-
-.project-medium-card-wrapper {
-    width: calc(50% - 2em);
-    margin: 1em 2em 1em 0;
-    vertical-align: top;
-    display: inline-flex;
-}
-
-.project-medium-card-wrapper:hover {
-    margin: 1.25em 0.5em 0.75em 1.5em;
-    transition-duration: 150ms;
-}
-
-@media screen and (max-width: 800px) {
-    .project-medium-card-wrapper {
-        width: 100%;
-    }
-}
-
-.project-medium-card {
-    padding: 1em;
-    background-color: rgba(255, 255, 255, 0.55);
-    transition-duration: 150ms;
-}
-
-.project-medium-card:hover {
-    background-color: rgba(255, 255, 255, 0.75);
-}
-
-.project-medium-card p {
-    margin-top: 1em;
-}
-
-.title-text {
-    overflow-wrap: anywhere;
-}
-
-.year-text {
-    font-size: 1.15em;
-}
-
-.card-links {
-    padding-left: 1em;
-}
-
-.stack-area {
-    margin-top: 1em;
-    border-top: 1px solid #ccc;
-    padding: 1em;
-    font-family: 'New Courier', monospace;
-    text-align: center;
-}
-
-.stack-area span {
-    padding: 0.25em;
-}
-
-.stack-area span:not(:first-child):before {
-    content:  " \B7  ";
+.filter-links {
+    margin-bottom: 2em;
 }
 
 .filter-links a {
@@ -121,9 +43,71 @@
     background-color: rgba(85, 85, 85, 0.25);
 }
 
-/* Right area of project component */
+/*
+    Project Card styles
+*/
 
-.web-link {
+.Project-Card-Container {
+    width: calc(50% - 2em);
+    margin: 1em 2em 3em 0;
+    vertical-align: top;
+    display: inline-flex;
+}
+
+.Project-Card-Container:hover {
+    margin: 1.25em 0.5em 0.75em 1.5em;
+    transition-duration: 150ms;
+}
+
+@media screen and (max-width: 800px) {
+    .Project-Card-Container {
+        width: 100%;
+    }
+}
+
+.Project-Card-Content {
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.55);
+    transition-duration: 150ms;
+}
+
+.Project-Card-Content:hover {
+    background-color: rgba(255, 255, 255, 0.75);
+}
+
+.Project-Card-Content p {
+    margin-top: 1em;
+}
+
+.Project-Card-Subtitle {
+    font-size: 1.15em;
+}
+
+.Project-Card-Icon-Link {
+    padding-left: 1em;
+}
+
+.Project-Card-Stack-Area {
+    margin-top: 1em;
+    border-top: 1px solid #ccc;
+    padding: 1em;
+    font-family: 'New Courier', monospace;
+    text-align: center;
+}
+
+.Project-Card-Stack-Area span {
+    padding: 0.25em;
+}
+
+.Project-Card-Stack-Area span:not(:first-child):before {
+    content:  " \B7  ";
+}
+
+/*
+    Project Row styles
+ */
+
+.Project-Row-Icon-Link {
     display: block;
     font-family: 'Courier New', monospace;
     font-size: 1.5em;
@@ -133,16 +117,27 @@
     outline: none;
 }
 
-.web-link:visited {
+.Project-Row-Icon-Link:visited {
     color: #555;
 }
 
-.web-link:hover {
+.Project-Row-Icon-Link:hover {
     color: #888;
 }
 
+.Project-Row-Header {
+    margin-top: 3em;
+    padding-bottom: 1em;
+    text-transform: uppercase;
+}
+
+.Project-Row-Stack-Item {
+    font-family: 'Courier New', monospace;
+    text-align: center;
+}
+
 /*
-    Favorites area styles
+    Favorite Projects area styles
  */
 
 .CUDA-area {
@@ -174,7 +169,7 @@
 }
 
 .CUDA-device-image-area {
-    margin: auto 2em;
+    margin: auto 2em auto 0;
     justify-content: end;
     padding-right: 3em;
 }
@@ -198,7 +193,7 @@
 }
 
 .SMLR-screen-image {
-    max-width: 350px;
+    max-width: 450px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
@@ -206,6 +201,7 @@
 
 .CHROM-TUNER-area {
     margin-top: 6em;
+    margin-bottom: 6em;
 }
 
 .CHROM-TUNER-screen-image-area {

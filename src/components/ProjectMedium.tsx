@@ -5,16 +5,16 @@ import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 
 const ProjectMedium = (props: any) => {
   return (
-    <div className="project-medium-card-wrapper">
-      <div className="project-medium-card">
-        <h4 className="title-text">
+    <div className="Project-Card-Container">
+      <div className="Project-Card-Content">
+        <h4 className="Project-Card-Title">
           {'+ ' + props.project.title}
         </h4>
-        <h4 className="year-text">
+        <h4 className="Project-Card-Subtitle">
           {props.project.wasFor + ' (' + props.project.year + ')'}
         </h4>
         <p>{props.project.description}</p>
-        <div className="stack-area">
+        <div className="Project-Card-Stack-Area">
           {
             Array.from(props.project.stack).map((item: any) => (
               <span key={item}>
@@ -24,9 +24,9 @@ const ProjectMedium = (props: any) => {
           }
         </div>
       </div>
-      <div className="card-links">
+      <div className="Project-Card-Icon-Link">
         <a
-          className="web-link"
+          className="Project-Row-Icon-Link"
           href="#"
           onClick={(e) => {
             e.preventDefault();
@@ -37,7 +37,7 @@ const ProjectMedium = (props: any) => {
         </a>
         {props.project.github_link &&
             <a
-              className="web-link"
+              className="Project-Row-Icon-Link"
               href={props.project.github_link}
             >
               <BsGithub />
@@ -45,7 +45,7 @@ const ProjectMedium = (props: any) => {
         }
         {props.project.demo_link &&
             <a
-              className="web-link"
+              className="Project-Row-Icon-Link"
               href={props.project.demo_link}
             >
               <BsBoxArrowUpRight />

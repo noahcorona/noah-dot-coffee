@@ -20,7 +20,7 @@ const ProjectSmall = (props: any) => {
         <Col xs={3} sm={3} md={3} lg={3} xl={3} className="text-center">
           {
             Array.from(props.project.stack).map((item: any) => (
-              <div className="info-badge" key={item}>
+              <div className="Project-Row-Stack-Item" key={item}>
                 {item}
               </div>
             ))
@@ -29,7 +29,7 @@ const ProjectSmall = (props: any) => {
         <Col xs={1} sm={1} md={1} lg={1} xl={1} className="text-center">
           <div>
             <a
-              className="web-link"
+              className="Project-Row-Icon-Link"
               href="#"
               onClick={(e) => {
                 e.preventDefault();
@@ -40,7 +40,7 @@ const ProjectSmall = (props: any) => {
             </a>
             {props.project.github_link &&
                 <a
-                  className="web-link"
+                  className="Project-Row-Icon-Link"
                   href={props.project.github_link}
                 >
                   <BsGithub />
@@ -48,7 +48,7 @@ const ProjectSmall = (props: any) => {
             }
             {props.project.demo_link &&
                 <a
-                  className="web-link"
+                  className="Project-Row-Icon-Link"
                   href={props.project.demo_link}
                 >
                   <BsBoxArrowUpRight />
