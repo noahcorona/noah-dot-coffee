@@ -311,8 +311,10 @@ export const projects = [
     media: [
       {
         type: 'photo',
-        source: 'https://picsum.photos/200/300',
-        description: 'Random image',
+        source: '/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif',
+        description: 'Tuner identifying a note being played from ' +
+            'an iPhone using earbuds. The error (in cents) is ' +
+            'displayed on a the green and red bar.',
       },
     ],
   },

@@ -1,6 +1,6 @@
 import ProjectSmall from '../ProjectSmall';
 import {projects} from '../../constants/projects.js';
-import {Badge, Col, Container, Row} from 'react-bootstrap';
+import {Col, Container, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/Portfolio.css';
 import ProjectMedium from '../ProjectMedium';
@@ -8,6 +8,10 @@ import {BiBookContent} from '@react-icons/all-files/bi/BiBookContent';
 import {BiListUl} from '@react-icons/all-files/bi/BiListUl';
 import {useEffect, useState} from 'react';
 import FadeIn from '../FadeIn';
+import {BiAward} from '@react-icons/all-files/bi/BiAward';
+import {RiGithubLine} from '@react-icons/all-files/ri/RiGithubLine';
+import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
+import {IoIosImages} from '@react-icons/all-files/io/IoIosImages';
 
 const Portfolio = (props: {
   windowSize: any,
@@ -62,22 +66,16 @@ const Portfolio = (props: {
           </span>
         </div>
         <FadeIn>
-          <div className="CUDA-area d-inline-flex">
-            <div className="CUDA-screen-image-area">
+          <div className="Favorites-CUDA d-inline-flex">
+            <div className="Favorites-CUDA-Image-Area">
               <img
                 src="/projects/CUDA/CUDA_demo.gif"
                 alt="Device screen"
-                className="CUDA-screen-image"
               />
             </div>
-            <div className="CUDA-description-area">
-              <div className="description-heading">
-                <h3>
-                      CUDA Medical Diagnostic Device
-                </h3>
-                <h3>
-                  <Badge bg="warning">Academic Award</Badge>
-                </h3>
+            <div className="Favorites-CUDA-Text-Area">
+              <div className="Favorites-Description-Heading-Area">
+                <h3>CUDA Medical Diagnostic Device</h3>
               </div>
               <p>
                 {'The CUDA group was awarded 3rd place amongst ' +
@@ -102,13 +100,39 @@ const Portfolio = (props: {
                 }
               </p>
             </div>
+            <div className="Favorites-Icon-Links">
+              <a
+                href="#"
+                className="Favorites-Icon-Link Favorites-Award-Icon"
+              >
+                <BiAward />
+              </a>
+              <a
+                href="#"
+                className="Favorites-Icon-Link-Small Favorites-Icon"
+              >
+                <RiGithubLine />
+              </a>
+              <a
+                href="#"
+                className="Favorites-Icon-Link-Small Favorites-Icon"
+              >
+                <IoIosImages />
+              </a>
+              <a
+                href="#"
+                className="Favorites-Icon-Link-Small Favorites-Icon"
+              >
+                <BsBoxArrowUpRight />
+              </a>
+            </div>
           </div>
         </FadeIn>
         <FadeIn>
-          <div className="SMLR-area">
+          <div className="Favorites-SMLR">
             <div className="d-flex">
-              <div className="SMLR-description-area">
-                <div className="description-heading">
+              <div className="Favorites-SMLR-Text-Area">
+                <div className="Favorites-Description-Heading-Area">
                   <h3>smlr.org: A free URL shortener</h3>
                 </div>
                 <p>{'smlr.org (smaller) is a full-stack web app that ' +
@@ -122,28 +146,26 @@ const Portfolio = (props: {
                 }
                 </p>
               </div>
-              <div className="SMLR-screen-image-area">
+              <div className="Favorites-SMLR-Image-Area">
                 <img
                   src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
-                  alt="Device screen"
-                  className="SMLR-screen-image"
+                  alt="Homepage of smlr.org"
                 />
               </div>
             </div>
           </div>
         </FadeIn>
         <FadeIn>
-          <div className="CHROM-TUNER-area">
+          <div className="Favorites-CHROM-TUNER">
             <div className="d-flex">
-              <div className="CHROM-TUNER-screen-image-area">
+              <div className="Favorites-CHROM-TUNER-Image-Area">
                 <img
                   src="/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif"
                   alt="Device screen"
-                  className="CHROM-TUNER-screen-image"
                 />
               </div>
-              <div className="CHROM-TUNER-description-area">
-                <div className="description-heading">
+              <div className="Favorites-CHROM-TUNER-Text-Area">
+                <div className="Favorites-Description-Heading-Area">
                   <h3>Chromatic Tuner</h3>
                 </div>
                 <p>{'An Artix-7 FPGA development board purposed to ' +
@@ -172,9 +194,10 @@ const Portfolio = (props: {
                 >
                   <BiListUl
                     className={
-                            condensedView ?
-                                'filter-icon-selected filter-icon' :
-                                'filter-icon'}
+                      condensedView ?
+                          'Project-Display-Type-Icon-Selected ' +
+                          'Project-Display-Type-Icon' :
+                          'Project-Display-Type-Icon'}
                   />
                 </a>
                 <a
@@ -183,16 +206,18 @@ const Portfolio = (props: {
                 >
                   <BiBookContent
                     className={
-                            condensedView ?
-                                'filter-icon' :
-                                'filter-icon-selected filter-icon'}
+                      condensedView ?
+                          'Project-Display-Type-Icon' :
+                          'Project-Display-Type-Icon-Selected ' +
+                          'Project-Display-Type-Icon'
+                    }
                   />
                 </a>
               </h3>
             )
           }
         </div>
-        <h5 className="filter-links">
+        <h5 className="Project-Row-Header-Filter-Area">
           <span>{'Filter: '}</span>
           <a
             href="#"

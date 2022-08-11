@@ -1,46 +1,27 @@
-.Portfolio {
-    color: #555;
-}
-
-.favorites-icon {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-}
-
-.description-heading > h3 {
-    font-size: 1.25em;
-    padding-bottom: 0.25em;
-}
-
-.description-heading > h4 {
-    font-size: 1.2em;
-    margin-bottom: 1.25em;
-}
-
 /*
     Project Archive header area styles
 */
 
-.filter-links {
+.Project-Row-Header-Filter-Area {
     margin-bottom: 2em;
 }
 
-.filter-links a {
+.Project-Row-Header-Filter-Area a {
     padding-left: 1em;
     color: #555;
     float: right;
     margin-bottom: 0.5em;
 }
 
-.filter-links a:visited {
+.Project-Row-Header-Filter-Area a:visited {
     color: #555;
 }
 
-.filter-links a:hover {
+.Project-Row-Header-Filter-Area a:hover {
     color: rgba(170, 85, 0, 1);
 }
 
-.filter-icon {
+.Project-Display-Type-Icon {
     margin-left: 0.5em;
     color: #555;
     font-size: 1.5em;
@@ -50,11 +31,11 @@
     border-radius: 0.25em;
 }
 
-.filter-icon-selected {
+.Project-Display-Type-Icon-Selected {
     background-color: rgba(85, 85, 85, 0.15);
 }
 
-.filter-icon:hover {
+.Project-Display-Type-Icon:hover {
     background-color: rgba(85, 85, 85, 0.25);
 }
 
@@ -156,18 +137,76 @@
     Favorite Projects area styles
  */
 
-.CUDA-area {
+.Favorites-Description-Heading-Area > h3 {
+    font-size: 1.25em;
+    padding-bottom: 0.25em;
+}
+
+.Favorites-Description-Heading-Area > h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.25em;
+}
+
+.Favorites-Icon-Links {
+    margin-top: 2em;
+    margin-left: 2em;
+}
+
+.Favorites-Icon-Link {
+    display: block;
+    padding: 0.05em 0.25em;
+    font-size: 2em;
+    margin-bottom: 1em;
+    border-radius: 50%;
+}
+
+.Favorites-Icon-Link-Small {
+    display: block;
+    padding: 0.15em 0.25em;
+    font-size: 1.75em;
+    margin-bottom: 1em;
+    border-radius: 50%;
+    align-self: center;
+    text-align: center;
+}
+
+.Favorites-Icon-Links > a:visited {
+    color: #aaa;
+}
+
+.Favorites-Icon-Link a:visited {
+    color: #fff;
+}
+
+.Favorites-Award-Icon {
+    background-color: rgba(215, 178, 52, 1);
+    color: #fff;
+}
+
+.Favorites-Award-Icon > * {
+    color: #fff;
+}
+
+.Favorites-Icon {
+    background-color: #fff;
+}
+
+.Favorites-Icon > * {
+    color: #aaa;
+}
+
+.Favorites-CUDA {
     margin-top: 6em;
     margin-bottom: 6em;
     width: 100%;
     justify-content: center;
 }
 
-.CUDA-screen-image-area {
+.Favorites-CUDA-Image-Area {
     margin: 2em;
 }
 
-.CUDA-screen-image {
+.Favorites-CUDA-Image-Area img {
     max-width: 350px;
     max-height: 500px;
     aspect-ratio: auto;
@@ -175,36 +214,36 @@
     border-radius: 0.25em;
 }
 
-.CUDA-description-area {
+.Favorites-CUDA-Text-Area {
     padding: 1.5em;
     background-color: #fff;
     max-width: 400px;
 }
 
-.CUDA-description-area h3 {
+.Favorites-CUDA-Text-Area h3 {
     line-height: 1em;
     margin-top: 0.5em;
     margin-bottom: 0.5em;
 }
 
-.SMLR-area {
+.Favorites-SMLR {
     margin-top: 6em;
     margin-bottom: 6em;
 }
 
-.SMLR-screen-image-area {
+.Favorites-SMLR-Image-Area {
     margin: 2em;
     align-self: center;
 }
 
-.SMLR-screen-image {
+.Favorites-SMLR-Image-Area img {
     max-width: 500px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
 }
 
-.SMLR-description-area {
+.Favorites-SMLR-Text-Area {
     padding: 1.5em;
     margin: 1em;
     max-width: 550px;
@@ -213,24 +252,24 @@
     background-color: #fff;
 }
 
-.CHROM-TUNER-area {
+.Favorites-CHROM-TUNER {
     margin-top: 6em;
     margin-bottom: 6em;
 }
 
-.CHROM-TUNER-screen-image-area {
+.Favorites-CHROM-TUNER-Image-Area {
     margin: 2em;
     align-self: center;
 }
 
-.CHROM-TUNER-screen-image {
+.Favorites-CHROM-TUNER-Image-Area img {
     max-width: 450px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
 }
 
-.CHROM-TUNER-description-area {
+.Favorites-CHROM-TUNER-Text-Area {
     padding: 1.5em;
     margin: 1em;
     max-width: 550px;
