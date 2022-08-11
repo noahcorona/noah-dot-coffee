@@ -2,6 +2,21 @@
     color: #555;
 }
 
+.favorites-icon {
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.description-heading > h3 {
+    font-size: 1.25em;
+    padding-bottom: 0.25em;
+}
+
+.description-heading > h4 {
+    font-size: 1.2em;
+    margin-bottom: 1.25em;
+}
+
 /*
     Project Archive header area styles
 */
@@ -49,13 +64,13 @@
 
 .Project-Card-Container {
     width: calc(50% - 2em);
-    margin: 1em 2em 3em 0;
     vertical-align: top;
     display: inline-flex;
+    padding: 1em 1em 1em 1em;
 }
 
 .Project-Card-Container:hover {
-    margin: 1.25em 0.5em 0.75em 1.5em;
+    padding: 2em 0.25em 0 1.75em;
     transition-duration: 150ms;
 }
 
@@ -81,6 +96,7 @@
 
 .Project-Card-Subtitle {
     font-size: 1.15em;
+    padding-top: 0.25em;
 }
 
 .Project-Card-Icon-Link {
@@ -148,38 +164,46 @@
 
 .CUDA-screen-image-area {
     margin-top: 2em;
-    align-self: center;
-    padding-left: 3em;
+    justify-self: end;
+    align-self: end;
 }
 
 .CUDA-screen-image {
     max-width: 250px;
+    max-height: 350px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
+    float: right;
 }
 
 .CUDA-description-area {
-    padding-left: 2em;
-    padding-bottom: 2em;
-    padding-right: 3em;
+    padding: 1.5em;
+    margin: 1em;
     max-width: 550px;
     min-width: 250px;
-    justify-content: end;
+    vertical-align: top;
+    background-color: #fff;
+}
+
+.CUDA-description-area h3 {
+    line-height: 1em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 .CUDA-device-image-area {
-    margin: auto 2em auto 0;
+    margin: auto 0 auto 0;
     justify-content: end;
-    padding-right: 3em;
 }
 
 .CUDA-device-image {
-    max-height: 300px;
+    max-height: 225px;
+    max-width: 350px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
-    margin: auto;
+    margin: 1em auto auto;
     display: block;
 }
 
@@ -190,13 +214,23 @@
 
 .SMLR-screen-image-area {
     margin: 2em;
+    align-self: center;
 }
 
 .SMLR-screen-image {
-    max-width: 450px;
+    max-width: 500px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
+}
+
+.SMLR-description-area {
+    padding: 1.5em;
+    margin: 1em;
+    max-width: 550px;
+    min-width: 250px;
+    vertical-align: top;
+    background-color: #fff;
 }
 
 .CHROM-TUNER-area {
@@ -206,11 +240,21 @@
 
 .CHROM-TUNER-screen-image-area {
     margin: 2em;
+    align-self: center;
 }
 
 .CHROM-TUNER-screen-image {
-    max-width: 400px;
+    max-width: 450px;
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
+}
+
+.CHROM-TUNER-description-area {
+    padding: 1.5em;
+    margin: 1em;
+    max-width: 550px;
+    min-width: 250px;
+    vertical-align: top;
+    background-color: #fff;
 }

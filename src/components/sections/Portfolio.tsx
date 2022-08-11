@@ -1,6 +1,6 @@
 import ProjectSmall from '../ProjectSmall';
 import {projects} from '../../constants/projects.js';
-import {Col, Container, Row} from 'react-bootstrap';
+import {Badge, Col, Container, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/Portfolio.css';
 import ProjectMedium from '../ProjectMedium';
@@ -62,32 +62,7 @@ const Portfolio = (props: {
         </div>
         <div className="CUDA-area">
           <div className="d-flex justify-content-around">
-            <div className="CUDA-screen-image-area">
-              <img
-                src="/projects/CUDA/device_screen.jpeg"
-                alt="Device screen"
-                className="CUDA-screen-image"
-              />
-            </div>
             <div>
-              <div className="CUDA-description-area">
-                <h3>CUDA</h3>
-                <p>{'The CUDA group was awarded 3rd place amongst the ' +
-                    'electrical and computer engineering capstone teams ' +
-                    'at UCSB. ' +
-                    'Working as project lead and developer with the ' +
-                    'researchers' +
-                    'at Aptitude Medical Systems, I helped build a medical ' +
-                    'diagnostic device capable of detecting a life ' +
-                    'threatening ' +
-                    'condition called coagulopathy that occurs commonly in ' +
-                    'physical trauma patients. On this team of five, my most ' +
-                    'significant contributions were the creation of a mobile ' +
-                    'app and additions to the embedded system\'s Bluetooth ' +
-                    'routines.'
-                }
-                </p>
-              </div>
               <div className="CUDA-device-image-area">
                 <img
                   src="/projects/CUDA/reader.jpeg"
@@ -95,19 +70,54 @@ const Portfolio = (props: {
                   className="CUDA-device-image"
                 />
               </div>
+              <div className="CUDA-screen-image-area">
+                <img
+                  src="/projects/CUDA/CUDA_demo.gif"
+                  alt="Device screen"
+                  className="CUDA-screen-image"
+                />
+              </div>
+            </div>
+            <div>
+              <div className="CUDA-description-area">
+                <div className="description-heading">
+                  <h3>
+                    CUDA Medical Diagnostic Device
+                  </h3>
+                  <h3>
+                    <Badge bg="warning">Academic Award</Badge>
+                  </h3>
+                </div>
+                <p>{'The CUDA group was awarded 3rd place amongst the ' +
+                    'electrical and computer engineering capstone teams ' +
+                    'at UCSB. Working as project lead and developer with the ' +
+                    'researchers at Aptitude Medical Systems, I helped build ' +
+                    'a medical diagnostic device capable of detecting a life ' +
+                    'threatening condition called coagulopathy that occurs ' +
+                    'commonly in physical trauma patients. On this team of ' +
+                    'five, my most significant contributions were the ' +
+                    'creation of a mobile app and additions to the embedded ' +
+                    'system\'s Bluetooth routines.'
+                }
+                </p>
+              </div>
             </div>
           </div>
         </div>
         <div className="SMLR-area">
           <div className="d-flex">
             <div className="SMLR-description-area">
-              <h3>smlr.org: A free URL service</h3>
-              <p>{'Hosted on smlr.org, smlr is a full-stack web app that ' +
+              <div className="description-heading">
+                <h3>smlr.org: A free URL shortener</h3>
+              </div>
+              <p>{'smlr.org (smaller) is a full-stack web app that ' +
                   'allows anyone to shorten a URL with ease. The app ' +
-                  'includes a public RESTful API so developers can ' +
-                  'easily implement small URLs into their own applications. ' +
-                  'Includes custom URL strings, profanity checking, and ' +
-                  'QR code generation.'
+                  'includes custom URL strings, profanity checking, QR ' +
+                  'code generation, and allows users to track the number ' +
+                  'of clicks their links have. Also includes a public ' +
+                  'RESTful API with documentation, allowing developers ' +
+                  'to easily implement free small URLs into their own ' +
+                  'applications.'
               }
               </p>
             </div>
@@ -130,8 +140,10 @@ const Portfolio = (props: {
               />
             </div>
             <div className="CHROM-TUNER-description-area">
-              <h3>Chromatic Tuner on an Artix-7 FPGA</h3>
-              <p>{'An Artix-7 FPGA development board by Xilinx purposed to ' +
+              <div className="description-heading">
+                <h3>Chromatic Tuner</h3>
+              </div>
+              <p>{'An Artix-7 FPGA development board purposed to ' +
                   'detect the nearest note being played via an on-board ' +
                   'microphone from the 3rd to the 9th octave. Under the ' +
                   'hood, utilizes the power of the fast Fourier transform ' +
