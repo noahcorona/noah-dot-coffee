@@ -68,12 +68,26 @@ h3 {
     padding: 5px 5px 5px 15px;
 }
 
-.associate-card {
-    width: 50%;
+.associate-card-wrapper {
+    width: calc(50% - 2em);
     display: inline-block;
     vertical-align: top;
-    padding-left: 1em;
-    padding-right: 0;
+    margin: 1em 0 1em 1em;
+    border-top: 3px solid rgba(170, 85, 0, 0.25);
+}
+
+.associate-card-wrapper:not(:last-of-type) {
+    margin: 1em 1em 1em 0;
+}
+
+.associate-card-wrapper:hover {
+    border-top: 6px solid rgba(170, 85, 0, 0.25);
+    transition-duration: 150ms;
+    margin-bottom: calc(1em - 3px);
+}
+
+.associate-card {
+    padding: 0.5em;
 }
 
 .associate-card:not(:last-of-type) {

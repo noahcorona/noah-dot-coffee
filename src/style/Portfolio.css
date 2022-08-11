@@ -30,7 +30,7 @@
 
 .project-medium-card-wrapper {
     width: calc(50% - 2em);
-    margin: 1em;
+    margin: 1em 2em 1em 0;
     vertical-align: top;
     display: inline-flex;
 }
@@ -139,4 +139,82 @@
 
 .web-link:hover {
     color: #888;
+}
+
+/*
+    Favorites area styles
+ */
+
+.CUDA-area {
+    justify-content: center;
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
+.CUDA-screen-image-area {
+    margin-top: 2em;
+    align-self: center;
+    padding-left: 3em;
+}
+
+.CUDA-screen-image {
+    max-width: 250px;
+    aspect-ratio: auto;
+    border: 4px solid rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+}
+
+.CUDA-description-area {
+    padding-left: 2em;
+    padding-bottom: 2em;
+    padding-right: 3em;
+    max-width: 550px;
+    min-width: 250px;
+    justify-content: end;
+}
+
+.CUDA-device-image-area {
+    margin: auto 2em;
+    justify-content: end;
+    padding-right: 3em;
+}
+
+.CUDA-device-image {
+    max-height: 300px;
+    aspect-ratio: auto;
+    border: 4px solid rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+    margin: auto;
+    display: block;
+}
+
+.SMLR-area {
+    margin-top: 6em;
+    margin-bottom: 6em;
+}
+
+.SMLR-screen-image-area {
+    margin: 2em;
+}
+
+.SMLR-screen-image {
+    max-width: 350px;
+    aspect-ratio: auto;
+    border: 4px solid rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
+}
+
+.CHROM-TUNER-area {
+    margin-top: 6em;
+}
+
+.CHROM-TUNER-screen-image-area {
+    margin: 2em;
+}
+
+.CHROM-TUNER-screen-image {
+    max-width: 400px;
+    aspect-ratio: auto;
+    border: 4px solid rgba(255, 255, 255, 1);
+    border-radius: 0.25em;
 }

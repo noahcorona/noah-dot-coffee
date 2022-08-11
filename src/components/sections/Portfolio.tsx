@@ -60,7 +60,88 @@ const Portfolio = (props: {
             <h1>{'Things I\'ve worked on'}</h1>
           </span>
         </div>
-        <h3>Favorites</h3>
+        <div className="CUDA-area">
+          <div className="d-flex justify-content-around">
+            <div className="CUDA-screen-image-area">
+              <img
+                src="/projects/CUDA/device_screen.jpeg"
+                alt="Device screen"
+                className="CUDA-screen-image"
+              />
+            </div>
+            <div>
+              <div className="CUDA-description-area">
+                <h3>CUDA</h3>
+                <p>{'The CUDA group was awarded 3rd place amongst the ' +
+                    'electrical and computer engineering capstone teams ' +
+                    'at UCSB. ' +
+                    'Working as project lead and developer with the ' +
+                    'researchers' +
+                    'at Aptitude Medical Systems, I helped build a medical ' +
+                    'diagnostic device capable of detecting a life ' +
+                    'threatening ' +
+                    'condition called coagulopathy that occurs commonly in ' +
+                    'physical trauma patients. On this team of five, my most ' +
+                    'significant contributions were the creation of a mobile ' +
+                    'app and additions to the embedded system\'s Bluetooth ' +
+                    'routines.'
+                }
+                </p>
+              </div>
+              <div className="CUDA-device-image-area">
+                <img
+                  src="/projects/CUDA/reader.jpeg"
+                  alt="Device screen"
+                  className="CUDA-device-image"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="SMLR-area">
+          <div className="d-flex">
+            <div className="SMLR-description-area">
+              <h3>smlr.org: A free URL service</h3>
+              <p>{'Hosted on smlr.org, smlr is a full-stack web app that ' +
+                  'allows anyone to shorten a URL with ease. The app ' +
+                  'includes a public RESTful API so developers can ' +
+                  'easily implement small URLs into their own applications. ' +
+                  'Includes custom URL strings, profanity checking, and ' +
+                  'QR code generation.'
+              }
+              </p>
+            </div>
+            <div className="SMLR-screen-image-area">
+              <img
+                src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
+                alt="Device screen"
+                className="SMLR-screen-image"
+              />
+            </div>
+          </div>
+        </div>
+        <div className="CHROM-TUNER-area">
+          <div className="d-flex">
+            <div className="CHROM-TUNER-screen-image-area">
+              <img
+                src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
+                alt="Device screen"
+                className="CHROM-TUNER-screen-image"
+              />
+            </div>
+            <div className="CHROM-TUNER-description-area">
+              <h3>smlr.org: A free URL service</h3>
+              <p>{'Hosted on smlr.org, smlr is a full-stack web app that ' +
+                  'allows anyone to shorten a URL with ease. The app ' +
+                  'includes a public RESTful API so developers can ' +
+                  'easily implement small URLs into their own applications. ' +
+                  'Includes custom URL strings, profanity checking, and ' +
+                  'QR code generation.'
+              }
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="d-flex justify-content-between">
           <h3 className="bottom-spaced">Project Archives</h3>
           {

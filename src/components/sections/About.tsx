@@ -116,63 +116,67 @@ const About = () => {
         }
       </p>
       <h3>{'People I\'ve Worked With'}</h3>
-      <div className="associate-card">
-        <div className="d-flex bottom-spaced
+      <div className="associate-card-wrapper">
+        <div className="associate-card">
+          <div className="d-flex bottom-spaced
         top-spaced justify-content-between">
-          <h5>{'Aptitude Medical Systems'}</h5>
-          <a
-            className="associate-site-link"
-            href="https://aptitudemedical.com/"
-          >
-            <BsBoxArrowUpRight />
-          </a>
+            <h5>{'Aptitude Medical Systems'}</h5>
+            <a
+              className="associate-site-link"
+              href="https://aptitudemedical.com/"
+            >
+              <BsBoxArrowUpRight />
+            </a>
+          </div>
+          <div className="d-inline-flex gap-4 bottom-spaced">
+            <div>Santa Barbara, CA</div>
+            <div>(2021, 2022)</div>
+          </div>
+          <p>
+            {
+              'During the 2021-2022 UCSB ECE Capstone course, I had the ' +
+                'pleasure of working with some of the research scientists at ' +
+                'Aptitude Medical Systems on the '
+            }
+            <a href="#">CUDA project</a>
+            {
+              '. I led a student project that aimed to produce portable, ' +
+                'trustworthy, and timely digital test results for COVID-19 ' +
+                'and coagulopathy using a unified device. Results are stored ' +
+                'and shared in the cloud via a React Native app.'
+            }
+          </p>
         </div>
-        <div className="d-inline-flex gap-4 bottom-spaced">
-          <div>Santa Barbara, CA</div>
-          <div>(2021, 2022)</div>
-        </div>
-        <p>
-          {
-            'During the 2021-2022 UCSB ECE Capstone course, I had the ' +
-            'pleasure of working with some of the research scientists at ' +
-            'Aptitude Medical Systems on the '
-          }
-          <a href="#">CUDA project</a>
-          {
-            '. I led a student project that aimed to produce portable, ' +
-            'trustworthy, and timely digital test results for COVID-19 ' +
-            'and coagulopathy using a unified device. Results are stored ' +
-            'and shared in the cloud via a React Native app.'
-          }
-        </p>
       </div>
-      <div className="associate-card">
-        <div className="d-flex bottom-spaced
+      <div className="associate-card-wrapper">
+        <div className="associate-card">
+          <div className="d-flex bottom-spaced
         top-spaced justify-content-between">
-          <h5>{'Powercon Engineering'}</h5>
-          <a
-            className="associate-site-link"
-            href="https://powerconengineering.com/"
-          >
-            <BsBoxArrowUpRight />
-          </a>
+            <h5>{'Powercon Engineering'}</h5>
+            <a
+              className="associate-site-link"
+              href="https://powerconengineering.com/"
+            >
+              <BsBoxArrowUpRight />
+            </a>
+          </div>
+          <div className="d-inline-flex gap-4 bottom-spaced">
+            <div>Tustin, CA</div>
+            <div>(2017, 2018, 2019)</div>
+          </div>
+          <p>
+            {
+              'As a project engineer intern at Powercon, I had the chance to ' +
+              'work on projects that utilize programmable logic controllers ' +
+              'and human-machine interfaces. I was fortunate to both work ' +
+              'on an '
+            }
+            <a href="#">independent project</a>
+            {' and contribute to '}
+            <a href="#">{'Powercon\'s commercial projects'}</a>
+            .
+          </p>
         </div>
-        <div className="d-inline-flex gap-4 bottom-spaced">
-          <div>Tustin, CA</div>
-          <div>(2017, 2018, 2019)</div>
-        </div>
-        <p>
-          {
-            'As a project engineer intern at Powercon, I had the chance to ' +
-            'work on projects that utilize programmable logic controllers ' +
-            'and human-machine interfaces. I was fortunate to both work ' +
-            'on an '
-          }
-          <a href="#">independent project</a>
-          {' and contribute to '}
-          <a href="#">{'Powercon\'s commercial projects'}</a>
-          .
-        </p>
       </div>
     </div>
   );
