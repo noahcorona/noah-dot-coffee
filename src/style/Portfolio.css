@@ -164,8 +164,9 @@
 
 .CUDA-screen-image-area {
     margin-top: 2em;
-    justify-self: end;
-    align-self: end;
+    place-self: center;
+    display: flex;
+    justify-content: center;
 }
 
 .CUDA-screen-image {
@@ -174,15 +175,14 @@
     aspect-ratio: auto;
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
-    float: right;
+    align-self: center;
 }
 
 .CUDA-description-area {
     padding: 1.5em;
     margin: 1em;
-    max-width: 550px;
+    max-width: 500px;
     min-width: 250px;
-    vertical-align: top;
     background-color: #fff;
 }
 
