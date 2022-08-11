@@ -1,8 +1,6 @@
 import ProjectSmall from '../ProjectSmall';
 import {projects} from '../../constants/projects.js';
 import {Col, Container, Row} from 'react-bootstrap';
-import '../../style/App.css';
-import '../../style/Portfolio.css';
 import ProjectMedium from '../ProjectMedium';
 import {BiBookContent} from '@react-icons/all-files/bi/BiBookContent';
 import {BiListUl} from '@react-icons/all-files/bi/BiListUl';
@@ -12,6 +10,9 @@ import {BiAward} from '@react-icons/all-files/bi/BiAward';
 import {RiGithubLine} from '@react-icons/all-files/ri/RiGithubLine';
 import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 import {IoIosImages} from '@react-icons/all-files/io/IoIosImages';
+import {BsDownload} from '@react-icons/all-files/bs/BsDownload';
+import '../../style/App.css';
+import '../../style/Portfolio.css';
 
 const Portfolio = (props: {
   windowSize: any,
@@ -75,55 +76,68 @@ const Portfolio = (props: {
             </div>
             <div className="Favorites-CUDA-Text-Area">
               <div className="Favorites-Description-Heading-Area">
-                <h3>CUDA Medical Diagnostic Device</h3>
+                <h2>CUDA Medical Diagnostic Device</h2>
               </div>
               <p>
                 {'The CUDA group was awarded 3rd place amongst ' +
-                    'the ' +
-                    'electrical and computer engineering capstone' +
-                    ' teams ' +
-                    'at UCSB. Working as project lead and developer' +
-                    ' with the ' +
-                    'researchers at Aptitude Medical Systems, I ' +
-                    'helped build ' +
-                    'a medical diagnostic device capable of detecting' +
-                    ' a life ' +
-                    'threatening condition called coagulopathy that' +
-                    ' occurs ' +
-                    'commonly in physical trauma patients. On this' +
-                    ' team of ' +
-                    'five, my most significant contributions were' +
-                    ' the ' +
-                    'creation of a mobile app and additions to the' +
-                    ' embedded ' +
-                    'system\'s Bluetooth routines.'
+                      'the ' +
+                      'electrical and computer engineering capstone' +
+                      ' teams ' +
+                      'at UCSB. Working as project lead and developer' +
+                      ' with the ' +
+                      'researchers at Aptitude Medical Systems, I ' +
+                      'helped build ' +
+                      'a medical diagnostic device capable of detecting' +
+                      ' a life ' +
+                      'threatening condition called coagulopathy that' +
+                      ' occurs ' +
+                      'commonly in physical trauma patients. On this' +
+                      ' team of ' +
+                      'five, my most significant contributions were' +
+                      ' the ' +
+                      'creation of a mobile app and additions to the' +
+                      ' embedded ' +
+                      'system\'s Bluetooth routines.'
                 }
               </p>
             </div>
             <div className="Favorites-Icon-Links">
               <a
-                href="#"
-                className="Favorites-Icon-Link Favorites-Award-Icon"
+                href="https://www.ece.ucsb.edu/spotlights/22-ee-ce-capstone-awards-replays"
+                className="Favorites-Icon-Link-Small"
               >
-                <BiAward />
+                <div className="Favorites-Icon Favorites-Award-Icon
+                Favorites-Award-Icon">
+                  <BiAward />
+                </div>
+                <div className="Favorites-Icon-Link-Small-Background" />
+              </a>
+              <a
+                href="https://github.com/AptitudeCapstone/CUDA"
+                className="Favorites-Icon-Link-Small"
+              >
+                <div className="Favorites-Icon">
+                  <RiGithubLine />
+                </div>
+                <div className="Favorites-Icon-Link-Small-Background" />
+              </a>
+              <a
+                href="https://aptitudemedical.com/"
+                className="Favorites-Icon-Link-Small"
+              >
+                <div className="Favorites-Icon">
+                  <IoIosImages />
+                </div>
+                <div className="Favorites-Icon-Link-Small-Background" />
               </a>
               <a
                 href="#"
-                className="Favorites-Icon-Link-Small Favorites-Icon"
+                className="Favorites-Icon-Link-Small"
               >
-                <RiGithubLine />
-              </a>
-              <a
-                href="#"
-                className="Favorites-Icon-Link-Small Favorites-Icon"
-              >
-                <IoIosImages />
-              </a>
-              <a
-                href="#"
-                className="Favorites-Icon-Link-Small Favorites-Icon"
-              >
-                <BsBoxArrowUpRight />
+                <div className="Favorites-Icon">
+                  <BsBoxArrowUpRight />
+                </div>
+                <div className="Favorites-Icon-Link-Small-Background" />
               </a>
             </div>
           </div>
@@ -131,9 +145,38 @@ const Portfolio = (props: {
         <FadeIn>
           <div className="Favorites-SMLR">
             <div className="d-flex">
+              <div className="Favorites-Icon-Links">
+                <a
+                  href="https://github.com/noahcorona/url-shortener/"
+                  className="Favorites-Icon-Link-Small"
+                >
+                  <div className="Favorites-Icon">
+                    <RiGithubLine />
+                  </div>
+                  <div className="Favorites-Icon-Link-Small-Background" />
+                </a>
+                <a
+                  href="#"
+                  className="Favorites-Icon-Link-Small"
+                >
+                  <div className="Favorites-Icon">
+                    <IoIosImages />
+                  </div>
+                  <div className="Favorites-Icon-Link-Small-Background" />
+                </a>
+                <a
+                  href="https://smlr.org/"
+                  className="Favorites-Icon-Link-Small"
+                >
+                  <div className="Favorites-Icon">
+                    <BsBoxArrowUpRight />
+                  </div>
+                  <div className="Favorites-Icon-Link-Small-Background" />
+                </a>
+              </div>
               <div className="Favorites-SMLR-Text-Area">
                 <div className="Favorites-Description-Heading-Area">
-                  <h3>smlr.org: A free URL shortener</h3>
+                  <h2>smlr.org: A free URL shortener</h2>
                 </div>
                 <p>{'smlr.org (smaller) is a full-stack web app that ' +
                     'allows anyone to shorten a URL with ease. The app ' +
@@ -166,7 +209,7 @@ const Portfolio = (props: {
               </div>
               <div className="Favorites-CHROM-TUNER-Text-Area">
                 <div className="Favorites-Description-Heading-Area">
-                  <h3>Chromatic Tuner</h3>
+                  <h2>Chromatic Tuner</h2>
                 </div>
                 <p>{'An Artix-7 FPGA development board purposed to ' +
                     'detect the nearest note being played via an on-board ' +
@@ -179,6 +222,35 @@ const Portfolio = (props: {
                     'being played. Accurate to +/- 10 cents.'
                 }
                 </p>
+              </div>
+              <div className="Favorites-Icon-Links ">
+                <a
+                  href="https://github.com/noahcorona/FPGA-chromatic-tuner"
+                  className="Favorites-Icon-Link-Small"
+                >
+                  <div className="Favorites-Icon">
+                    <RiGithubLine />
+                  </div>
+                  <div className="Favorites-Icon-Link-Small-Background" />
+                </a>
+                <a
+                  href="#"
+                  className="Favorites-Icon-Link-Small"
+                >
+                  <div className="Favorites-Icon">
+                    <IoIosImages />
+                  </div>
+                  <div className="Favorites-Icon-Link-Small-Background" />
+                </a>
+                <a
+                  href="https://github.com/noahcorona/FPGA-chromatic-tuner/archive/refs/heads/main.zip"
+                  className="Favorites-Icon-Link-Small"
+                >
+                  <div className="Favorites-Icon">
+                    <BsDownload />
+                  </div>
+                  <div className="Favorites-Icon-Link-Small-Background" />
+                </a>
               </div>
             </div>
           </div>
