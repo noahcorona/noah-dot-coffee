@@ -96,27 +96,9 @@ const Portfolio = (props: {
           <span>{'Filter: '}</span>
           <a
             href="#"
-            onClick={(e) => handleFilterClick(e, 'web')}
+            onClick={(e) => handleFilterClick(e, null)}
           >
-            Web
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'mobile')}
-          >
-            Mobile
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'embedded')}
-          >
-            Embedded
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'ml')}
-          >
-            Machine Learning
+            View All
           </a>
           <a
             href="#"
@@ -126,9 +108,27 @@ const Portfolio = (props: {
           </a>
           <a
             href="#"
-            onClick={(e) => handleFilterClick(e, null)}
+            onClick={(e) => handleFilterClick(e, 'ml')}
           >
-            View All
+            Machine Learning
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'embedded')}
+          >
+            Embedded
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'mobile')}
+          >
+            Mobile
+          </a>
+          <a
+            href="#"
+            onClick={(e) => handleFilterClick(e, 'web')}
+          >
+            Web
           </a>
         </h5>
         {

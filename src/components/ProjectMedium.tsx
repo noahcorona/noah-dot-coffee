@@ -7,14 +7,12 @@ const ProjectMedium = (props: any) => {
   return (
     <div className="project-medium-card-wrapper">
       <div className="project-medium-card">
-        <div className="d-flex justify-content-between">
-          <h4>
-            {'+ ' + props.project.title}
-          </h4>
-          <h4>
-            {props.project.year}
-          </h4>
-        </div>
+        <h4 className="title-text">
+          {'+ ' + props.project.title}
+        </h4>
+        <h4 className="year-text">
+          {props.project.wasFor + ' (' + props.project.year + ')'}
+        </h4>
         <p>{props.project.description}</p>
         <div className="stack-area">
           {

@@ -20,9 +20,9 @@ const ProjectSmall = (props: any) => {
         <Col xs={3} sm={3} md={3} lg={3} xl={3} className="text-center">
           {
             Array.from(props.project.stack).map((item: any) => (
-              <span className="info-badge" key={item}>
+              <div className="info-badge" key={item}>
                 {item}
-              </span>
+              </div>
             ))
           }
         </Col>

@@ -16,14 +16,7 @@
 
 .info-badge {
     font-family: 'Courier New', monospace;
-    margin-right: 0.5em;
-    font-size: 1em;
-    color: #222;
     text-align: center;
-}
-
-.info-badge:not(:first-child):before {
-    content:  " \B7  ";
 }
 
 /* Project component layout */
@@ -67,6 +60,14 @@
     margin-top: 1em;
 }
 
+.title-text {
+    overflow-wrap: anywhere;
+}
+
+.year-text {
+    font-size: 1.15em;
+}
+
 .card-links {
     padding-left: 1em;
 }
@@ -83,6 +84,10 @@
     padding: 0.25em;
 }
 
+.stack-area span:not(:first-child):before {
+    content:  " \B7  ";
+}
+
 .filter-links a {
     padding-left: 1em;
     color: #555;
@@ -92,6 +97,10 @@
 
 .filter-links a:visited {
     color: #555;
+}
+
+.filter-links a:hover {
+    color: rgba(170, 85, 0, 1);
 }
 
 .filter-icon {

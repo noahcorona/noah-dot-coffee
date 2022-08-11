@@ -4,6 +4,7 @@ import '../../style/App.css';
 import '../../style/About.css';
 // eslint-disable-next-line max-len
 import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
+import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 
 const About = () => {
   return (
@@ -116,10 +117,17 @@ const About = () => {
       </p>
       <h3>{'People I\'ve Worked With'}</h3>
       <div className="associate-card">
-        <div className="d-inline-flex gap-4 bottom-spaced top-spaced">
-          <a href="https://aptitudemedical.com/">
-            <h5>{'> Aptitude Medical Systems'}</h5>
+        <div className="d-flex bottom-spaced
+        top-spaced justify-content-between">
+          <h5>{'Aptitude Medical Systems'}</h5>
+          <a
+            className="associate-site-link"
+            href="https://aptitudemedical.com/"
+          >
+            <BsBoxArrowUpRight />
           </a>
+        </div>
+        <div className="d-inline-flex gap-4 bottom-spaced">
           <div>Santa Barbara, CA</div>
           <div>(2021, 2022)</div>
         </div>
@@ -139,10 +147,17 @@ const About = () => {
         </p>
       </div>
       <div className="associate-card">
-        <div className="d-inline-flex gap-4 bottom-spaced top-spaced">
-          <a href="https://powerconengineering.com/">
-            <h5>{'> Powercon Engineering'}</h5>
+        <div className="d-flex bottom-spaced
+        top-spaced justify-content-between">
+          <h5>{'Powercon Engineering'}</h5>
+          <a
+            className="associate-site-link"
+            href="https://powerconengineering.com/"
+          >
+            <BsBoxArrowUpRight />
           </a>
+        </div>
+        <div className="d-inline-flex gap-4 bottom-spaced">
           <div>Tustin, CA</div>
           <div>(2017, 2018, 2019)</div>
         </div>
@@ -154,8 +169,8 @@ const About = () => {
             'on an '
           }
           <a href="#">independent project</a>
-          and contribute to some of
-          <a href="#">{'Powercon\'s commercials projects'}</a>
+          {' and contribute to '}
+          <a href="#">{'Powercon\'s commercial projects'}</a>
           .
         </p>
       </div>

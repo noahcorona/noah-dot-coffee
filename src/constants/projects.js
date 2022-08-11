@@ -1,6 +1,7 @@
 export const projects = [
   {
     year: 2022,
+    wasFor: 'Personal project',
     types: [
       'web',
     ],
@@ -25,6 +26,7 @@ export const projects = [
   },
   {
     year: 2022,
+    wasFor: 'Personal project',
     types: [
       'web',
     ],
@@ -53,6 +55,7 @@ export const projects = [
   },
   {
     year: 2010,
+    wasFor: 'Anoroc Precision Sheet Metal, Inc.',
     types: [
       'web',
     ],
@@ -86,6 +89,7 @@ export const projects = [
   },
   {
     year: 2022,
+    wasFor: 'Aptitude Medical Systems / UCSB Capstone',
     types: [
       'mobile',
       'embedded',
@@ -116,6 +120,7 @@ export const projects = [
   },
   {
     year: 2021,
+    wasFor: 'Academic project',
     types: [
       'mobile',
     ],
@@ -158,6 +163,7 @@ export const projects = [
   },
   {
     year: 2018,
+    wasFor: 'Personal project',
     types: [
       'mobile',
     ],
@@ -201,11 +207,11 @@ export const projects = [
   },
   {
     year: 2020,
+    wasFor: 'Academic project',
     types: [
       'embedded',
-      'mobile',
     ],
-    title: 'Solar Battery Charger with Active Tracking',
+    title: 'Active Tracking USB Solar Charger',
     description: 'An 18650 solar battery charger with a 2.0A USB output. ' +
         'Actively tracks the brightest light source in view and adjusts the ' +
         'panels using two 180 degree servo motors.',
@@ -248,6 +254,7 @@ export const projects = [
   },
   {
     year: 2020,
+    wasFor: 'Personal project',
     types: [
       'embedded',
       'mobile',
@@ -286,6 +293,7 @@ export const projects = [
   },
   {
     year: 2020,
+    wasFor: 'Academic project',
     types: [
       'embedded',
     ],
@@ -310,6 +318,7 @@ export const projects = [
   },
   {
     year: 2021,
+    wasFor: 'Academic project',
     types: [
       'ml',
     ],
@@ -327,6 +336,7 @@ export const projects = [
   },
   {
     year: 2021,
+    wasFor: 'Academic project',
     types: [
       'ml',
     ],
@@ -345,6 +355,7 @@ export const projects = [
   },
   {
     year: 2021,
+    wasFor: 'Academic project',
     types: [
       'ml',
     ],
@@ -361,6 +372,7 @@ export const projects = [
   },
   {
     year: 2021,
+    wasFor: 'Academic project',
     types: [
       'ml',
     ],
@@ -380,6 +392,7 @@ export const projects = [
   },
   {
     year: 2022,
+    wasFor: 'Academic project',
     types: [
       'ml',
     ],
@@ -404,6 +417,7 @@ export const projects = [
   },
   {
     year: 2019,
+    wasFor: 'Powercon Engineering Inc.',
     types: [
       'plc-hmi',
     ],
@@ -431,6 +445,7 @@ export const projects = [
   },
   {
     year: 2017,
+    wasFor: 'Powercon Engineering Inc.',
     types: [
       'plc-hmi',
     ],
