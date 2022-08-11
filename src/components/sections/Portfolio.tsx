@@ -44,10 +44,19 @@ const Portfolio = (props: {
     setCondensedView(condensed);
   };
 
+  const openGalleryClickHandler = (e: any, title: string) => {
+    e.preventDefault();
+    props.setGalleryActiveProject(
+        projects.filter((el: any) => {
+          return el.title === title;
+        }).at(0),
+    );
+  };
+
   useEffect(() => {
     if (projectFilter) {
       const filteredProjects = projects
-          .filter((el) => el.types.includes(projectFilter))
+          .filter((el: any) => el.types.includes(projectFilter))
           .sort(order);
       setCurrentProjects(filteredProjects);
     } else {
@@ -79,25 +88,18 @@ const Portfolio = (props: {
                 <h2>CUDA Medical Diagnostic Device</h2>
               </div>
               <p>
-                {'The CUDA group was awarded 3rd place amongst ' +
-                      'the ' +
-                      'electrical and computer engineering capstone' +
-                      ' teams ' +
-                      'at UCSB. Working as project lead and developer' +
-                      ' with the ' +
-                      'researchers at Aptitude Medical Systems, I ' +
-                      'helped build ' +
-                      'a medical diagnostic device capable of detecting' +
-                      ' a life ' +
-                      'threatening condition called coagulopathy that' +
-                      ' occurs ' +
-                      'commonly in physical trauma patients. On this' +
-                      ' team of ' +
-                      'five, my most significant contributions were' +
-                      ' the ' +
-                      'creation of a mobile app and additions to the' +
-                      ' embedded ' +
-                      'system\'s Bluetooth routines.'
+                {'The CUDA group was awarded 3rd place amongst the ' +
+                 'electrical and computer engineering capstone ' +
+                 'teams at UCSB. Working as project lead and ' +
+                 'developer with the researchers at Aptitude ' +
+                 'Medical Systems, I helped build a medical ' +
+                 'diagnostic device capable of detecting ' +
+                 'a life threatening condition called coagulopathy ' +
+                 'that occurs commonly in physical trauma ' +
+                 'patients. On this team of five, my most significant ' +
+                 'contributions were the creation of a ' +
+                 'mobile app and additions to the embedded system\'s ' +
+                 'Bluetooth routines.'
                 }
               </p>
             </div>
@@ -107,7 +109,8 @@ const Portfolio = (props: {
                 className="Favorites-Icon-Link-Small"
               >
                 <div className="Favorites-Icon Favorites-Award-Icon
-                Favorites-Award-Icon">
+                                Favorites-Award-Icon"
+                >
                   <BiAward />
                 </div>
                 <div className="Favorites-Icon-Link-Small-Background" />
@@ -122,8 +125,9 @@ const Portfolio = (props: {
                 <div className="Favorites-Icon-Link-Small-Background" />
               </a>
               <a
-                href="https://aptitudemedical.com/"
+                href="#"
                 className="Favorites-Icon-Link-Small"
+                onClick={(e: any) => openGalleryClickHandler(e, 'CUDA')}
               >
                 <div className="Favorites-Icon">
                   <IoIosImages />
@@ -131,7 +135,7 @@ const Portfolio = (props: {
                 <div className="Favorites-Icon-Link-Small-Background" />
               </a>
               <a
-                href="#"
+                href="https://aptitudemedical.com/"
                 className="Favorites-Icon-Link-Small"
               >
                 <div className="Favorites-Icon">
@@ -158,6 +162,7 @@ const Portfolio = (props: {
                 <a
                   href="#"
                   className="Favorites-Icon-Link-Small"
+                  onClick={(e: any) => openGalleryClickHandler(e, 'smlr.org')}
                 >
                   <div className="Favorites-Icon">
                     <IoIosImages />
@@ -236,6 +241,9 @@ const Portfolio = (props: {
                 <a
                   href="#"
                   className="Favorites-Icon-Link-Small"
+                  onClick={(e: any) =>
+                    openGalleryClickHandler(e, 'Chromatic Tuner')
+                  }
                 >
                   <div className="Favorites-Icon">
                     <IoIosImages />
