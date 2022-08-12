@@ -133,7 +133,7 @@ const About = (props: {windowSize: number}) => {
           'with a B.S. in Computer Engineering. My ' +
           'interest in the field started in 2010, when ' +
           'I started exploring source code of video game ' +
-          'modifications and websites. In the years between, I\ve ' +
+          'modifications and websites. In the years between, I\'ve ' +
           'explored several areas of computer science and ' +
           'electrical engineering, and have been fortunate ' +
           'to work on impactful work with exemplary people.'
