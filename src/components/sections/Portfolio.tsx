@@ -101,10 +101,10 @@ const Portfolio = (props: {
       <div className="Favorites-Icon-Links">
         <a
           href="https://www.ece.ucsb.edu/spotlights/22-ee-ce-capstone-awards-replays"
-          className="Favorites-Icon-Link-Small"
+          className="Favorites-Icon-Link"
         >
           <div className="Favorites-Icon Favorites-Award-Icon
-                                Favorites-Award-Icon"
+                          Favorites-Award-Icon"
           >
             <BiAward />
           </div>
@@ -112,7 +112,7 @@ const Portfolio = (props: {
         </a>
         <a
           href="https://github.com/AptitudeCapstone/CUDA"
-          className="Favorites-Icon-Link-Small"
+          className="Favorites-Icon-Link"
         >
           <div className="Favorites-Icon">
             <RiGithubLine />
@@ -121,7 +121,7 @@ const Portfolio = (props: {
         </a>
         <a
           href="#"
-          className="Favorites-Icon-Link-Small"
+          className="Favorites-Icon-Link"
           onClick={(e: any) => openGalleryClickHandler(e, 'CUDA')}
         >
           <div className="Favorites-Icon">
@@ -131,7 +131,7 @@ const Portfolio = (props: {
         </a>
         <a
           href="https://aptitudemedical.com/"
-          className="Favorites-Icon-Link-Small"
+          className="Favorites-Icon-Link"
         >
           <div className="Favorites-Icon">
             <BsBoxArrowUpRight />
@@ -142,59 +142,79 @@ const Portfolio = (props: {
     </div>
   );
 
-  const SMLRAreaMain = () => (
-    <div className="Favorites-Area-Medium Favorites-SMLR-Text-Area d-flex">
-      <div>
-        <div className="Favorites-Description-Heading-Area">
-          <h2>smlr.org: A free URL shortener</h2>
-        </div>
-        <p>
-          {'smlr.org (smaller) is a full-stack web app that ' +
-                'allows anyone to shorten a URL with ease. The app ' +
-                'includes custom URL strings, profanity checking, QR ' +
-                'code generation, and allows users to track the number ' +
-                'of clicks their links have. Also includes a public ' +
-                'RESTful API with documentation, allowing developers ' +
-                'to easily implement free small URLs into their own ' +
-                'applications.'
-          }
-        </p>
+  const SMLRAreaMainText = () => (
+    <div>
+      <div className="Favorites-Description-Heading-Area">
+        <h2>smlr.org: A free URL shortener</h2>
       </div>
-      <div className="Favorites-Icon-Links">
-        <a
-          href="https://github.com/noahcorona/url-shortener/"
-          className="Favorites-Icon-Link-Small"
-        >
-          <div className="Favorites-Icon">
-            <RiGithubLine />
-          </div>
-          <div className="Favorites-Icon-Link-Small-Background" />
-        </a>
-        <a
-          href="#"
-          className="Favorites-Icon-Link-Small"
-          onClick={(e: any) => openGalleryClickHandler(e, 'smlr.org')}
-        >
-          <div className="Favorites-Icon">
-            <IoIosImages />
-          </div>
-          <div className="Favorites-Icon-Link-Small-Background" />
-        </a>
-        <a
-          href="https://smlr.org/"
-          className="Favorites-Icon-Link-Small"
-        >
-          <div className="Favorites-Icon">
-            <BsBoxArrowUpRight />
-          </div>
-          <div className="Favorites-Icon-Link-Small-Background" />
-        </a>
-      </div>
+      <p>
+        {'smlr.org (smaller) is a full-stack web app that ' +
+              'allows anyone to shorten a URL with ease. The app ' +
+              'includes custom URL strings, profanity checking, QR ' +
+              'code generation, and allows users to track the number ' +
+              'of clicks their links have. Also includes a public ' +
+              'RESTful API with documentation, allowing developers ' +
+              'to easily implement free small URLs into their own ' +
+              'applications.'
+        }
+      </p>
     </div>
   );
+
+  const SMLRAreaMainLinks = () => (
+    <div className="Favorites-Icon-Links">
+      <a
+        href="https://github.com/noahcorona/url-shortener/"
+        className="Favorites-Icon-Link"
+      >
+        <div className="Favorites-Icon">
+          <RiGithubLine />
+        </div>
+        <div className="Favorites-Icon-Link-Small-Background" />
+      </a>
+      <a
+        href="#"
+        className="Favorites-Icon-Link"
+        onClick={(e: any) => openGalleryClickHandler(e, 'smlr.org')}
+      >
+        <div className="Favorites-Icon">
+          <IoIosImages />
+        </div>
+        <div className="Favorites-Icon-Link-Small-Background" />
+      </a>
+      <a
+        href="https://smlr.org/"
+        className="Favorites-Icon-Link"
+      >
+        <div className="Favorites-Icon">
+          <BsBoxArrowUpRight />
+        </div>
+        <div className="Favorites-Icon-Link-Small-Background" />
+      </a>
+    </div>
+  );
+
+  const SMLRAreaMain = () => {
+    return (
+      <div className="Favorites-Area-Larger Favorites-SMLR-Text-Area d-flex">
+        {
+          props.windowSize > 1000 ?
+              (
+                  <>
+                    <SMLRAreaMainLinks/>
+                    <SMLRAreaMainText/>
+                  </>) : (
+                  <>
+                    <SMLRAreaMainText/>
+                    <SMLRAreaMainLinks/>
+                  </>)
+        }
+      </div>
+    );
+  };
 
   const SMLRAreaMedia = () => (
-    <div className="Favorites-Area-Medium">
+    <div className="Favorites-Area-Smaller">
       <div className="Favorites-SMLR-Image-Area">
         <img
           src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
@@ -205,7 +225,7 @@ const Portfolio = (props: {
   );
 
   const CHROMTunerAreaMain = () => (
-    <div className="Favorites-Area-Medium Favorites-CHROM-TUNER-Text-Area">
+    <div className="Favorites-Area-Larger Favorites-CHROM-TUNER-Text-Area">
       <div>
         <div className="Favorites-Description-Heading-Area">
           <h2>Chromatic Tuner</h2>
@@ -225,7 +245,7 @@ const Portfolio = (props: {
       <div className="Favorites-Icon-Links ">
         <a
           href="https://github.com/noahcorona/FPGA-chromatic-tuner"
-          className="Favorites-Icon-Link-Small"
+          className="Favorites-Icon-Link"
         >
           <div className="Favorites-Icon">
             <RiGithubLine />
@@ -234,7 +254,7 @@ const Portfolio = (props: {
         </a>
         <a
           href="#"
-          className="Favorites-Icon-Link-Small"
+          className="Favorites-Icon-Link"
           onClick={(e: any) =>
             openGalleryClickHandler(e, 'Chromatic Tuner')
           }
@@ -246,7 +266,7 @@ const Portfolio = (props: {
         </a>
         <a
           href="https://github.com/noahcorona/FPGA-chromatic-tuner/archive/refs/heads/main.zip"
-          className="Favorites-Icon-Link-Small"
+          className="Favorites-Icon-Link"
         >
           <div className="Favorites-Icon">
             <BsDownload />
@@ -258,7 +278,7 @@ const Portfolio = (props: {
   );
 
   const CHROMTUNERAreaMedia = () => (
-    <div className="Favorites-Area-Medium">
+    <div className="Favorites-Area-Smaller">
       <div className="Favorites-CHROM-TUNER-Image-Area">
         <img
           src="/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif"
@@ -282,7 +302,7 @@ const Portfolio = (props: {
         <FadeIn>
           <div className="Favorites-CUDA">
             {
-              props.windowSize > 900 ?
+              props.windowSize > 1000 ?
                   <>
                     <CUDAAreaSmall />
                     <CUDAAreaLarge />

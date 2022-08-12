@@ -139,17 +139,13 @@
 .Favorites-Icon-Links {
     display: inline-block;
     align-self: center;
+    justify-content: center;
+    justify-self: center;
+    padding-right: 2.25em;
+    padding-left: 2em;
 }
 
 .Favorites-Icon-Link {
-    display: block;
-    padding: 0.05em 0.25em;
-    font-size: 2em;
-    margin-bottom: 1em;
-    border-radius: 50%;
-}
-
-.Favorites-Icon-Link-Small {
     display: block;
     padding: 0.15em 0.25em;
     font-size: 1.75em;
@@ -158,14 +154,14 @@
     position: relative;
 }
 
-.Favorites-Icon-Link-Small:hover > *:last-child {
+.Favorites-Icon-Link:hover > *:last-child {
     left: 0.25em;
     top: -1.35em;
     transition-duration: 150ms;
 }
 
 
-.Favorites-Icon-Link-Small:hover > *:not(:last-child) {
+.Favorites-Icon-Link:hover > *:not(:last-child) {
     left: -0.15em;
     top: -0.15em;
     transition-duration: 150ms;
@@ -223,23 +219,12 @@
     flex: 0.5;
     padding: 1em;
     display: inline-flex;
-    justify-content: end;
-    align-content: center;
     align-self: center;
 }
 
 .Favorites-Area-Larger {
     flex: 1;
     padding: 1em;
-    justify-content: end;
-    align-content: center;
-    align-self: center;
-}
-
-.Favorites-Area-Medium {
-    flex: 0.5;
-    padding: 1em;
-    display: inline-flex;
     justify-content: end;
     align-content: center;
     align-self: center;
@@ -253,13 +238,25 @@
     display: flex;
 }
 
+.Favorites-CUDA-Image-Area {
+    width: 100%;
+    justify-content: flex-end;
+    align-content: end;
+    justify-items: flex-end;
+}
+
 .Favorites-CUDA-Image-Area img {
     border: 4px solid rgba(255, 255, 255, 1);
     border-radius: 0.25em;
+    width: 13vw;
+    max-width: 500px;
+    aspect-ratio: auto;
+    float: right;
 }
 
 .Favorites-CUDA-Text-Area {
     display: flex;
+    margin-left: 1em;
 }
 
 .Favorites-CUDA-Text-Area h3 {
@@ -273,7 +270,6 @@
     background-color: #fff;
     border-radius: 0.25em;
     margin-top: 2em;
-    margin-right: 1.5em;
 }
 
 .Favorites-SMLR {
@@ -282,6 +278,10 @@
     width: 100%;
     justify-content: center;
     display: flex;
+}
+
+.Favorites-SMLR-Image-Area {
+    height: 100%;
 }
 
 .Favorites-SMLR-Image-Area img {
@@ -295,18 +295,12 @@
     display: flex;
 }
 
-.Favorites-SMLR-Text-Area h3 {
-    line-height: 1em;
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
-}
-
 .Favorites-SMLR-Text-Area p {
     padding: 1.5em;
     background-color: #fff;
     border-radius: 0.25em;
     margin-top: 2em;
-    margin-right: 1.5em;
+    margin-right: 1em;
 }
 
 .Favorites-CHROM-TUNER {
@@ -325,6 +319,7 @@
 
 .Favorites-CHROM-TUNER-Text-Area {
     display: flex;
+    margin-left: 1em;
 }
 
 .Favorites-CHROM-TUNER-Text-Area h3 {
@@ -338,7 +333,6 @@
     background-color: #fff;
     border-radius: 0.25em;
     margin-top: 2em;
-    margin-right: 1.5em;
 }
 
 
@@ -347,11 +341,21 @@
     Styles for different screen sizes
  */
 
-@media screen and (max-width: 900px) {
-    .Project-Card-Container {
-        width: 100%;
+@media screen and (max-width: 1500px) {
+    .Favorites-CUDA-Image-Area img {
+        width: 15vw;
+        max-width: 400px;
     }
+}
 
+@media screen and (max-width: 1200px) {
+    .Favorites-CUDA-Image-Area img {
+        width: 20vw;
+        max-width: 400px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
     .Favorites-CUDA {
         display: block;
     }
@@ -363,9 +367,27 @@
         margin: auto;
         width: 100%;
     }
-}
 
-@media screen and (max-width: 1000px) {
+    .Favorites-CUDA-Text-Area {
+        margin-right: 1em;
+    }
+
+    .Favorites-CUDA-Image-Area {
+        align-content: center;
+        align-self: center;
+        justify-content: center;
+        display: inline-flex;
+    }
+
+    .Favorites-CUDA-Image-Area img {
+        width: 275px;
+        max-width: 275px;
+        max-height: 50%;
+        align-self: center;
+        justify-self: center;
+        float: none;
+    }
+
     .Favorites-SMLR {
         display: block;
     }
@@ -403,5 +425,30 @@
         border-radius: 0.25em;
         width: 100%;
         max-width: 100%;
+    }
+
+    .Favorites-SMLR-Text-Area p {
+        margin-right: 0;
+    }
+
+    .Favorites-CHROM-TUNER-Text-Area {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .Project-Card-Container {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .Favorites-CUDA-Image-Area img {
+        width: 100%;
+        margin: 3em;
+        max-width: 100%;
+        align-self: center;
+        justify-self: center;
+        float: none;
     }
 }
