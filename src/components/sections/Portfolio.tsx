@@ -83,17 +83,18 @@ const Portfolio = (props: {
         </div>
         <p>
           {'The CUDA group was awarded 3rd place amongst the ' +
-                'electrical and computer engineering capstone ' +
-                'teams at UCSB. Working as project lead and ' +
-                'developer with the researchers at Aptitude ' +
-                'Medical Systems, I helped build a medical ' +
-                'diagnostic device capable of detecting ' +
-                'a life threatening condition called coagulopathy ' +
-                'that occurs commonly in physical trauma ' +
-                'patients. On this team of five, my most significant ' +
-                'contributions were the creation of a ' +
-                'mobile app and additions to the embedded system\'s ' +
-                'Bluetooth routines.'
+           'electrical and computer engineering capstone ' +
+           'teams at UCSB. Working as project lead and ' +
+           'developer with the researchers at Aptitude ' +
+           'Medical Systems, I helped build a medical ' +
+           'diagnostic device capable of detecting ' +
+           'a life threatening condition called coagulopathy ' +
+           'that occurs commonly in physical trauma ' +
+           'patients. On this team of five, my most significant ' +
+           'contributions were the creation of a ' +
+           'mobile app using React Native, and additions to the ' +
+           'embedded system\'s Bluetooth and testing routines ' +
+           'using Python.'
           }
         </p>
       </div>
@@ -141,6 +142,132 @@ const Portfolio = (props: {
     </div>
   );
 
+  const SMLRAreaMain = () => (
+    <div className="Favorites-Area-Medium Favorites-SMLR-Text-Area d-flex">
+      <div>
+        <div className="Favorites-Description-Heading-Area">
+          <h2>smlr.org: A free URL shortener</h2>
+        </div>
+        <p>
+          {'smlr.org (smaller) is a full-stack web app that ' +
+                'allows anyone to shorten a URL with ease. The app ' +
+                'includes custom URL strings, profanity checking, QR ' +
+                'code generation, and allows users to track the number ' +
+                'of clicks their links have. Also includes a public ' +
+                'RESTful API with documentation, allowing developers ' +
+                'to easily implement free small URLs into their own ' +
+                'applications.'
+          }
+        </p>
+      </div>
+      <div className="Favorites-Icon-Links">
+        <a
+          href="https://github.com/noahcorona/url-shortener/"
+          className="Favorites-Icon-Link-Small"
+        >
+          <div className="Favorites-Icon">
+            <RiGithubLine />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+        <a
+          href="#"
+          className="Favorites-Icon-Link-Small"
+          onClick={(e: any) => openGalleryClickHandler(e, 'smlr.org')}
+        >
+          <div className="Favorites-Icon">
+            <IoIosImages />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+        <a
+          href="https://smlr.org/"
+          className="Favorites-Icon-Link-Small"
+        >
+          <div className="Favorites-Icon">
+            <BsBoxArrowUpRight />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+      </div>
+    </div>
+  );
+
+  const SMLRAreaMedia = () => (
+    <div className="Favorites-Area-Medium">
+      <div className="Favorites-SMLR-Image-Area">
+        <img
+          src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
+          alt="Device screen"
+        />
+      </div>
+    </div>
+  );
+
+  const CHROMTunerAreaMain = () => (
+    <div className="Favorites-Area-Medium Favorites-CHROM-TUNER-Text-Area">
+      <div>
+        <div className="Favorites-Description-Heading-Area">
+          <h2>Chromatic Tuner</h2>
+        </div>
+        <p>{'An Artix-7 FPGA development board purposed to ' +
+              'detect the nearest note being played via an on-board ' +
+              'microphone from the 3rd to the 9th octave. Under the ' +
+              'hood, utilizes the power of the fast Fourier transform ' +
+              'in an impressively fast grand loop. The tuner ' +
+              'can be configured for the note A4 to be set ' +
+              'to any frequency between 420 and 460 Hz, with the ' +
+              'default being 440 Hz. Automatically ranges the note ' +
+              'being played. Accurate to +/- 10 cents.'
+        }
+        </p>
+      </div>
+      <div className="Favorites-Icon-Links ">
+        <a
+          href="https://github.com/noahcorona/FPGA-chromatic-tuner"
+          className="Favorites-Icon-Link-Small"
+        >
+          <div className="Favorites-Icon">
+            <RiGithubLine />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+        <a
+          href="#"
+          className="Favorites-Icon-Link-Small"
+          onClick={(e: any) =>
+            openGalleryClickHandler(e, 'Chromatic Tuner')
+          }
+        >
+          <div className="Favorites-Icon">
+            <IoIosImages />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+        <a
+          href="https://github.com/noahcorona/FPGA-chromatic-tuner/archive/refs/heads/main.zip"
+          className="Favorites-Icon-Link-Small"
+        >
+          <div className="Favorites-Icon">
+            <BsDownload />
+          </div>
+          <div className="Favorites-Icon-Link-Small-Background" />
+        </a>
+      </div>
+    </div>
+  );
+
+  const CHROMTUNERAreaMedia = () => (
+    <div className="Favorites-Area-Medium">
+      <div className="Favorites-CHROM-TUNER-Image-Area">
+        <img
+          src="/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif"
+          alt="Device screen"
+        />
+      </div>
+    </div>
+  );
+
   return (
     <div
       id="portfolio"
@@ -169,115 +296,23 @@ const Portfolio = (props: {
         </FadeIn>
         <FadeIn>
           <div className="Favorites-SMLR">
-            <div className="Favorites-Icon-Links Favorites-Left-Area">
-              <a
-                href="https://github.com/noahcorona/url-shortener/"
-                className="Favorites-Icon-Link-Small"
-              >
-                <div className="Favorites-Icon">
-                  <RiGithubLine />
-                </div>
-                <div className="Favorites-Icon-Link-Small-Background" />
-              </a>
-              <a
-                href="#"
-                className="Favorites-Icon-Link-Small"
-                onClick={(e: any) => openGalleryClickHandler(e, 'smlr.org')}
-              >
-                <div className="Favorites-Icon">
-                  <IoIosImages />
-                </div>
-                <div className="Favorites-Icon-Link-Small-Background" />
-              </a>
-              <a
-                href="https://smlr.org/"
-                className="Favorites-Icon-Link-Small"
-              >
-                <div className="Favorites-Icon">
-                  <BsBoxArrowUpRight />
-                </div>
-                <div className="Favorites-Icon-Link-Small-Background" />
-              </a>
-            </div>
-            <div className="Favorites-SMLR-Text-Area">
-              <div className="Favorites-Description-Heading-Area">
-                <h2>smlr.org: A free URL shortener</h2>
-              </div>
-              <p>{'smlr.org (smaller) is a full-stack web app that ' +
-                    'allows anyone to shorten a URL with ease. The app ' +
-                    'includes custom URL strings, profanity checking, QR ' +
-                    'code generation, and allows users to track the number ' +
-                    'of clicks their links have. Also includes a public ' +
-                    'RESTful API with documentation, allowing developers ' +
-                    'to easily implement free small URLs into their own ' +
-                    'applications.'
-              }
-              </p>
-            </div>
-            <div className="Favorites-SMLR-Image-Area">
-              <img
-                src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
-                alt="Homepage of smlr.org"
-              />
-            </div>
+            <SMLRAreaMain />
+            <SMLRAreaMedia />
           </div>
         </FadeIn>
         <FadeIn>
-          <div className="d-flex Favorites-CHROM-TUNER">
-            <div className="Favorites-CHROM-TUNER-Image-Area">
-              <img
-                src="/projects/chromatic-tuner/gif-fpga-chromatic-tuner.gif"
-                alt="Device screen"
-              />
-            </div>
-            <div className="Favorites-CHROM-TUNER-Text-Area">
-              <div className="Favorites-Description-Heading-Area">
-                <h2>Chromatic Tuner</h2>
-              </div>
-              <p>{'An Artix-7 FPGA development board purposed to ' +
-                    'detect the nearest note being played via an on-board ' +
-                    'microphone from the 3rd to the 9th octave. Under the ' +
-                    'hood, utilizes the power of the fast Fourier transform ' +
-                    'in an impressively fast grand loop. The tuner ' +
-                    'can be configured for the note A4 to be set ' +
-                    'to any frequency between 420 and 460 Hz, with the ' +
-                    'default being 440 Hz. Automatically ranges the note ' +
-                    'being played. Accurate to +/- 10 cents.'
-              }
-              </p>
-            </div>
-            <div className="Favorites-Icon-Links ">
-              <a
-                href="https://github.com/noahcorona/FPGA-chromatic-tuner"
-                className="Favorites-Icon-Link-Small"
-              >
-                <div className="Favorites-Icon">
-                  <RiGithubLine />
-                </div>
-                <div className="Favorites-Icon-Link-Small-Background" />
-              </a>
-              <a
-                href="#"
-                className="Favorites-Icon-Link-Small"
-                onClick={(e: any) =>
-                  openGalleryClickHandler(e, 'Chromatic Tuner')
-                }
-              >
-                <div className="Favorites-Icon">
-                  <IoIosImages />
-                </div>
-                <div className="Favorites-Icon-Link-Small-Background" />
-              </a>
-              <a
-                href="https://github.com/noahcorona/FPGA-chromatic-tuner/archive/refs/heads/main.zip"
-                className="Favorites-Icon-Link-Small"
-              >
-                <div className="Favorites-Icon">
-                  <BsDownload />
-                </div>
-                <div className="Favorites-Icon-Link-Small-Background" />
-              </a>
-            </div>
+          <div className="Favorites-CHROM-TUNER">
+            {
+              props.windowSize > 1000 ?
+                  <>
+                    <CHROMTUNERAreaMedia />
+                    <CHROMTunerAreaMain />
+                  </> :
+                  <>
+                    <CHROMTunerAreaMain />
+                    <CHROMTUNERAreaMedia />
+                  </>
+            }
           </div>
         </FadeIn>
         <div className="d-flex justify-content-between">
