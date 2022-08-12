@@ -5,20 +5,24 @@ import '../../style/About.css';
 import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
 import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 
-const ContactShortcut = () => (
-  <div className="About-Contact-Link-Container">
-    <a
-      href="#contact"
-      className="About-Contact-Link"
-    >
-      <u>Hiring? Reach out</u>
-      {'  '}
-      <AiOutlineArrowRight />
-    </a>
-  </div>
-);
-
 const About = (props: {windowSize: number}) => {
+  const ContactShortcut = () => {
+    return (
+      <div className={props.windowSize > 600 ?
+            'About-Contact-Link-Container' :
+            'About-Contact-Link-Container'}>
+        <a
+          href="#contact"
+          className="About-Contact-Link"
+        >
+          <u>Hiring? Reach out</u>
+          {'  '}
+          <AiOutlineArrowRight/>
+        </a>
+      </div>
+    );
+  };
+
   return (
     <div className="Section small-top-pad">
       <div className="decorated bottom-spaced">
