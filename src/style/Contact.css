@@ -1,3 +1,32 @@
 .Contact {
     color: #555;
 }
+
+.Contact-Form-Submit-Button {
+    border: none;
+    font-family: 'Courier New', monospace;
+    text-decoration: none;
+    font-weight: 800;
+    line-height: 3em;
+    color: #555;
+    padding: 0.75em 3em;
+    border-radius: 8px;
+    background: rgba(170, 85, 0, 0.15);
+    transition-duration: 250ms;
+}
+
+.Contact-Form-Submit-Button:hover {
+    color: #555;
+    background: rgba(170, 85, 0, 0.25);
+    transition-duration: 250ms;
+    margin-left: 1.25em;
+}
+
+h5 {
+    border-left: 4px solid #555;
+    padding-left: 1em;
+    line-height: 2em;
+    font-size: 1.1em;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
