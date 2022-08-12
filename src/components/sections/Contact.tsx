@@ -54,18 +54,30 @@ const Contact = (props: { windowSize: number; }) => {
                   {'Here\'s a copy of your message:'}
                   <br />
                 </h4>
-                <h5><u>Name</u>{' ' + name}</h5>
+                <h5 className="Contact-Form-Sent-Area">
+                  <u>Name</u>
+                  {' ' + name}
+                </h5>
                 {email ? (
                   <>
-                    <h5><u>E-mail Address</u>{' ' + email}</h5>
+                    <h5 className="Contact-Form-Sent-Area">
+                      <u>E-mail Address</u>
+                      {' ' + email}
+                    </h5>
                   </>
                 ) : <div />}
                 {company ? (
                   <>
-                    <h5><u>Company</u>{' ' + company}</h5>
+                    <h5 className="Contact-Form-Sent-Area">
+                      <u>Company</u>
+                      {' ' + company}
+                    </h5>
                   </>
                 ) : <div />}
-                <h5><u>Body</u><p>{message}</p></h5>
+                <h5 className="Contact-Form-Sent-Area">
+                  <u>Body</u>
+                  <p>{message}</p>
+                </h5>
               </>
           ) : (
               <Form

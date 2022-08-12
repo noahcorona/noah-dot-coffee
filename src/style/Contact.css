@@ -8,21 +8,22 @@
     text-decoration: none;
     font-weight: 800;
     line-height: 3em;
-    color: #555;
-    padding: 0.75em 3em;
+    font-size: 1.25em;
+    padding: 0.25em 2.75em;
     border-radius: 8px;
-    background: rgba(170, 85, 0, 0.15);
+    background-color: rgba(124, 173, 107, 0.8);
+    color: #fff;
     transition-duration: 250ms;
 }
 
 .Contact-Form-Submit-Button:hover {
-    color: #555;
-    background: rgba(170, 85, 0, 0.25);
+    background-color: rgba(124, 173, 107, 1.0);
+    color: #fff;
     transition-duration: 250ms;
     margin-left: 1.25em;
 }
 
-h5 {
+.Contact-Form-Sent-Area {
     border-left: 4px solid #555;
     padding-left: 1em;
     line-height: 2em;

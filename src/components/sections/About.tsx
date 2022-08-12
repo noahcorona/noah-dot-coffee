@@ -1,12 +1,24 @@
 import Container from 'react-bootstrap/Container';
-import {Col, Row} from 'react-bootstrap';
 import '../../style/App.css';
 import '../../style/About.css';
 // eslint-disable-next-line max-len
 import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
 import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 
-const About = () => {
+const ContactShortcut = () => (
+  <div className="About-Contact-Link-Container">
+    <a
+      href="#contact"
+      className="About-Contact-Link"
+    >
+      <u>Hiring? Reach out</u>
+      {'  '}
+      <AiOutlineArrowRight />
+    </a>
+  </div>
+);
+
+const About = (props: {windowSize: number}) => {
   return (
     <div className="Section small-top-pad">
       <div className="decorated bottom-spaced">
@@ -14,105 +26,117 @@ const About = () => {
       </div>
       <div className="d-flex gap-4">
         <div className="d-flex gap-4">
-          <div>
+          <div className="About-Text">
             <h2>Software Engineer</h2>
             <p>
               {'I take pride in the software I build. Between ' +
                 'professional, academic, and personal projects, ' +
-                'I\'ve been writing software for over a decade. ' +
+                'my experience writing software spans over a decade. ' +
                 'I\'m specializing in web and mobile development, ' +
                 'and also enjoy working on embedded and machine ' +
-                'learning projects.'
+                'learning projects. '
               }
             </p>
+            {
+              props.windowSize > 600 && <ContactShortcut />
+            }
           </div>
           <img src="/me.jpeg" alt="me" className="Portrait" />
         </div>
       </div>
-      <div className="About-Text">
-        <p>
-          {'If you\'re hiring, please consider'}
-          <a href="#contact">
-            <u>reaching out</u>
-            {'  '}
-            <AiOutlineArrowRight />
-          </a>
-        </p>
-      </div>
+      {
+        props.windowSize < 600 && <ContactShortcut />
+      }
       <h3>Technologies I work with</h3>
       <Container fluid>
-        <Row>
-          <Col md="auto">
-            <div className="technology-link-wrapper">
-              <a
-                href="#"
-                className="technology-link"
-              >
-                {'> JavaScript (es6+)'}
-              </a>
-              <a
-                href="#"
-                className="technology-link"
-              >
-                {'> TypeScript'}
-              </a>
-              <a
-                href="#"
-                className="technology-link"
-              >
-                {'> Swift'}
-              </a>
-            </div>
-          </Col>
-          <Col md="auto">
-            <div className="technology-link-wrapper">
-              <a
-                href="#"
-                className="technology-link"
-              >
-                {'> Python'}
-              </a>
-              <a
-                href="#"
-                className="technology-link"
-              >
-                {'> Node'}
-              </a>
-              <a
-                href="#"
-                className="technology-link"
-              >
-                {'> C++'}
-              </a>
-            </div>
-          </Col>
-          <Col md="auto">
-            <div className="technology-link-wrapper">
-              <a
-                href="#"
-                className="technology-link"
-              >{'> C#'}
-              </a>
-              <a
-                href="#"
-                className="technology-link"
-              >
-                {'> SQL'}
-              </a>
-              <a href="#" className="technology-link">{'> MongoDB'}</a>
-            </div>
-          </Col>
-        </Row>
+        <div className="technology-link-wrapper">
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> JavaScript (es6+)'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> TypeScript'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> Python'}
+          </a>
+        </div>
+        <div className="technology-link-wrapper">
+          <a
+            href="#"
+            className="technology-link"
+          >{'> React.js'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> MongoDB'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> SQL'}
+          </a>
+        </div>
+        <div className="technology-link-wrapper">
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> React Native'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >{'> Node.js'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> Swift'}
+          </a>
+        </div>
+        <div className="technology-link-wrapper">
+          <a
+            href="#"
+            className="technology-link"
+          >
+            {'> C'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >{'> C#'}
+          </a>
+          <a
+            href="#"
+            className="technology-link"
+          >{'> C++'}
+          </a>
+        </div>
       </Container>
-      <h3>About Me</h3>
-      <p>
+      <h3 className="top-spaced">About Me</h3>
+      <p className="bottom-spaced-lg">
         {
-          'My interest in software development started in 2010, ' +
-          'when I started exploring source code of video game ' +
-          'modifications for Microsoft\'s Xbox platform. Recently, ' +
-          'I graduated from UC, Santa Barbara with a B.S. in ' +
-          'Computer Engineering. In the years between, I\'ve ' +
-          'written software professionally, academically, and for fun.'
+          'I recently graduated from UC, Santa Barbara ' +
+          'with a B.S. in Computer Engineering. My ' +
+          'interest in the field started in 2010, when ' +
+          'I started exploring source code of video game ' +
+          'modifications and websites. In the years between, I\ve ' +
+          'explored several areas of computer science and ' +
+          'electrical engineering, and have been fortunate ' +
+          'to work on impactful work with exemplary people.'
         }
       </p>
       <h3>{'People I\'ve Worked With'}</h3>

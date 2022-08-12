@@ -56,7 +56,7 @@ function App() {
               path="/"
               element={
                 <>
-                  <About />
+                  <About windowSize={windowSize} />
                   <Portfolio
                     windowSize={windowSize}
                     setGalleryActiveProject={setGalleryActiveProject}

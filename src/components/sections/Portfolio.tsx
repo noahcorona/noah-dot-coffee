@@ -369,44 +369,46 @@ const Portfolio = (props: {
             )
           }
         </div>
-        <h5 className="Project-Row-Header-Filter-Area">
+        <h5 className="Project-Row-Header-Filter-Area d-flex">
           <span>{'Filter: '}</span>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, null)}
-          >
-            View All
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'plc-hmi')}
-          >
-            PLC & HMI
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'ml')}
-          >
-            Machine Learning
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'embedded')}
-          >
-            Embedded
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'mobile')}
-          >
-            Mobile
-          </a>
-          <a
-            href="#"
-            onClick={(e) => handleFilterClick(e, 'web')}
-          >
-            Web
-          </a>
+          <div>
+            <a
+              href="#"
+              onClick={(e) => handleFilterClick(e, 'web')}
+            >
+              Web
+            </a>
+            <a
+              href="#"
+              onClick={(e) => handleFilterClick(e, 'mobile')}
+            >
+              Mobile
+            </a>
+            <a
+              href="#"
+              onClick={(e) => handleFilterClick(e, 'embedded')}
+            >
+              Embedded
+            </a>
+            <a
+              href="#"
+              onClick={(e) => handleFilterClick(e, 'ml')}
+            >
+              Machine Learning
+            </a>
+            <a
+              href="#"
+              onClick={(e) => handleFilterClick(e, 'plc-hmi')}
+            >
+              PLC & HMI
+            </a>
+            <a
+              href="#"
+              onClick={(e) => handleFilterClick(e, null)}
+            >
+              View All
+            </a>
+          </div>
         </h5>
         {
           (condensedView && props.windowSize > 800) &&

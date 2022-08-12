@@ -4,12 +4,13 @@
 
 .Project-Row-Header-Filter-Area {
     margin-bottom: 2em;
+    justify-content: space-between;
 }
 
 .Project-Row-Header-Filter-Area a {
     padding-left: 1em;
     color: #555;
-    float: right;
+    display: inline-flex;
     margin-bottom: 0.5em;
 }
 
