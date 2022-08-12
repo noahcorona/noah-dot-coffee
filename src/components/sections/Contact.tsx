@@ -7,7 +7,7 @@ import '../../style/Contact.css';
 // eslint-disable-next-line max-len
 import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
 
-const Contact = () => {
+const Contact = (props: { windowSize: number; }) => {
   const [status, setStatus] = useState('Send');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -72,12 +72,14 @@ const Contact = () => {
                 ref={form}
                 onSubmit={handleSubmit}
               >
-                <div className="d-flex gap-3 bottom-spaced">
+                <div className={'gap-3 ' +
+                    (props.windowSize > 800 ? 'd-flex' : '')}>
                   <Form.Control
                     name="name"
                     id="name"
                     type="text"
                     placeholder="Name *"
+                    className="bottom-spaced"
                     onChange={(event) => setName(event.target.value)}
                     required
                   />
@@ -85,6 +87,7 @@ const Contact = () => {
                     name="email"
                     id="email"
                     type="email"
+                    className="bottom-spaced"
                     onChange={(event) => setEmail(event.target.value)}
                     placeholder="Email address"
                   />
@@ -92,6 +95,7 @@ const Contact = () => {
                     name="company"
                     id="company"
                     type="text"
+                    className="bottom-spaced"
                     onChange={(event) => setCompany(event.target.value)}
                     placeholder="Company"
                   />
@@ -104,7 +108,7 @@ const Contact = () => {
                   id="message"
                   type="text"
                   onChange={(event) => setMessage(event.target.value)}
-                  placeholder="Message body"
+                  placeholder="Message body *"
                   required
                 />
                 <Button

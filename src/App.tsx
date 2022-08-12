@@ -61,7 +61,7 @@ function App() {
                     windowSize={windowSize}
                     setGalleryActiveProject={setGalleryActiveProject}
                   />
-                  <Contact />
+                  <Contact windowSize={windowSize} />
                   <GalleryModal
                     setGalleryActiveProject={setGalleryActiveProject}
                     project={

@@ -440,6 +440,31 @@
     .Project-Card-Container {
         width: 100%;
     }
+
+    .Favorites-Icon-Links {
+        padding-right: 1.25em;
+        padding-left: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Favorites-CUDA-Text-Area {
+        padding: 0;
+        margin: 0;
+        font-size: 0.85em;
+    }
+
+    .Favorites-SMLR-Text-Area {
+        padding: 0;
+        margin: 0;
+        font-size: 0.85em;
+    }
+
+    .Favorites-CHROM-TUNER-Text-Area {
+        padding: 0;
+        margin: 0;
+        font-size: 0.85em;
+    }
 }
 
 @media screen and (max-width: 500px) {
