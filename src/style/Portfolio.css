@@ -466,6 +466,19 @@
         margin: 0;
         font-size: 0.85em;
     }
+
+    .Favorites-Icon-Links {
+        padding-right: 0em;
+        padding-left: 0.75em;
+    }
+
+    .Favorites-Area-Smaller {
+        padding: 0;
+    }
+
+    .Favorites-Area-Larger {
+        padding: 0;
+    }
 }
 
 @media screen and (max-width: 1000px) {
