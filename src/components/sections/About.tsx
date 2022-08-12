@@ -24,7 +24,7 @@ const About = (props: {windowSize: number}) => {
       <div className="decorated bottom-spaced">
         <span><h1>Noah Corona</h1></span>
       </div>
-      <div className="d-flex gap-4">
+      <div className="d-flex gap-4 top-spaced">
         <div className="d-flex gap-4">
           <div className="About-Text">
             <h2>Software Engineer</h2>
@@ -126,7 +126,7 @@ const About = (props: {windowSize: number}) => {
           </a>
         </div>
       </Container>
-      <h3 className="top-spaced">About Me</h3>
+      <h3>About Me</h3>
       <p className="bottom-spaced-lg">
         {
           'I recently graduated from UC, Santa Barbara ' +

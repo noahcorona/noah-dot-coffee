@@ -25,19 +25,19 @@
 .Project-Display-Type-Icon {
     margin-left: 0.5em;
     color: #555;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: -0.25em;
-    padding: 4px;
+    padding: 0.2em;
     overflow: visible;
-    border-radius: 0.25em;
+    border-radius: 50%;
 }
 
 .Project-Display-Type-Icon-Selected {
-    background-color: rgba(85, 85, 85, 0.15);
+    background-color: rgba(0, 0, 0, 0.075);
 }
 
 .Project-Display-Type-Icon:hover {
-    background-color: rgba(85, 85, 85, 0.25);
+    background-color: rgba(0, 0, 0, 0.15);
 }
 
 /*

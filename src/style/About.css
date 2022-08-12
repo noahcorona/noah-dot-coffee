@@ -4,15 +4,16 @@ h5 {
 
 h3 {
     margin-top: 1.5em;
+    margin-bottom: 0.25em;
 }
 
 .About-Text {
     color: #555;
-    padding-bottom: 2em;
+    padding-bottom: 0.5em;
 }
 
 .About-Contact-Link-Container {
-    margin-top: 3em;
+    margin-top: 2.5em;
 }
 
 .About-Contact-Link {
@@ -96,11 +97,12 @@ h3 {
 @media screen and (max-width: 800px) {
     .associate-card-wrapper {
         width: 100%;
+        margin: 1em 0;
     }
 }
 
 .associate-card {
-    padding: 0.5em;
+    padding: 1.5em;
 }
 
 .associate-card:not(:last-of-type) {
@@ -118,14 +120,7 @@ h3 {
     font-size: 1.4em;
     line-height: 1.4em;
     margin-top: -0.4em;
-    position: relative;
-    right: 0;
-}
-
-.associate-site-link:hover {
-    right: -4px;
-    padding-left: 4px;
-    transition-duration: 150ms;
+    padding-left: 1em;
 }
 
 @media screen and (max-width: 600px) {
