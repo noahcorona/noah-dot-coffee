@@ -468,6 +468,12 @@
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .Project-Card-Container {
+        font-size: 0.9em;
+    }
+}
+
 @media screen and (max-width: 500px) {
     .Favorites-CUDA-Image-Area img {
         width: 100%;
