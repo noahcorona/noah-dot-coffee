@@ -1,9 +1,9 @@
-import Container from 'react-bootstrap/Container';
 import '../../style/App.css';
 import '../../style/About.css';
 // eslint-disable-next-line max-len
 import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
 import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
+import TechLinks from '../TechLinks';
 
 const About = (props: {windowSize: number}) => {
   const ContactShortcut = () => {
@@ -51,96 +51,19 @@ const About = (props: {windowSize: number}) => {
       {
         props.windowSize < 600 && <ContactShortcut />
       }
-      <h3>Technologies I work with</h3>
-      <Container fluid>
-        <div className="technology-link-wrapper">
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> JavaScript (es6+)'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> TypeScript'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> Python'}
-          </a>
-        </div>
-        <div className="technology-link-wrapper">
-          <a
-            href="#"
-            className="technology-link"
-          >{'> React.js'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> MongoDB'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> SQL'}
-          </a>
-        </div>
-        <div className="technology-link-wrapper">
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> React Native'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >{'> Node.js'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> Swift'}
-          </a>
-        </div>
-        <div className="technology-link-wrapper">
-          <a
-            href="#"
-            className="technology-link"
-          >
-            {'> C'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >{'> C#'}
-          </a>
-          <a
-            href="#"
-            className="technology-link"
-          >{'> C++'}
-          </a>
-        </div>
-      </Container>
+      <h3 className="bottom-spaced">Technologies I work with</h3>
+      <TechLinks windowSize={props.windowSize} />
       <h3>About Me</h3>
       <p className="bottom-spaced-lg">
         {
-          'I recently graduated from UC, Santa Barbara ' +
+          'I recently graduated from U.C. Santa Barbara ' +
           'with a B.S. in Computer Engineering. My ' +
-          'interest in the field started in 2010, when ' +
-          'I started exploring source code of video game ' +
-          'modifications and websites. In the years between, I\'ve ' +
+          'journey in the field began in 2010, when my interest ' +
+          'in website design and video game modifications led ' +
+          'me to explore their source code. In the years between, I\'ve ' +
           'explored several areas of computer science and ' +
           'electrical engineering, and have been fortunate ' +
-          'to work on impactful work with exemplary people.'
+          'to work with exemplary people on impactful projects.'
         }
       </p>
       <h3>{'People I\'ve Worked With'}</h3>
@@ -162,16 +85,18 @@ const About = (props: {windowSize: number}) => {
           </div>
           <p>
             {
-              'During the 2021-2022 UCSB ECE Capstone course, I had the ' +
-                'pleasure of working with some of the research scientists at ' +
-                'Aptitude Medical Systems on the '
+              'During the 2021-2022 U.C.S.B. Capstone course for ' +
+              'electrical & computer engineering, I worked ' +
+              'with some of the scientists at Aptitude Medical ' +
+              'Systems on the '
             }
             <a href="#">CUDA project</a>
             {
               '. I led a student project that aimed to produce portable, ' +
                 'trustworthy, and timely digital test results for COVID-19 ' +
-                'and coagulopathy using a unified device. Results are stored ' +
-                'and shared in the cloud via a React Native app.'
+                'and coagulopathy using a unified device. The project scope ' +
+                'also included a mobile platform for managing devices and ' +
+                'results.'
             }
           </p>
         </div>
@@ -195,14 +120,15 @@ const About = (props: {windowSize: number}) => {
           <p>
             {
               'As a project engineer intern at Powercon, I had the chance to ' +
-              'work on projects that utilize programmable logic controllers ' +
-              'and human-machine interfaces. I was fortunate to both work ' +
-              'on an '
+              'work on projects that monitor and control devices ' +
+              'utilizing programmable logic controllers ' +
+              'and human-machine interfaces. I had the pleasure of both ' +
+              'working on an '
             }
             <a href="#">independent project</a>
             {' and contribute to '}
             <a href="#">{'Powercon\'s commercial projects'}</a>
-            .
+              .
           </p>
         </div>
       </div>

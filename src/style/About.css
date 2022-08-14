@@ -50,14 +50,15 @@ h3 {
     font-family: 'Courier New', monospace;
     font-size: 0.8em;
     display: inline-block;
-    padding-right: 1em;
+    width: 25%;
+    vertical-align: top;
 }
 
 .technology-link-wrapper > a {
     color: #000;
     font-weight: bold;
     text-decoration: none;
-    width: fit-content;
+    width: 100%;
     position: relative;
     left: 0;
 }
@@ -73,7 +74,7 @@ h3 {
     position: relative;
     border-radius: 10em;
     margin-bottom: 10px;
-    padding: 5px 5px 5px 0;
+    padding: 0.25em
 }
 
 .associate-card-wrapper {
@@ -131,5 +132,11 @@ h3 {
 
     .associate-card {
         padding: 1.25em;
+    }
+
+    .technology-link-wrapper {
+        width: 50%;
+        max-width: 50%;
+        padding-top: 0;
     }
 }
