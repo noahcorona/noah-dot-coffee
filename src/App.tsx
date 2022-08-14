@@ -17,9 +17,13 @@ import './style/App.css';
  * @constructor
  */
 function App() {
-  // bookkeeping for window size to toggle hamburger nav
-  const [windowSize, setWindowSize] = useState(window.innerWidth);
+  // expansion state for mobile/narrow screen nav bar
+  const [navExpanded, setNavExpanded] = useState(true);
+  // bookkeeping for navbar height to for proper scroll behavior
   const [navHeight, setNavHeight] = useState(0);
+  // bookkeeping for window size to toggle hamburger nav
+  const [pageWidth, setPageWidth] = useState(window.innerWidth);
+  // current photo in the gallery modal
   const [galleryActiveProject, setGalleryActiveProject] = useState(null);
 
   useEffect(() => {
@@ -29,7 +33,7 @@ function App() {
          * devices and narrow windows
          */
     function handleWindowResize() {
-      setWindowSize(window.innerWidth);
+      setPageWidth(window.innerWidth);
     }
 
     window.addEventListener('resize', handleWindowResize);
@@ -45,7 +49,9 @@ function App() {
         <Navigation
           height={navHeight}
           setHeight={setNavHeight}
-          windowSize={windowSize}
+          windowSize={pageWidth}
+          expanded={navExpanded}
+          setExpanded={setNavExpanded}
         />
         <div
           className="container"
@@ -55,13 +61,13 @@ function App() {
             <Route
               path="/"
               element={
-                <>
-                  <About windowSize={windowSize} />
+                <div onClick={() => setNavExpanded(false)}>
+                  <About windowSize={pageWidth} />
                   <Portfolio
-                    windowSize={windowSize}
+                    windowSize={pageWidth}
                     setGalleryActiveProject={setGalleryActiveProject}
                   />
-                  <Contact windowSize={windowSize} />
+                  <Contact windowSize={pageWidth} />
                   <GalleryModal
                     setGalleryActiveProject={setGalleryActiveProject}
                     project={
@@ -73,7 +79,7 @@ function App() {
                         }
                     }
                   />
-                </>
+                </div>
               } />
             <Route path="*" element={<Error404 />} />
           </Routes>

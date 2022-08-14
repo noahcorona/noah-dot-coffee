@@ -8,7 +8,6 @@ import {Nav, Navbar} from 'react-bootstrap';
 import '../style/Navigation.css';
 
 const Navigation = (props: any) => {
-  // bookkeeping for navbar height to for proper scroll behavior
   const ref = useRef<HTMLDivElement>(null);
 
   useLayoutEffect(() => {
@@ -87,11 +86,15 @@ const Navigation = (props: any) => {
             bg="transparent"
             expand="lg"
             variant="light"
+            expanded={props.expanded}
           >
             <Navbar.Brand href="#">
               <span className="Brand-Items">
                 <div className="social-bar">
-                  <a href="#">
+                  <a
+                    href="#"
+                    onClick={() => props.setExpanded(false)}
+                  >
                     <img
                       src="/android-chrome-192x192.png"
                       alt="logo"
@@ -102,44 +105,66 @@ const Navigation = (props: any) => {
                   <a
                     href="https://github.com/noahcorona"
                     className="social-icon-link"
+                    onClick={() => props.setExpanded(false)}
                   >
                     <AiFillGithub size="2em" />
                   </a>
                   <a
                     href="https://linkedin.com/in/noahcorona"
                     className="social-icon-link"
+                    onClick={() => props.setExpanded(false)}
                   >
                     <AiFillLinkedin size="2em" />
                   </a>
                   <a
                     href="buymeacoffee.com/4IeSH91kr"
                     className="social-icon-link"
+                    onClick={() => props.setExpanded(false)}
                   >
                     <SiBuymeacoffee size="2em" />
                   </a>
                 </div>
               </span>
             </Navbar.Brand>
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+            <Navbar.Toggle
+              aria-controls="responsive-navbar-nav"
+              onClick={() => props.setExpanded(!props.expanded)}
+            />
             <Navbar.Collapse id="responsive-navbar-nav">
               <Nav className="mr-auto">
                 <div className="nav-menu-item">
-                  <a className="nav-button" href="/#about">
-                About
+                  <a
+                    className="nav-button"
+                    href="/#about"
+                    onClick={() => props.setExpanded(false)}
+                  >
+                    About
                   </a>
                 </div>
                 <div className="nav-menu-item">
-                  <a className="nav-button" href="/#portfolio">
-                Portfolio
+                  <a
+                    className="nav-button"
+                    href="/#portfolio"
+                    onClick={() => props.setExpanded(false)}
+                  >
+                    Portfolio
                   </a>
                 </div>
                 <div className="nav-menu-item">
-                  <a className="nav-button" href="/#contact">
-                Contact
+                  <a
+                    className="nav-button"
+                    href="/#contact"
+                    onClick={() => props.setExpanded(false)}
+                  >
+                    Contact
                   </a>
                 </div>
                 <div className="nav-menu-item">
-                  <a className="nav-button" href="/resume/Resume.pdf">
+                  <a
+                    className="nav-button"
+                    href="/resume/Resume.pdf"
+                    onClick={() => props.setExpanded(false)}
+                  >
                 Resume
                   </a>
                 </div>
