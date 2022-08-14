@@ -1,83 +1,102 @@
 import Container from 'react-bootstrap/Container';
 
-const TechLinks = (props: {windowSize: number}) => {
+const TechLinks = (props: {
+  setProjectFilter: any,
+  windowSize: number,
+}) => {
   if (props.windowSize > 600) {
     return (
       <Container fluid>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('web')}
           >
             {'> JavaScript'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('ml')}
           >
             {'> Python'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('embedded')}
           >
             {'> C++'}
           </a>
         </div>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> TypeScript'}
+            onClick={() => props.setProjectFilter('web')}
+          >
+            {'> TypeScript'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('embedded')}
           >
             {'> C'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('plc-hmi')}
           >
             {'> C#'}
           </a>
         </div>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('mobile')}
           >
             {'> React Native'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> SQL'}
+            onClick={() => props.setProjectFilter('plc-hmi')}
+          >
+            {'> SQL'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('web')}
           >
             {'> MongoDB'}
           </a>
         </div>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('web')}
           >
             {'> React.js'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> Express.js'}
+            onClick={() => props.setProjectFilter('web')}
+          >
+            {'> Express.js'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> Node.js'}
+            onClick={() => props.setProjectFilter('web')}
+          >
+            {'> Node.js'}
           </a>
         </div>
       </Container>
@@ -87,78 +106,94 @@ const TechLinks = (props: {windowSize: number}) => {
       <Container fluid>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('web')}
           >
             {'> JavaScript'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('embedded')}
           >
             {'> C'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('embedded')}
           >
             {'> C++'}
           </a>
         </div>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> TypeScript'}
+            onClick={() => props.setProjectFilter('web')}
+          >
+            {'> TypeScript'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('ml')}
           >
             {'> Python'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('plc-hmi')}
           >
             {'> C#'}
           </a>
         </div>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('plc-hmi')}
           >
             {'> SQL'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> MongoDB'}
+            onClick={() => props.setProjectFilter('web')}
+          >
+            {'> MongoDB'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('web')}
           >
             {'> Node.js'}
           </a>
         </div>
         <div className="technology-link-wrapper">
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
+            onClick={() => props.setProjectFilter('web')}
           >
             {'> React.js'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> React Native'}
+            onClick={() => props.setProjectFilter('mobile')}
+          >
+            {'> React Native'}
           </a>
           <a
-            href="#"
+            href="#archive"
             className="technology-link"
-          >{'> Express.js'}
+            onClick={() => props.setProjectFilter('web')}
+          >
+            {'> Express.js'}
           </a>
         </div>
       </Container>

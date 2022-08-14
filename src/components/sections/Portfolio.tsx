@@ -15,10 +15,11 @@ import '../../style/App.css';
 import '../../style/Portfolio.css';
 
 const Portfolio = (props: {
+  projectFilter: any,
+  setProjectFilter: any,
   windowSize: any,
   setGalleryActiveProject: any;
 }) => {
-  const [projectFilter, setProjectFilter] = useState<any>(null);
   const [currentProjects, setCurrentProjects] = useState<any>(null);
   const [condensedView, setCondensedView] = useState<any>(false);
 
@@ -36,7 +37,7 @@ const Portfolio = (props: {
 
   const handleFilterClick = (e: any, filterText: any) => {
     e.preventDefault();
-    setProjectFilter(filterText);
+    props.setProjectFilter(filterText);
   };
 
   const handleViewTypeClick = (e: any, condensed: any) => {
@@ -54,15 +55,15 @@ const Portfolio = (props: {
   };
 
   useEffect(() => {
-    if (projectFilter) {
+    if (props.projectFilter) {
       const filteredProjects = projects
-          .filter((el: any) => el.types.includes(projectFilter))
+          .filter((el: any) => el.types.includes(props.projectFilter))
           .sort(order);
       setCurrentProjects(filteredProjects);
     } else {
       setCurrentProjects(projects.sort(order));
     }
-  }, [projectFilter]);
+  }, [props.projectFilter]);
 
   const CUDAAreaSmall = () => (
     <div className="Favorites-Area-Smaller">
@@ -76,10 +77,12 @@ const Portfolio = (props: {
   );
 
   const CUDAAreaLarge = () => (
-    <div className="Favorites-Area-Larger Favorites-CUDA-Text-Area">
+    <div
+      className="Favorites-Area-Larger Favorites-CUDA-Text-Area"
+    >
       <div>
         <div className="Favorites-Description-Heading-Area">
-          <h2>CUDA Medical Diagnostic Device</h2>
+          <h2 id="CUDA">CUDA Medical Diagnostic Device</h2>
         </div>
         <p>
           {'The CUDA group was awarded 3rd place amongst the ' +
@@ -294,7 +297,7 @@ const Portfolio = (props: {
       className="Section"
     >
       <div className="Portfolio">
-        <div className="decorated bottom-spaced">
+        <div className="decorated bottom-spaced" id="CUDA">
           <span>
             <h1>{'Things I\'ve worked on'}</h1>
           </span>
@@ -335,6 +338,7 @@ const Portfolio = (props: {
             }
           </div>
         </FadeIn>
+        <div id="archive" className="Nav-Offset-Gap" />
         <div className="d-flex justify-content-between">
           <h3 className="bottom-spaced">Project Archive</h3>
           {
@@ -373,36 +377,48 @@ const Portfolio = (props: {
           <span>{'Filter: '}</span>
           <div>
             <a
+              className={props.projectFilter === 'web' ? 'selected-filter' : ''}
               href="#"
               onClick={(e) => handleFilterClick(e, 'web')}
             >
               Web
             </a>
             <a
+              className={props.projectFilter === 'mobile' ?
+                  'selected-filter' :
+                  ''}
               href="#"
               onClick={(e) => handleFilterClick(e, 'mobile')}
             >
               Mobile
             </a>
             <a
+              className={props.projectFilter === 'embedded' ?
+                  'selected-filter' :
+                  ''}
               href="#"
               onClick={(e) => handleFilterClick(e, 'embedded')}
             >
               Embedded
             </a>
             <a
+              className={props.projectFilter === 'ml' ? 'selected-filter' : ''}
               href="#"
               onClick={(e) => handleFilterClick(e, 'ml')}
             >
               Machine Learning
             </a>
             <a
+              className={props.projectFilter === 'plc-hmi' ?
+                  'selected-filter' :
+                  ''}
               href="#"
               onClick={(e) => handleFilterClick(e, 'plc-hmi')}
             >
               PLC & HMI
             </a>
             <a
+              className={props.projectFilter === null ? 'selected-filter' : ''}
               href="#"
               onClick={(e) => handleFilterClick(e, null)}
             >

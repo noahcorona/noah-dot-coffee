@@ -25,6 +25,8 @@ function App() {
   const [pageWidth, setPageWidth] = useState(window.innerWidth);
   // current photo in the gallery modal
   const [galleryActiveProject, setGalleryActiveProject] = useState(null);
+  // current project filter in the project archive
+  const [projectFilter, setProjectFilter] = useState<any>(null);
 
   useEffect(() => {
     /**
@@ -62,10 +64,15 @@ function App() {
               path="/"
               element={
                 <div onClick={() => setNavExpanded(false)}>
-                  <About windowSize={pageWidth} />
+                  <About
+                    windowSize={pageWidth}
+                    setProjectFilter={setProjectFilter}
+                  />
                   <Portfolio
                     windowSize={pageWidth}
                     setGalleryActiveProject={setGalleryActiveProject}
+                    projectFilter={projectFilter}
+                    setProjectFilter={setProjectFilter}
                   />
                   <Contact windowSize={pageWidth} />
                   <GalleryModal

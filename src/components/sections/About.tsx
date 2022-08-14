@@ -5,7 +5,10 @@ import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight
 import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 import TechLinks from '../TechLinks';
 
-const About = (props: {windowSize: number}) => {
+const About = (props: {
+    setProjectFilter: any,
+    windowSize: number,
+}) => {
   const ContactShortcut = () => {
     return (
       <div className={props.windowSize > 600 ?
@@ -52,7 +55,10 @@ const About = (props: {windowSize: number}) => {
         props.windowSize < 600 && <ContactShortcut />
       }
       <h3 className="bottom-spaced">Technologies I work with</h3>
-      <TechLinks windowSize={props.windowSize} />
+      <TechLinks
+        windowSize={props.windowSize}
+        setProjectFilter={props.setProjectFilter}
+      />
       <h3>About Me</h3>
       <p className="bottom-spaced-lg">
         {
@@ -90,7 +96,11 @@ const About = (props: {windowSize: number}) => {
               'with some of the scientists at Aptitude Medical ' +
               'Systems on the '
             }
-            <a href="#">CUDA project</a>
+            <a
+              href="#CUDA"
+            >
+                CUDA project
+            </a>
             {
               '. I led a student project that aimed to produce portable, ' +
                 'trustworthy, and timely digital test results for COVID-19 ' +
@@ -125,9 +135,18 @@ const About = (props: {windowSize: number}) => {
               'and human-machine interfaces. I had the pleasure of both ' +
               'working on an '
             }
-            <a href="#">independent project</a>
+            <a
+              href="#archive"
+              onClick={() => props.setProjectFilter('plc-hmi')}
+            >
+                independent project</a>
             {' and contribute to '}
-            <a href="#">{'Powercon\'s commercial projects'}</a>
+            <a
+              href="#archive"
+              onClick={() => props.setProjectFilter('plc-hmi')}
+            >
+              {'Powercon\'s commercial projects'}
+            </a>
               .
           </p>
         </div>

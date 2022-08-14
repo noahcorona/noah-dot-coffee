@@ -456,6 +456,7 @@ export const projects = [
     stack: [
       'Ladder Logic',
       'C#',
+      'SQL',
       'PLC & HMI',
       'Modbus',
     ],

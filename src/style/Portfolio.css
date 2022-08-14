@@ -2,6 +2,11 @@
     Project Archive header area styles
 */
 
+.Nav-Offset-Gap {
+    height: 5em;
+    width: 100%;
+}
+
 .Project-Row-Header-Filter-Area {
     margin-bottom: 2em;
     justify-content: space-between;
@@ -20,6 +25,26 @@
 
 .Project-Row-Header-Filter-Area a:hover {
     color: rgba(170, 85, 0, 1);
+}
+
+.selected-filter {
+    display: inline-block;
+    vertical-align: top;
+    padding-bottom: 2em;
+    position: relative;
+    color: #fff;
+}
+
+.selected-filter:after {
+    transform: translateX(-50%);
+    border-radius: 100%;
+    position: absolute;
+    background-color: #555;
+    bottom: 10px;
+    height: 8px;
+    content: '';
+    width: 8px;
+    left: calc(50% + 6px);
 }
 
 .Project-Display-Type-Icon {
@@ -306,7 +331,6 @@
 
 .Favorites-CHROM-TUNER {
     margin-top: 6em;
-    margin-bottom: 6em;
     width: 100%;
     justify-content: center;
     display: flex;
