@@ -68,7 +68,7 @@ const Navigation = (props: any) => {
                 </HashLink>
               </li>
               <li className="nav-menu-item">
-                <a className="nav-button" href="/resume/Resume.pdf">
+                <a className="nav-button" href="/Resume.pdf">
                     Resume
                 </a>
               </li>
