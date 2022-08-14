@@ -18,7 +18,7 @@ import './style/App.css';
  */
 function App() {
   // expansion state for mobile/narrow screen nav bar
-  const [navExpanded, setNavExpanded] = useState(true);
+  const [navExpanded, setNavExpanded] = useState(false);
   // bookkeeping for navbar height to for proper scroll behavior
   const [navHeight, setNavHeight] = useState(0);
   // bookkeeping for window size to toggle hamburger nav
