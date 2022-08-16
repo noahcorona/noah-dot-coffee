@@ -220,7 +220,7 @@ const Portfolio = (props: {
     <div className="Favorites-Area-Smaller">
       <div className="Favorites-SMLR-Image-Area">
         <img
-          src="/projects/smlr-dot-org/smlr_dot_org_homepage.png"
+          src="/projects/smlr-dot-org/smlr_demo.gif"
           alt="Device screen"
         />
       </div>
