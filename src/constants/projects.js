@@ -206,7 +206,7 @@ export const projects = [
     stack: [
       'STM32',
     ],
-    github_link: 'https://example.com',
+    github_link: 'https://github.com/noahcorona/battery-charger-solar-tracking',
     media: [
       {
         type: 'photo',
@@ -302,24 +302,6 @@ export const projects = [
             'an iPhone using earbuds. The error (in cents) is ' +
             'displayed on a the green and red bar.',
       },
-    ],
-  },
-  {
-    year: 2021,
-    wasFor: 'Academic project',
-    types: [
-      'ml',
-    ],
-    title: 'Pacman Agent',
-    description: 'A rational agent for the common game PacMan. ' +
-                'Based on a homework assignment. ',
-    stack: [
-      'Python',
-      'SciKit Learn',
-    ],
-    github_link: 'https://example.com',
-    media: [
-
     ],
   },
   {
