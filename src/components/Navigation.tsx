@@ -44,7 +44,7 @@ const Navigation = (props: any) => {
               <AiFillLinkedin size="2em" />
             </a>
             <a
-              href="buymeacoffee.com/4IeSH91kr"
+              href="https://buymeacoffee.com/4IeSH91kr"
               className="social-icon-link"
             >
               <SiBuymeacoffee size="2em" />

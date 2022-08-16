@@ -20,7 +20,7 @@ export const projects = [
       {
         type: 'photo',
         source: '/projects/smlr-dot-org/smlr_dot_org_homepage.png',
-        description: 'URL Shortening service\'s landing page.',
+        description: 'URL Shortening service\'s homepage.',
       },
     ],
   },
@@ -43,13 +43,21 @@ export const projects = [
     media: [
       {
         type: 'photo',
-        source: '/projects/noah-dot-coffee/1.png',
-        description: 'Landing page',
+        source: '/projects/noah-dot-coffee/noah_dot_coffee_homepage.png',
+        description: 'The noah.coffee homepage',
       },
       {
         type: 'photo',
-        source: '/projects/noah-dot-coffee/2.png',
-        description: 'Contact page',
+        source: '/projects/noah-dot-coffee/noah_dot_coffee_portfolio.png',
+        description: 'The portfolio section, featuring three of my ' +
+            'favorite projects. ',
+      },
+      {
+        type: 'photo',
+        source: '/projects/noah-dot-coffee/noah_dot_coffee_archive.png',
+        description: 'The project archive section, displaying some of the ' +
+            'projects I\'ve worked on over the years. Filterable by ' +
+            'project type.',
       },
     ],
   },
@@ -111,10 +119,22 @@ export const projects = [
     github_link: 'https://github.com/AptitudeCapstone/CUDA',
     media: [
       {
+        type: 'photo',
+        source: '/projects/CUDA/CUDA_poster.png',
+        description: 'The presentation poster for the 2022 U.C. Santa ' +
+            'Barbara E.C.E. Capstone event',
+      },
+      {
         type: 'video',
         source: 'https://user-images.githubusercontent.com/' +
             '25698069/180273048-2b10df13-f372-4fe7-acd8-6ecb7d3206be.mp4',
         description: 'Demo video',
+      },
+      {
+        type: 'photo',
+        source: '/projects/CUDA/CUDA_reader.jpeg',
+        description: 'CUDA Reader device. Adapted from an ' +
+            'original design by Aptitude Medical Systems.',
       },
     ],
   },

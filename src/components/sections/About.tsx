@@ -36,12 +36,14 @@ const About = (props: {
           <div className="About-Text">
             <h2>Software Engineer</h2>
             <p>
-              {'I take pride in the software I build. Between ' +
-                'professional, academic, and personal projects, ' +
-                'my experience writing software spans over a decade. ' +
-                'I\'m specializing in web and mobile development, ' +
-                'and also enjoy working on embedded and machine ' +
-                'learning projects. '
+              {'I take pride in the software I build. My professional, ' +
+                'academic, and personal projects span over' +
+                'a decade of web and mobile development experience. ' +
+                'In addition, I enjoy working on both embedded ' +
+                'and machine learning projects. Combining these ' +
+                'interests has helped me develop a solid ' +
+                'understanding of the software development ' +
+                'process and how to efficiently get things done.'
               }
             </p>
             {
@@ -66,10 +68,11 @@ const About = (props: {
           'with a B.S. in Computer Engineering. My ' +
           'journey in the field began in 2010, when my interest ' +
           'in website design and video game modifications led ' +
-          'me to explore their source code. In the years between, I\'ve ' +
-          'explored several areas of computer science and ' +
-          'electrical engineering, and have been fortunate ' +
-          'to work with exemplary people on impactful projects.'
+          'me to explore their source code. In the subsequent ' +
+          'years, I\'ve explored several areas of computer ' +
+          'science and electrical engineering, and have been ' +
+          'fortunate to work with exemplary people on ' +
+          'impactful projects.'
         }
       </p>
       <h3>{'People I\'ve Worked With'}</h3>
@@ -140,12 +143,12 @@ const About = (props: {
               onClick={() => props.setProjectFilter('plc-hmi')}
             >
                 independent project</a>
-            {' and contribute to '}
+            {' and contributing to some of Powercon\'s '}
             <a
               href="#archive"
               onClick={() => props.setProjectFilter('plc-hmi')}
             >
-              {'Powercon\'s commercial projects'}
+              {'commercial projects'}
             </a>
               .
           </p>
