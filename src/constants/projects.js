@@ -175,33 +175,21 @@ export const projects = [
     stack: [
       'Swift',
     ],
-    github_link: 'https://example.com',
     media: [
       {
         type: 'video',
-        source: '/projects/receipt-scanner/receipt_scanner_demo_video.m4v',
-        description: 'Demo video 1',
-      },
-      {
-        type: 'video',
-        source: '/projects/receipt-scanner/receipt_scanner_demo_video_2.m4v',
-        description: 'Demo video 2',
-      },
-      {
-        type: 'video',
-        source: '/projects/receipt-scanner/receipt_scanner_demo_video_3.m4v',
-        description: 'Demo video 3',
-      },
-      {
-        type: 'video',
         source: '/projects/receipt-scanner/receipt_scanner_demo_video_4.m4v',
-        description: 'Demo video 4',
+        description: 'A demo of the receipt scanner adding a receipt to ' +
+            'a group. At the end, a PDF is generated with the receipts ' +
+            'in the new group. In this instance, OCR and automatic text ' +
+            'recognition were not enabled.',
       },
       {
         type: 'photo',
         source: '/projects/receipt-scanner/receipt_scanner_dev_screenshot.jpg',
-        description: 'Mobile app screenshot, taken when the app ' +
-            'is actively monitoring a nearby thermocouple via an esp32',
+        description: 'A screenshot of the mobile app that shows one stage of ' +
+            'the pre-processing. This screen is not usually visible to the ' +
+            'user.',
       },
     ],
   },
@@ -218,7 +206,6 @@ export const projects = [
     stack: [
       'STM32',
     ],
-    demo_link: 'https://example.com',
     github_link: 'https://example.com',
     media: [
       {
@@ -299,15 +286,14 @@ export const projects = [
     ],
     title: 'Chromatic Tuner',
     description: 'A chromatic tuner built using Fourier transforms ' +
-        'running on an STM32. Outputs nearest note on LCD using ' +
-        'the SPI serial protocol.',
+        'running on an Artix-7 FPGA board. Outputs nearest note on LCD using ' +
+        'the SPI serial protocol, as well as error in cents.',
     stack: [
-      'C++',
-      'STM32',
+      'C',
+      'FPGA',
       'LCD via SPI',
     ],
-    demo_link: 'https://example.com',
-    github_link: 'https://example.com',
+    github_link: 'https://github.com/noahcorona/FPGA-chromatic-tuner',
     media: [
       {
         type: 'photo',
@@ -446,13 +432,14 @@ export const projects = [
     ],
   },
   {
-    year: 2017,
+    year: 2018,
     wasFor: 'Powercon Engineering Inc.',
     types: [
       'plc-hmi',
     ],
     title: 'Pump Monitor & Control System',
-    description: 'Data collection Histogram Alarms',
+    description: 'A program to collect data, control alarm states, and ' +
+        'allow for viewing of historical data for a pump system.',
     stack: [
       'Ladder Logic',
       'C#',
@@ -471,13 +458,7 @@ export const projects = [
         type: 'photo',
         source: '/projects/fluid-tech/fluid_tech_alarms.png',
         description: 'The alarms page of the control panel user ' +
-            'interface (1 of 2)',
-      },
-      {
-        type: 'photo',
-        source: '/projects/fluid-tech/fluid_tech_alarms_2.png',
-        description: 'The alarms page of the control panel user ' +
-            'interface (2 of 2)',
+            'interface',
       },
       {
         type: 'photo',
