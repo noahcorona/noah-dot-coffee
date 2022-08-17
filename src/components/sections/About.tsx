@@ -37,7 +37,7 @@ const About = (props: {
             <h2>Software Engineer</h2>
             <p>
               {'I take pride in the software I build. My professional, ' +
-                'academic, and personal projects span over' +
+                'academic, and personal projects span over ' +
                 'a decade of web and mobile development experience. ' +
                 'In addition, I enjoy working on both embedded ' +
                 'and machine learning projects. Combining these ' +
