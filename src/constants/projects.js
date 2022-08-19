@@ -338,7 +338,8 @@ export const projects = [
       'Python',
       'SciKit Learn',
     ],
-    demo_link: 'https://colab.research.google.com/github/noahcorona/ucsb-165b-fashion-classifier/blob/main/hw4.ipynb',
+    demo_link: 'https://colab.research.google.com/github/noahcorona/' +
+        'ucsb-165b-fashion-classifier/blob/main/hw4.ipynb',
     github_link: 'https://github.com/noahcorona/ucsb-165b-fashion-classifier',
     media: [
     ],
@@ -355,7 +356,8 @@ export const projects = [
     stack: [
       'Python',
     ],
-    demo_link: 'https://colab.research.google.com/github/noahcorona/ucsb-cs165b-linear-classifier/blob/main/hw2.ipynb',
+    demo_link: 'https://colab.research.google.com/github/noahcorona/' +
+        'ucsb-cs165b-linear-classifier/blob/main/hw2.ipynb',
     github_link: 'https://github.com/noahcorona/ucsb-cs165b-linear-classifier',
     media: [
     ],
@@ -387,21 +389,22 @@ export const projects = [
       'ml',
     ],
     title: 'Tempo Estimator',
-    description: 'A tempo estimator implemented in Python, using' +
+    description: 'A tempo estimator implemented in Python, using ' +
         'a novelty function and the short-time Fourier transform. ' +
         'Predicts the beats per minute (BPM) of audio samples. ',
     stack: [
       'Python',
       'Essentia',
     ],
-    demo_link: 'https://colab.research.google.com/github/noahcorona/ucsb-ece160-tempo-estimation/blob/main/Mini_Project_2.ipynb',
+    demo_link: 'https://colab.research.google.com/github/noahcorona/' +
+        'ucsb-ece160-tempo-estimation/blob/main/Mini_Project_2.ipynb',
     github_link: 'https://github.com/noahcorona/ucsb-ece160-tempo-estimation',
     media: [
       {
         type: 'photo',
         source: '/projects/tempo-estimation/tempo_estimation_tempogram.png',
         description: 'Tempogram for two 20-second audio ' +
-                        'clips, in units of beats per minute vs. seconds',
+            'clips, in units of beats per minute vs. seconds',
       },
     ],
   },
