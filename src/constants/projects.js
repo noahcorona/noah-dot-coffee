@@ -336,7 +336,7 @@ export const projects = [
         'the MNIST Fashion dataset. MNIST fashion items. ',
     stack: [
       'Python',
-      'SciKit Learn',
+      'scikit-learn',
     ],
     demo_link: 'https://colab.research.google.com/github/noahcorona/' +
         'ucsb-165b-fashion-classifier/blob/main/hw4.ipynb',
@@ -373,7 +373,7 @@ export const projects = [
         'SciKit Learn library.',
     stack: [
       'Python',
-      'SciKit-learn',
+      'scikit-learn',
     ],
     keywords: [
       'Classification',
