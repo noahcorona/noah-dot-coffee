@@ -182,38 +182,6 @@ export const projects = [
     ],
   },
   {
-    year: 2018,
-    wasFor: 'Personal project',
-    types: [
-      'mobile',
-    ],
-    title: 'Receipt Scanner',
-    description: 'Scans receipts, performing OCR to aid in the process of ' +
-                'organizing business expenses. Allows the user to ' +
-                'easily export a PDF of collections of their receipts ' +
-                'with customizable information.',
-    stack: [
-      'Swift',
-    ],
-    media: [
-      {
-        type: 'video',
-        source: '/projects/receipt-scanner/receipt_scanner_demo_video_4.m4v',
-        description: 'A demo of the receipt scanner adding a receipt to ' +
-            'a group. At the end, a PDF is generated with the receipts ' +
-            'in the new group. In this instance, OCR and automatic text ' +
-            'recognition were not enabled.',
-      },
-      {
-        type: 'photo',
-        source: '/projects/receipt-scanner/receipt_scanner_dev_screenshot.jpg',
-        description: 'A screenshot of the mobile app that shows one stage of ' +
-            'the pre-processing. This screen is not usually visible to the ' +
-            'user.',
-      },
-    ],
-  },
-  {
     year: 2020,
     wasFor: 'Academic project',
     types: [
