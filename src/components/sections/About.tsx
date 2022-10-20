@@ -1,7 +1,6 @@
 import '../../style/App.css';
 import '../../style/About.css';
 // eslint-disable-next-line max-len
-import {AiOutlineArrowRight} from '@react-icons/all-files/ai/AiOutlineArrowRight';
 import {BsBoxArrowUpRight} from '@react-icons/all-files/bs/BsBoxArrowUpRight';
 import TechLinks from '../TechLinks';
 
@@ -9,23 +8,6 @@ const About = (props: {
     setProjectFilter: any,
     windowSize: number,
 }) => {
-  const ContactShortcut = () => {
-    return (
-      <div className={props.windowSize > 600 ?
-            'About-Contact-Link-Container' :
-            'About-Contact-Link-Container'}>
-        <a
-          href="#contact"
-          className="About-Contact-Link"
-        >
-          <u>Hiring? Reach out</u>
-          {'  '}
-          <AiOutlineArrowRight/>
-        </a>
-      </div>
-    );
-  };
-
   return (
     <div className="Section small-top-pad">
       <div className="decorated bottom-spaced">
@@ -34,7 +16,7 @@ const About = (props: {
       <div className="d-flex gap-4 top-spaced">
         <div className="d-flex gap-4">
           <div className="About-Text">
-            <h2>Software Engineer</h2>
+            <h2>Controls Engineer</h2>
             <p>
               {'I take pride in the software I build. My professional, ' +
                 'academic, and personal projects span over ' +
@@ -46,16 +28,10 @@ const About = (props: {
                 'process and how to efficiently get things done.'
               }
             </p>
-            {
-              props.windowSize > 600 && <ContactShortcut />
-            }
           </div>
           <img src="/me.jpeg" alt="me" className="Portrait" />
         </div>
       </div>
-      {
-        props.windowSize < 600 && <ContactShortcut />
-      }
       <h3 className="bottom-spaced">Technologies I work with</h3>
       <TechLinks
         windowSize={props.windowSize}
